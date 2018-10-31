@@ -21,11 +21,11 @@ export post letter history
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.PostLetterApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.PostLetterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -75,11 +75,11 @@ Get all post letter history
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.PostLetterApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.PostLetterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -131,11 +131,11 @@ Calculate post letter price
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.PostLetterApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.PostLetterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -185,11 +185,11 @@ Send post letter
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.PostLetterApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.PostLetterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

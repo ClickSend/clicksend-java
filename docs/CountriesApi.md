@@ -18,8 +18,8 @@ Get all countries
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.CountriesApi;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Api.CountriesApi;
 
 
 CountriesApi apiInstance = new CountriesApi();

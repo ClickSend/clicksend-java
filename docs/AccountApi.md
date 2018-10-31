@@ -24,11 +24,11 @@ Get account details
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.AccountApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.AccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -74,11 +74,11 @@ Create An Account
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.AccountApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.AccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -128,11 +128,11 @@ Send account activation token
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.AccountApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.AccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -182,11 +182,11 @@ Verify new account
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.AccountApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.AccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -236,11 +236,11 @@ Forgot password
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.AccountApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.AccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -290,11 +290,11 @@ Verify forgot password
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.AccountApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.AccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -344,8 +344,8 @@ Forgot username
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.AccountApi;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Api.AccountApi;
 
 
 AccountApi apiInstance = new AccountApi();

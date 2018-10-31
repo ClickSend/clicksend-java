@@ -22,11 +22,11 @@ Delete fax delivery receipt automation
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -76,11 +76,11 @@ Get specific fax delivery receipt automation
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -130,11 +130,11 @@ Create fax delivery receipt automations
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -184,11 +184,11 @@ Update fax delivery receipt automation
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -240,11 +240,11 @@ Get all fax delivery receipt automations
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.Client.ApiClient;
+//import ClickSend.Client.ApiException;
+//import ClickSend.Client.Configuration;
+//import ClickSend.Client.auth.*;
+//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
