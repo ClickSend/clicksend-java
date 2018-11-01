@@ -20,11 +20,11 @@ Get mms statistics
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.StatisticsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.StatisticsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -70,11 +70,11 @@ Get sms statistics
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.StatisticsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.StatisticsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -120,11 +120,11 @@ Get voice statistics
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.StatisticsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.StatisticsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

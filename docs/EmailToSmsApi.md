@@ -24,11 +24,11 @@ Get list of email to sms allowed addresses
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.EmailToSmsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.EmailToSmsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -80,11 +80,11 @@ Create email to sms allowed address
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.EmailToSmsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.EmailToSmsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -134,11 +134,11 @@ Delete email to sms stripped string rule
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.EmailToSmsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.EmailToSmsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -188,11 +188,11 @@ Get email to sms stripped string rule
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.EmailToSmsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.EmailToSmsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -242,11 +242,11 @@ Create email to sms stripped string rules
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.EmailToSmsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.EmailToSmsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -296,11 +296,11 @@ Update email to sms stripped string rule
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.EmailToSmsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.EmailToSmsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -352,11 +352,11 @@ Get list of email to sms stripped string rules
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.EmailToSmsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.EmailToSmsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

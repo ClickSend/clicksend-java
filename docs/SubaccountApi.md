@@ -23,11 +23,11 @@ Delete a subaccount
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.SubaccountApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.SubaccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -77,11 +77,11 @@ Get specific subaccount
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.SubaccountApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.SubaccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -131,11 +131,11 @@ Update subaccount
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.SubaccountApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.SubaccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -187,11 +187,11 @@ Get all subaccounts
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.SubaccountApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.SubaccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -243,11 +243,11 @@ Create new subaccount
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.SubaccountApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.SubaccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -297,11 +297,11 @@ Regenerate an API Key
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.SubaccountApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.SubaccountApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

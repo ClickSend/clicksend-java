@@ -19,11 +19,11 @@ Get Price for MMS sent
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.MmsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.MmsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -73,11 +73,11 @@ Send MMS
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.MmsApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.MmsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

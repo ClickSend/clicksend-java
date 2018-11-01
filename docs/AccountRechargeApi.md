@@ -23,11 +23,11 @@ Get Credit Card info
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.AccountRechargeApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.AccountRechargeApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -73,11 +73,11 @@ Update credit card info
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.AccountRechargeApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.AccountRechargeApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -127,11 +127,11 @@ Get list of all packages
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.AccountRechargeApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.AccountRechargeApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -181,11 +181,11 @@ Purchase a package
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.AccountRechargeApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.AccountRechargeApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -235,11 +235,11 @@ Get specific Transaction
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.AccountRechargeApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.AccountRechargeApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -289,11 +289,11 @@ Get all transactions
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.AccountRechargeApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.AccountRechargeApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

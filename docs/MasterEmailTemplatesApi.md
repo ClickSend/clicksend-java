@@ -22,11 +22,11 @@ Get all master email template categories
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.MasterEmailTemplatesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.MasterEmailTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -78,11 +78,11 @@ Get specific master email template category
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.MasterEmailTemplatesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.MasterEmailTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -132,11 +132,11 @@ Get specific master email template
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.MasterEmailTemplatesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.MasterEmailTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -186,11 +186,11 @@ Get all master email templates
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.MasterEmailTemplatesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.MasterEmailTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -242,11 +242,11 @@ Get all master email templates in a category
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.MasterEmailTemplatesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.MasterEmailTemplatesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

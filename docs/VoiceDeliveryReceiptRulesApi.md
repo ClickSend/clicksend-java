@@ -22,11 +22,11 @@ Delete voice delivery receipt automation
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.VoiceDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.VoiceDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -76,11 +76,11 @@ Get specific voice delivery receipt automation
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.VoiceDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.VoiceDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -130,11 +130,11 @@ Create voice delivery receipt automations
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.VoiceDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.VoiceDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -184,11 +184,11 @@ Update voice delivery receipt automation
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.VoiceDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.VoiceDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -240,11 +240,11 @@ Get all voice delivery receipt automations
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.VoiceDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.VoiceDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

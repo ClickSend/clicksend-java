@@ -18,8 +18,8 @@ Get all countries
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Api.CountriesApi;
+//import ClickSend.ApiException;
+//import ClickSend.Api.CountriesApi;
 
 
 CountriesApi apiInstance = new CountriesApi();

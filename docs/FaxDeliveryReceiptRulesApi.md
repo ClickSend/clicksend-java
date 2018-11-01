@@ -22,11 +22,11 @@ Delete fax delivery receipt automation
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -76,11 +76,11 @@ Get specific fax delivery receipt automation
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -130,11 +130,11 @@ Create fax delivery receipt automations
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -184,11 +184,11 @@ Update fax delivery receipt automation
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -240,11 +240,11 @@ Get all fax delivery receipt automations
 ### Example
 ```java
 // Import classes:
-//import ClickSend.Client.ApiClient;
-//import ClickSend.Client.ApiException;
-//import ClickSend.Client.Configuration;
-//import ClickSend.Client.auth.*;
-//import ClickSend.Client.Api.FaxDeliveryReceiptRulesApi;
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.FaxDeliveryReceiptRulesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
