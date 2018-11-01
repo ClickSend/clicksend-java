@@ -28,7 +28,7 @@ import java.io.IOException;
  * Campaign Model for MMS
  */
 @ApiModel(description = "Campaign Model for MMS")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-01T02:11:41.869Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-01T03:08:18.225Z")
 
 public class MmsCampaign {
   @SerializedName("list_id")
