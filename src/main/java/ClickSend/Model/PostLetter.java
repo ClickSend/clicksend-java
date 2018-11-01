@@ -31,7 +31,7 @@ import java.util.List;
  * PostLetter model
  */
 @ApiModel(description = "PostLetter model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-01T03:53:13.462Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-01T04:49:32.610Z")
 
 public class PostLetter {
   @SerializedName("file_url")
