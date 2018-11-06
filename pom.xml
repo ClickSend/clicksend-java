@@ -7,7 +7,7 @@
     <name>swagger-java-client</name>
     <version>1.0.0</version>
     <url>https://github.com/swagger-api/swagger-codegen</url>
-    <description>Swagger Java</description>
+    <description>ClickSend Java</description>
     <scm>
         <connection>scm:git:git@github.com:swagger-api/swagger-codegen.git</connection>
         <developerConnection>scm:git:git@github.com:swagger-api/swagger-codegen.git</developerConnection>
@@ -24,9 +24,9 @@
 
     <developers>
         <developer>
-            <name>Swagger</name>
+            <name>ClickSend</name>
             <email>apiteam@swagger.io</email>
-            <organization>Swagger</organization>
+            <organization>ClickSend</organization>
             <organizationUrl>http://swagger.io</organizationUrl>
         </developer>
     </developers>
