@@ -28,7 +28,7 @@ import java.io.IOException;
  * Single MMS message model
  */
 @ApiModel(description = "Single MMS message model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-06T02:13:15.765Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-06T02:52:53.511Z")
 
 public class MmsMessage {
   @SerializedName("to")
