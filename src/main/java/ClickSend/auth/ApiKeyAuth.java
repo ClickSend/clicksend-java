@@ -18,7 +18,7 @@ import ClickSend.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-06T05:45:35.576Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-06T06:45:52.507Z")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

@@ -7,7 +7,7 @@
     <name>clicksend-java-client</name>
     <version>1.0.0</version>
     <url>https://github.com/clicksend-api/clicksend-codegen</url>
-    <description>ClickSend Java</description>
+    <description>Swagger Java</description>
     <scm>
         <connection>scm:git:git@github.com:clicksend-api/clicksend-codegen.git</connection>
         <developerConnection>scm:git:git@github.com:clicksend-api/clicksend-codegen.git</developerConnection>
@@ -24,9 +24,9 @@
 
     <developers>
         <developer>
-            <name>ClickSend</name>
+            <name>Swagger</name>
             <email>apiteam@clicksend.io</email>
-            <organization>ClickSend</organization>
+            <organization>Swagger</organization>
             <organizationUrl>http://clicksend.io</organizationUrl>
         </developer>
     </developers>

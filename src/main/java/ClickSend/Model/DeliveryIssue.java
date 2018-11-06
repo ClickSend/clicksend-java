@@ -28,7 +28,7 @@ import java.io.IOException;
  * Issues with message delivery
  */
 @ApiModel(description = "Issues with message delivery")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-06T05:45:35.576Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-06T06:45:52.507Z")
 
 public class DeliveryIssue {
   @SerializedName("message_id")
