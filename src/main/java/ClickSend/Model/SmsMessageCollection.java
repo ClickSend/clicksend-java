@@ -31,7 +31,7 @@ import java.util.List;
  * Array of SmsMessage items
  */
 @ApiModel(description = "Array of SmsMessage items")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-06T03:04:12.874Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-06T05:45:35.576Z")
 
 public class SmsMessageCollection {
   @SerializedName("messages")

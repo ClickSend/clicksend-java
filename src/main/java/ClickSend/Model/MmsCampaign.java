@@ -28,7 +28,7 @@ import java.io.IOException;
  * Campaign Model for MMS
  */
 @ApiModel(description = "Campaign Model for MMS")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-06T03:04:12.874Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-06T05:45:35.576Z")
 
 public class MmsCampaign {
   @SerializedName("list_id")
