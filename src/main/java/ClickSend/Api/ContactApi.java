@@ -888,7 +888,7 @@ public class ContactApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/lists/{from_list_id}/contacts/{contact_id}/{to_list_id}"
+        String localVarPath = "/lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id}"
             .replaceAll("\\{" + "from_list_id" + "\\}", apiClient.escapeString(fromListId.toString()))
             .replaceAll("\\{" + "contact_id" + "\\}", apiClient.escapeString(contactId.toString()))
             .replaceAll("\\{" + "to_list_id" + "\\}", apiClient.escapeString(toListId.toString()));

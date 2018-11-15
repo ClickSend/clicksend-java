@@ -27,6 +27,7 @@ import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
 import org.threeten.bp.format.DateTimeFormatter;
 
+import ClickSend.Model.*;
 import okio.ByteString;
 
 import java.io.IOException;
