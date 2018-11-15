@@ -14,7 +14,6 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
-import java.io.File;
 import ClickSend.Model.VoiceMessageCollection;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -75,7 +74,7 @@ public class VoiceApiTest {
     @Test
     public void voiceHistoryExportGetTest() throws ApiException {
         String filename = null;
-        File response = api.voiceHistoryExportGet(filename);
+        String response = api.voiceHistoryExportGet(filename);
 
         // TODO: test validations
     }

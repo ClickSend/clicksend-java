@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="postPostcardsHistoryExportGet"></a>
 # **postPostcardsHistoryExportGet**
-> File postPostcardsHistoryExportGet(filename)
+> String postPostcardsHistoryExportGet(filename)
 
 Export postcard history to a CSV file
 
@@ -37,7 +37,7 @@ BasicAuth.setPassword("YOUR PASSWORD");
 PostPostcardApi apiInstance = new PostPostcardApi();
 String filename = "filename_example"; // String | Filename to export to
 try {
-    File result = apiInstance.postPostcardsHistoryExportGet(filename);
+    String result = apiInstance.postPostcardsHistoryExportGet(filename);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PostPostcardApi#postPostcardsHistoryExportGet");
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**String**
 
 ### Authorization
 

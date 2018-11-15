@@ -14,7 +14,6 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
-import java.io.File;
 import ClickSend.Model.PostPostcard;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -44,7 +43,7 @@ public class PostPostcardApiTest {
     @Test
     public void postPostcardsHistoryExportGetTest() throws ApiException {
         String filename = null;
-        File response = api.postPostcardsHistoryExportGet(filename);
+        String response = api.postPostcardsHistoryExportGet(filename);
 
         // TODO: test validations
     }

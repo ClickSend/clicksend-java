@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 <a name="smsHistoryExportGet"></a>
 # **smsHistoryExportGet**
-> File smsHistoryExportGet(filename)
+> String smsHistoryExportGet(filename)
 
 Export all sms history
 
@@ -154,7 +154,7 @@ BasicAuth.setPassword("YOUR PASSWORD");
 SmsApi apiInstance = new SmsApi();
 String filename = "filename_example"; // String | Filename to download history as
 try {
-    File result = apiInstance.smsHistoryExportGet(filename);
+    String result = apiInstance.smsHistoryExportGet(filename);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SmsApi#smsHistoryExportGet");
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**String**
 
 ### Authorization
 

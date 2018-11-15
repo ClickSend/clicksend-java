@@ -28,7 +28,6 @@ import java.io.IOException;
 
 
 import ClickSend.Model.Email;
-import java.io.File;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -132,11 +131,11 @@ public class TransactionalEmailApi {
      * @param filename Filename to download history as (required)
      * @param dateFrom Start date (optional)
      * @param dateTo End date (optional)
-     * @return File
+     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public File emailHistoryExportGet(String filename, Integer dateFrom, Integer dateTo) throws ApiException {
-        ApiResponse<File> resp = emailHistoryExportGetWithHttpInfo(filename, dateFrom, dateTo);
+    public String emailHistoryExportGet(String filename, Integer dateFrom, Integer dateTo) throws ApiException {
+        ApiResponse<String> resp = emailHistoryExportGetWithHttpInfo(filename, dateFrom, dateTo);
         return resp.getData();
     }
 
@@ -146,12 +145,12 @@ public class TransactionalEmailApi {
      * @param filename Filename to download history as (required)
      * @param dateFrom Start date (optional)
      * @param dateTo End date (optional)
-     * @return ApiResponse&lt;File&gt;
+     * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<File> emailHistoryExportGetWithHttpInfo(String filename, Integer dateFrom, Integer dateTo) throws ApiException {
+    public ApiResponse<String> emailHistoryExportGetWithHttpInfo(String filename, Integer dateFrom, Integer dateTo) throws ApiException {
         com.squareup.okhttp.Call call = emailHistoryExportGetValidateBeforeCall(filename, dateFrom, dateTo, null, null);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -165,7 +164,7 @@ public class TransactionalEmailApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call emailHistoryExportGetAsync(String filename, Integer dateFrom, Integer dateTo, final ApiCallback<File> callback) throws ApiException {
+    public com.squareup.okhttp.Call emailHistoryExportGetAsync(String filename, Integer dateFrom, Integer dateTo, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -187,7 +186,7 @@ public class TransactionalEmailApi {
         }
 
         com.squareup.okhttp.Call call = emailHistoryExportGetValidateBeforeCall(filename, dateFrom, dateTo, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

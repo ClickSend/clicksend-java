@@ -15,7 +15,6 @@ package ClickSend.Api;
 
 import ClickSend.ApiException;
 import ClickSend.Model.EmailCampaign;
-import java.io.File;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -111,7 +110,7 @@ public class EmailMarketingApiTest {
         Integer emailCampaignId = null;
         Integer dateFrom = null;
         Integer dateTo = null;
-        File response = api.emailCampaignHistoryExportGet(emailCampaignId, dateFrom, dateTo);
+        String response = api.emailCampaignHistoryExportGet(emailCampaignId, dateFrom, dateTo);
 
         // TODO: test validations
     }

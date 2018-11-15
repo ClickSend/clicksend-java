@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 <a name="voiceHistoryExportGet"></a>
 # **voiceHistoryExportGet**
-> File voiceHistoryExportGet(filename)
+> String voiceHistoryExportGet(filename)
 
 Export voice history
 
@@ -145,7 +145,7 @@ BasicAuth.setPassword("YOUR PASSWORD");
 VoiceApi apiInstance = new VoiceApi();
 String filename = "filename_example"; // String | Filename to export to
 try {
-    File result = apiInstance.voiceHistoryExportGet(filename);
+    String result = apiInstance.voiceHistoryExportGet(filename);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling VoiceApi#voiceHistoryExportGet");
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**String**
 
 ### Authorization
 

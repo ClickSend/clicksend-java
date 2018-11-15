@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import java.io.File;
 import ClickSend.Model.PostPostcard;
 
 import java.lang.reflect.Type;
@@ -124,11 +123,11 @@ public class PostPostcardApi {
      * Export postcard history to a CSV file
      * Export postcard history to a CSV file
      * @param filename Filename to export to (required)
-     * @return File
+     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public File postPostcardsHistoryExportGet(String filename) throws ApiException {
-        ApiResponse<File> resp = postPostcardsHistoryExportGetWithHttpInfo(filename);
+    public String postPostcardsHistoryExportGet(String filename) throws ApiException {
+        ApiResponse<String> resp = postPostcardsHistoryExportGetWithHttpInfo(filename);
         return resp.getData();
     }
 
@@ -136,12 +135,12 @@ public class PostPostcardApi {
      * Export postcard history to a CSV file
      * Export postcard history to a CSV file
      * @param filename Filename to export to (required)
-     * @return ApiResponse&lt;File&gt;
+     * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<File> postPostcardsHistoryExportGetWithHttpInfo(String filename) throws ApiException {
+    public ApiResponse<String> postPostcardsHistoryExportGetWithHttpInfo(String filename) throws ApiException {
         com.squareup.okhttp.Call call = postPostcardsHistoryExportGetValidateBeforeCall(filename, null, null);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -153,7 +152,7 @@ public class PostPostcardApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call postPostcardsHistoryExportGetAsync(String filename, final ApiCallback<File> callback) throws ApiException {
+    public com.squareup.okhttp.Call postPostcardsHistoryExportGetAsync(String filename, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -175,7 +174,7 @@ public class PostPostcardApi {
         }
 
         com.squareup.okhttp.Call call = postPostcardsHistoryExportGetValidateBeforeCall(filename, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

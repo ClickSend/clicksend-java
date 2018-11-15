@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="emailHistoryExportGet"></a>
 # **emailHistoryExportGet**
-> File emailHistoryExportGet(filename, dateFrom, dateTo)
+> String emailHistoryExportGet(filename, dateFrom, dateTo)
 
 Export all Transactional Email history
 
@@ -39,7 +39,7 @@ String filename = "filename_example"; // String | Filename to download history a
 Integer dateFrom = 56; // Integer | Start date
 Integer dateTo = 56; // Integer | End date
 try {
-    File result = apiInstance.emailHistoryExportGet(filename, dateFrom, dateTo);
+    String result = apiInstance.emailHistoryExportGet(filename, dateFrom, dateTo);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling TransactionalEmailApi#emailHistoryExportGet");
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**String**
 
 ### Authorization
 

@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import java.io.File;
 import ClickSend.Model.SmsMessageCollection;
 import ClickSend.Model.SmsTemplate;
 
@@ -361,11 +360,11 @@ public class SmsApi {
      * Export all sms history
      * Export all sms history
      * @param filename Filename to download history as (required)
-     * @return File
+     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public File smsHistoryExportGet(String filename) throws ApiException {
-        ApiResponse<File> resp = smsHistoryExportGetWithHttpInfo(filename);
+    public String smsHistoryExportGet(String filename) throws ApiException {
+        ApiResponse<String> resp = smsHistoryExportGetWithHttpInfo(filename);
         return resp.getData();
     }
 
@@ -373,12 +372,12 @@ public class SmsApi {
      * Export all sms history
      * Export all sms history
      * @param filename Filename to download history as (required)
-     * @return ApiResponse&lt;File&gt;
+     * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<File> smsHistoryExportGetWithHttpInfo(String filename) throws ApiException {
+    public ApiResponse<String> smsHistoryExportGetWithHttpInfo(String filename) throws ApiException {
         com.squareup.okhttp.Call call = smsHistoryExportGetValidateBeforeCall(filename, null, null);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -390,7 +389,7 @@ public class SmsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsHistoryExportGetAsync(String filename, final ApiCallback<File> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsHistoryExportGetAsync(String filename, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -412,7 +411,7 @@ public class SmsApi {
         }
 
         com.squareup.okhttp.Call call = smsHistoryExportGetValidateBeforeCall(filename, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

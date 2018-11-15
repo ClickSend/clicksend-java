@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="postLettersExportGet"></a>
 # **postLettersExportGet**
-> File postLettersExportGet(filename)
+> String postLettersExportGet(filename)
 
 export post letter history
 
@@ -37,7 +37,7 @@ BasicAuth.setPassword("YOUR PASSWORD");
 PostLetterApi apiInstance = new PostLetterApi();
 String filename = "filename_example"; // String | Filename to export to
 try {
-    File result = apiInstance.postLettersExportGet(filename);
+    String result = apiInstance.postLettersExportGet(filename);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PostLetterApi#postLettersExportGet");
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**String**
 
 ### Authorization
 

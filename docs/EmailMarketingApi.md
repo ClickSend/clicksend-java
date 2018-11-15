@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 <a name="emailCampaignHistoryExportGet"></a>
 # **emailCampaignHistoryExportGet**
-> File emailCampaignHistoryExportGet(emailCampaignId, dateFrom, dateTo)
+> String emailCampaignHistoryExportGet(emailCampaignId, dateFrom, dateTo)
 
 Export specific email campaign history
 
@@ -267,7 +267,7 @@ Integer emailCampaignId = 56; // Integer | Allowed email campaign id
 Integer dateFrom = 56; // Integer | Start date
 Integer dateTo = 56; // Integer | End date
 try {
-    File result = apiInstance.emailCampaignHistoryExportGet(emailCampaignId, dateFrom, dateTo);
+    String result = apiInstance.emailCampaignHistoryExportGet(emailCampaignId, dateFrom, dateTo);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EmailMarketingApi#emailCampaignHistoryExportGet");
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**File**](File.md)
+**String**
 
 ### Authorization
 

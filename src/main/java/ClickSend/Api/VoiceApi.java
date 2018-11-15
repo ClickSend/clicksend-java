@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import java.io.File;
 import ClickSend.Model.VoiceMessageCollection;
 
 import java.lang.reflect.Type;
@@ -360,11 +359,11 @@ public class VoiceApi {
      * Export voice history
      * Export voice history
      * @param filename Filename to export to (required)
-     * @return File
+     * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public File voiceHistoryExportGet(String filename) throws ApiException {
-        ApiResponse<File> resp = voiceHistoryExportGetWithHttpInfo(filename);
+    public String voiceHistoryExportGet(String filename) throws ApiException {
+        ApiResponse<String> resp = voiceHistoryExportGetWithHttpInfo(filename);
         return resp.getData();
     }
 
@@ -372,12 +371,12 @@ public class VoiceApi {
      * Export voice history
      * Export voice history
      * @param filename Filename to export to (required)
-     * @return ApiResponse&lt;File&gt;
+     * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<File> voiceHistoryExportGetWithHttpInfo(String filename) throws ApiException {
+    public ApiResponse<String> voiceHistoryExportGetWithHttpInfo(String filename) throws ApiException {
         com.squareup.okhttp.Call call = voiceHistoryExportGetValidateBeforeCall(filename, null, null);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -389,7 +388,7 @@ public class VoiceApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call voiceHistoryExportGetAsync(String filename, final ApiCallback<File> callback) throws ApiException {
+    public com.squareup.okhttp.Call voiceHistoryExportGetAsync(String filename, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -411,7 +410,7 @@ public class VoiceApi {
         }
 
         com.squareup.okhttp.Call call = voiceHistoryExportGetValidateBeforeCall(filename, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

@@ -14,7 +14,6 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
-import java.io.File;
 import ClickSend.Model.SmsMessageCollection;
 import ClickSend.Model.SmsTemplate;
 import org.junit.Test;
@@ -76,7 +75,7 @@ public class SmsApiTest {
     @Test
     public void smsHistoryExportGetTest() throws ApiException {
         String filename = null;
-        File response = api.smsHistoryExportGet(filename);
+        String response = api.smsHistoryExportGet(filename);
 
         // TODO: test validations
     }

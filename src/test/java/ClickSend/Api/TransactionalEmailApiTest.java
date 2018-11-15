@@ -15,7 +15,6 @@ package ClickSend.Api;
 
 import ClickSend.ApiException;
 import ClickSend.Model.Email;
-import java.io.File;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -46,7 +45,7 @@ public class TransactionalEmailApiTest {
         String filename = null;
         Integer dateFrom = null;
         Integer dateTo = null;
-        File response = api.emailHistoryExportGet(filename, dateFrom, dateTo);
+        String response = api.emailHistoryExportGet(filename, dateFrom, dateTo);
 
         // TODO: test validations
     }

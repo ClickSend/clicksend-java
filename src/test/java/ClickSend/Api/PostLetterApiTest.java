@@ -14,7 +14,6 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
-import java.io.File;
 import ClickSend.Model.PostLetter;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -44,7 +43,7 @@ public class PostLetterApiTest {
     @Test
     public void postLettersExportGetTest() throws ApiException {
         String filename = null;
-        File response = api.postLettersExportGet(filename);
+        String response = api.postLettersExportGet(filename);
 
         // TODO: test validations
     }
