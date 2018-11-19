@@ -28,7 +28,7 @@ import java.io.IOException;
  * Email-to-SMS Allowed Address
  */
 @ApiModel(description = "Email-to-SMS Allowed Address")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-15T07:21:30.816Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-19T02:40:45.147Z")
 
 public class EmailSMSAddress {
   @SerializedName("email_address")
@@ -36,6 +36,9 @@ public class EmailSMSAddress {
 
   @SerializedName("from")
   private String from = null;
+
+  @SerializedName("subaccount_id")
+  private String subaccountId = null;
 
   public EmailSMSAddress() {
     this.classType = this.getClass().getSimpleName();
@@ -76,6 +79,24 @@ public class EmailSMSAddress {
     this.from = from;
   }
 
+  public EmailSMSAddress subaccountId(String subaccountId) {
+    this.subaccountId = subaccountId;
+    return this;
+  }
+
+   /**
+   * Your subaccount id
+   * @return subaccountId
+  **/
+  @ApiModelProperty(value = "Your subaccount id")
+  public String getSubaccountId() {
+    return subaccountId;
+  }
+
+  public void setSubaccountId(String subaccountId) {
+    this.subaccountId = subaccountId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -87,12 +108,13 @@ public class EmailSMSAddress {
     }
     EmailSMSAddress emailSMSAddress = (EmailSMSAddress) o;
     return Objects.equals(this.emailAddress, emailSMSAddress.emailAddress) &&
-        Objects.equals(this.from, emailSMSAddress.from);
+        Objects.equals(this.from, emailSMSAddress.from) &&
+        Objects.equals(this.subaccountId, emailSMSAddress.subaccountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(emailAddress, from);
+    return Objects.hash(emailAddress, from, subaccountId);
   }
 
 
@@ -103,6 +125,7 @@ public class EmailSMSAddress {
     
     sb.append("    emailAddress: ").append(toIndentedString(emailAddress)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
+    sb.append("    subaccountId: ").append(toIndentedString(subaccountId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -14,10 +14,10 @@ Method | HTTP request | Description
 [**emailCampaignPricePost**](EmailMarketingApi.md#emailCampaignPricePost) | **POST** /email-campaigns/price | Calculate email campaign price
 [**emailCampaignPut**](EmailMarketingApi.md#emailCampaignPut) | **PUT** /email-campaigns/{email_campaign_id} | Edit email campaign
 [**emailCampaignsGet**](EmailMarketingApi.md#emailCampaignsGet) | **GET** /email-campaigns | Get all email campaigns
-[**sendVerificationTokenGet**](EmailMarketingApi.md#sendVerificationTokenGet) | **GET** /email/address-verify/{email_address_id}/send | Send verification token
+[**sendVerificationTokenGet**](EmailMarketingApi.md#sendVerificationTokenGet) | **PUT** /email/address-verify/{email_address_id}/send | Send verification token
 [**specificAllowedEmailAddressDelete**](EmailMarketingApi.md#specificAllowedEmailAddressDelete) | **DELETE** /email/addresses/{email_address_id} | Delete specific email address
 [**specificAllowedEmailAddressGet**](EmailMarketingApi.md#specificAllowedEmailAddressGet) | **GET** /email/addresses/{email_address_id} | Get specific email address
-[**verifyAllowedEmailAddressGet**](EmailMarketingApi.md#verifyAllowedEmailAddressGet) | **GET** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
+[**verifyAllowedEmailAddressGet**](EmailMarketingApi.md#verifyAllowedEmailAddressGet) | **PUT** /email/address-verify/{email_address_id}/verify/{activation_token} | Verify email address using verification token
 
 
 <a name="allowedEmailAddressGet"></a>
@@ -468,7 +468,7 @@ Name | Type | Description  | Notes
 
 <a name="emailCampaignPut"></a>
 # **emailCampaignPut**
-> String emailCampaignPut(emailCampaignId)
+> String emailCampaignPut(emailCampaignId, emailCampaign)
 
 Edit email campaign
 
@@ -492,8 +492,9 @@ BasicAuth.setPassword("YOUR PASSWORD");
 
 EmailMarketingApi apiInstance = new EmailMarketingApi();
 Integer emailCampaignId = 56; // Integer | Allowed email campaign id
+EmailCampaign emailCampaign = new EmailCampaign(); // EmailCampaign | Email model
 try {
-    String result = apiInstance.emailCampaignPut(emailCampaignId);
+    String result = apiInstance.emailCampaignPut(emailCampaignId, emailCampaign);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EmailMarketingApi#emailCampaignPut");
@@ -506,6 +507,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **emailCampaignId** | **Integer**| Allowed email campaign id |
+ **emailCampaign** | [**EmailCampaign**](EmailCampaign.md)| Email model |
 
 ### Return type
 

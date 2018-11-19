@@ -34,7 +34,7 @@ import java.util.List;
  * Send Email
  */
 @ApiModel(description = "Send Email")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-15T07:21:30.816Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-19T02:40:45.147Z")
 
 public class Email {
   @SerializedName("to")
@@ -48,6 +48,9 @@ public class Email {
 
   @SerializedName("from")
   private List<EmailFrom> from = new ArrayList<EmailFrom>();
+
+  @SerializedName("subject")
+  private String subject = null;
 
   @SerializedName("body")
   private String body = null;
@@ -159,6 +162,24 @@ public class Email {
     this.from = from;
   }
 
+  public Email subject(String subject) {
+    this.subject = subject;
+    return this;
+  }
+
+   /**
+   * Subject of the email.
+   * @return subject
+  **/
+  @ApiModelProperty(value = "Subject of the email.")
+  public String getSubject() {
+    return subject;
+  }
+
+  public void setSubject(String subject) {
+    this.subject = subject;
+  }
+
   public Email body(String body) {
     this.body = body;
     return this;
@@ -235,6 +256,7 @@ public class Email {
         Objects.equals(this.cc, email.cc) &&
         Objects.equals(this.bcc, email.bcc) &&
         Objects.equals(this.from, email.from) &&
+        Objects.equals(this.subject, email.subject) &&
         Objects.equals(this.body, email.body) &&
         Objects.equals(this.attachments, email.attachments) &&
         Objects.equals(this.schedule, email.schedule);
@@ -242,7 +264,7 @@ public class Email {
 
   @Override
   public int hashCode() {
-    return Objects.hash(to, cc, bcc, from, body, attachments, schedule);
+    return Objects.hash(to, cc, bcc, from, subject, body, attachments, schedule);
   }
 
 
@@ -255,6 +277,7 @@ public class Email {
     sb.append("    cc: ").append(toIndentedString(cc)).append("\n");
     sb.append("    bcc: ").append(toIndentedString(bcc)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
     sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
     sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");

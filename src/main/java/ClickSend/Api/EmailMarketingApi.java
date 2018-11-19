@@ -1076,13 +1076,14 @@ public class EmailMarketingApi {
     /**
      * Build call for emailCampaignPut
      * @param emailCampaignId Allowed email campaign id (required)
+     * @param emailCampaign Email model (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call emailCampaignPutCall(Integer emailCampaignId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call emailCampaignPutCall(Integer emailCampaignId, EmailCampaign emailCampaign, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = emailCampaign;
 
         // create path and map variables
         String localVarPath = "/email-campaigns/{email_campaign_id}"
@@ -1124,15 +1125,20 @@ public class EmailMarketingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call emailCampaignPutValidateBeforeCall(Integer emailCampaignId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call emailCampaignPutValidateBeforeCall(Integer emailCampaignId, EmailCampaign emailCampaign, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'emailCampaignId' is set
         if (emailCampaignId == null) {
             throw new ApiException("Missing the required parameter 'emailCampaignId' when calling emailCampaignPut(Async)");
         }
         
+        // verify the required parameter 'emailCampaign' is set
+        if (emailCampaign == null) {
+            throw new ApiException("Missing the required parameter 'emailCampaign' when calling emailCampaignPut(Async)");
+        }
+        
 
-        com.squareup.okhttp.Call call = emailCampaignPutCall(emailCampaignId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = emailCampaignPutCall(emailCampaignId, emailCampaign, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1141,11 +1147,12 @@ public class EmailMarketingApi {
      * Edit email campaign
      * Edit email campaign
      * @param emailCampaignId Allowed email campaign id (required)
+     * @param emailCampaign Email model (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String emailCampaignPut(Integer emailCampaignId) throws ApiException {
-        ApiResponse<String> resp = emailCampaignPutWithHttpInfo(emailCampaignId);
+    public String emailCampaignPut(Integer emailCampaignId, EmailCampaign emailCampaign) throws ApiException {
+        ApiResponse<String> resp = emailCampaignPutWithHttpInfo(emailCampaignId, emailCampaign);
         return resp.getData();
     }
 
@@ -1153,11 +1160,12 @@ public class EmailMarketingApi {
      * Edit email campaign
      * Edit email campaign
      * @param emailCampaignId Allowed email campaign id (required)
+     * @param emailCampaign Email model (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> emailCampaignPutWithHttpInfo(Integer emailCampaignId) throws ApiException {
-        com.squareup.okhttp.Call call = emailCampaignPutValidateBeforeCall(emailCampaignId, null, null);
+    public ApiResponse<String> emailCampaignPutWithHttpInfo(Integer emailCampaignId, EmailCampaign emailCampaign) throws ApiException {
+        com.squareup.okhttp.Call call = emailCampaignPutValidateBeforeCall(emailCampaignId, emailCampaign, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1166,11 +1174,12 @@ public class EmailMarketingApi {
      * Edit email campaign (asynchronously)
      * Edit email campaign
      * @param emailCampaignId Allowed email campaign id (required)
+     * @param emailCampaign Email model (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call emailCampaignPutAsync(Integer emailCampaignId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call emailCampaignPutAsync(Integer emailCampaignId, EmailCampaign emailCampaign, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1191,7 +1200,7 @@ public class EmailMarketingApi {
             };
         }
 
-        com.squareup.okhttp.Call call = emailCampaignPutValidateBeforeCall(emailCampaignId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = emailCampaignPutValidateBeforeCall(emailCampaignId, emailCampaign, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1368,7 +1377,7 @@ public class EmailMarketingApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
     @SuppressWarnings("rawtypes")
@@ -1739,7 +1748,7 @@ public class EmailMarketingApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
-        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
     @SuppressWarnings("rawtypes")

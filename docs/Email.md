@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **cc** | [**List&lt;EmailRecipient&gt;**](EmailRecipient.md) | Array of Cc Recipient items. |  [optional]
 **bcc** | [**List&lt;EmailRecipient&gt;**](EmailRecipient.md) | Array of Bcc Recipient items. |  [optional]
 **from** | [**List&lt;EmailFrom&gt;**](EmailFrom.md) | From Email object. | 
+**subject** | **String** | Subject of the email. |  [optional]
 **body** | **String** | Body of the email. | 
 **attachments** | [**List&lt;Attachment&gt;**](Attachment.md) | Array of Attachment items. |  [optional]
 **schedule** | [**BigDecimal**](BigDecimal.md) | Schedule. |  [optional]

@@ -31,7 +31,7 @@ import java.util.List;
  * Post direct mail model
  */
 @ApiModel(description = "Post direct mail model")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-15T07:21:30.816Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-19T02:40:45.147Z")
 
 public class PostDirectMail {
   @SerializedName("name")

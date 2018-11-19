@@ -178,7 +178,8 @@ public class EmailMarketingApiTest {
     @Test
     public void emailCampaignPutTest() throws ApiException {
         Integer emailCampaignId = null;
-        String response = api.emailCampaignPut(emailCampaignId);
+        EmailCampaign emailCampaign = null;
+        String response = api.emailCampaignPut(emailCampaignId, emailCampaign);
 
         // TODO: test validations
     }
