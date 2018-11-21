@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import ClickSend.Model.EmailAddress;
 import ClickSend.Model.EmailCampaign;
 
 import java.lang.reflect.Type;
@@ -181,14 +182,14 @@ public class EmailMarketingApi {
     }
     /**
      * Build call for allowedEmailAddressPost
-     * @param emailAddress Email to be allowed. (required)
+     * @param emailAddress  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call allowedEmailAddressPostCall(String emailAddress, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call allowedEmailAddressPostCall(EmailAddress emailAddress, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = emailAddress;
 
         // create path and map variables
         String localVarPath = "/email/addresses";
@@ -199,8 +200,6 @@ public class EmailMarketingApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        if (emailAddress != null)
-        localVarFormParams.put("email_address", emailAddress);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -209,7 +208,7 @@ public class EmailMarketingApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/x-www-form-urlencoded"
+            "application/json"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -231,12 +230,7 @@ public class EmailMarketingApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call allowedEmailAddressPostValidateBeforeCall(String emailAddress, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'emailAddress' is set
-        if (emailAddress == null) {
-            throw new ApiException("Missing the required parameter 'emailAddress' when calling allowedEmailAddressPost(Async)");
-        }
+    private com.squareup.okhttp.Call allowedEmailAddressPostValidateBeforeCall(EmailAddress emailAddress, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
         com.squareup.okhttp.Call call = allowedEmailAddressPostCall(emailAddress, progressListener, progressRequestListener);
@@ -247,11 +241,11 @@ public class EmailMarketingApi {
     /**
      * Create allowed Email Address
      * Create allowed Email Address
-     * @param emailAddress Email to be allowed. (required)
+     * @param emailAddress  (optional)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String allowedEmailAddressPost(String emailAddress) throws ApiException {
+    public String allowedEmailAddressPost(EmailAddress emailAddress) throws ApiException {
         ApiResponse<String> resp = allowedEmailAddressPostWithHttpInfo(emailAddress);
         return resp.getData();
     }
@@ -259,11 +253,11 @@ public class EmailMarketingApi {
     /**
      * Create allowed Email Address
      * Create allowed Email Address
-     * @param emailAddress Email to be allowed. (required)
+     * @param emailAddress  (optional)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> allowedEmailAddressPostWithHttpInfo(String emailAddress) throws ApiException {
+    public ApiResponse<String> allowedEmailAddressPostWithHttpInfo(EmailAddress emailAddress) throws ApiException {
         com.squareup.okhttp.Call call = allowedEmailAddressPostValidateBeforeCall(emailAddress, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -272,12 +266,12 @@ public class EmailMarketingApi {
     /**
      * Create allowed Email Address (asynchronously)
      * Create allowed Email Address
-     * @param emailAddress Email to be allowed. (required)
+     * @param emailAddress  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call allowedEmailAddressPostAsync(String emailAddress, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call allowedEmailAddressPostAsync(EmailAddress emailAddress, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

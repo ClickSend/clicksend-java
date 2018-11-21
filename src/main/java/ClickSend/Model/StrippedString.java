@@ -25,55 +25,34 @@ import io.clicksend.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * SmsTemplate model
+ * String to be stripped.
  */
-@ApiModel(description = "SmsTemplate model")
+@ApiModel(description = "String to be stripped.")
 @javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T09:24:25.563Z")
 
-public class SmsTemplate {
-  @SerializedName("template_name")
-  private String templateName = null;
+public class StrippedString {
+  @SerializedName("strip-string")
+  private String stripString = null;
 
-  @SerializedName("body")
-  private String body = null;
-
-  public SmsTemplate() {
+  public StrippedString() {
     this.classType = this.getClass().getSimpleName();
   }
-  public SmsTemplate templateName(String templateName) {
-    this.templateName = templateName;
+  public StrippedString stripString(String stripString) {
+    this.stripString = stripString;
     return this;
   }
 
    /**
-   * Name of template
-   * @return templateName
+   * String to be.
+   * @return stripString
   **/
-  @ApiModelProperty(required = true, value = "Name of template")
-  public String getTemplateName() {
-    return templateName;
+  @ApiModelProperty(required = true, value = "String to be.")
+  public String getStripString() {
+    return stripString;
   }
 
-  public void setTemplateName(String templateName) {
-    this.templateName = templateName;
-  }
-
-  public SmsTemplate body(String body) {
-    this.body = body;
-    return this;
-  }
-
-   /**
-   * Body of template
-   * @return body
-  **/
-  @ApiModelProperty(required = true, value = "Body of template")
-  public String getBody() {
-    return body;
-  }
-
-  public void setBody(String body) {
-    this.body = body;
+  public void setStripString(String stripString) {
+    this.stripString = stripString;
   }
 
 
@@ -85,24 +64,22 @@ public class SmsTemplate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SmsTemplate smsTemplate = (SmsTemplate) o;
-    return Objects.equals(this.templateName, smsTemplate.templateName) &&
-        Objects.equals(this.body, smsTemplate.body);
+    StrippedString strippedString = (StrippedString) o;
+    return Objects.equals(this.stripString, strippedString.stripString);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(templateName, body);
+    return Objects.hash(stripString);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SmsTemplate {\n");
+    sb.append("class StrippedString {\n");
     
-    sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
-    sb.append("    body: ").append(toIndentedString(body)).append("\n");
+    sb.append("    stripString: ").append(toIndentedString(stripString)).append("\n");
     sb.append("}");
     return sb.toString();
   }

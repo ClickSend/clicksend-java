@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import ClickSend.Model.UploadFile;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -55,15 +56,15 @@ public class UploadApi {
 
     /**
      * Build call for uploadsPost
-     * @param content Your base64 encoded file. (required)
      * @param convert  (required)
+     * @param uploadFile  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call uploadsPostCall(String content, String convert, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call uploadsPostCall(String convert, UploadFile uploadFile, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = uploadFile;
 
         // create path and map variables
         String localVarPath = "/uploads";
@@ -76,8 +77,6 @@ public class UploadApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        if (content != null)
-        localVarFormParams.put("content", content);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -86,7 +85,7 @@ public class UploadApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/x-www-form-urlencoded"
+            "application/json"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -108,12 +107,7 @@ public class UploadApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call uploadsPostValidateBeforeCall(String content, String convert, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'content' is set
-        if (content == null) {
-            throw new ApiException("Missing the required parameter 'content' when calling uploadsPost(Async)");
-        }
+    private com.squareup.okhttp.Call uploadsPostValidateBeforeCall(String convert, UploadFile uploadFile, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'convert' is set
         if (convert == null) {
@@ -121,7 +115,7 @@ public class UploadApi {
         }
         
 
-        com.squareup.okhttp.Call call = uploadsPostCall(content, convert, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = uploadsPostCall(convert, uploadFile, progressListener, progressRequestListener);
         return call;
 
     }
@@ -129,26 +123,26 @@ public class UploadApi {
     /**
      * Upload File
      * Upload File
-     * @param content Your base64 encoded file. (required)
      * @param convert  (required)
+     * @param uploadFile  (optional)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String uploadsPost(String content, String convert) throws ApiException {
-        ApiResponse<String> resp = uploadsPostWithHttpInfo(content, convert);
+    public String uploadsPost(String convert, UploadFile uploadFile) throws ApiException {
+        ApiResponse<String> resp = uploadsPostWithHttpInfo(convert, uploadFile);
         return resp.getData();
     }
 
     /**
      * Upload File
      * Upload File
-     * @param content Your base64 encoded file. (required)
      * @param convert  (required)
+     * @param uploadFile  (optional)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> uploadsPostWithHttpInfo(String content, String convert) throws ApiException {
-        com.squareup.okhttp.Call call = uploadsPostValidateBeforeCall(content, convert, null, null);
+    public ApiResponse<String> uploadsPostWithHttpInfo(String convert, UploadFile uploadFile) throws ApiException {
+        com.squareup.okhttp.Call call = uploadsPostValidateBeforeCall(convert, uploadFile, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -156,13 +150,13 @@ public class UploadApi {
     /**
      * Upload File (asynchronously)
      * Upload File
-     * @param content Your base64 encoded file. (required)
      * @param convert  (required)
+     * @param uploadFile  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call uploadsPostAsync(String content, String convert, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call uploadsPostAsync(String convert, UploadFile uploadFile, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -183,7 +177,7 @@ public class UploadApi {
             };
         }
 
-        com.squareup.okhttp.Call call = uploadsPostValidateBeforeCall(content, convert, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = uploadsPostValidateBeforeCall(convert, uploadFile, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

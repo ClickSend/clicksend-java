@@ -101,7 +101,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 EmailMarketingApi apiInstance = new EmailMarketingApi();
-String emailAddress = "emailAddress_example"; // String | Email to be allowed.
+EmailAddress emailAddress = new EmailAddress(); // EmailAddress | 
 try {
     String result = apiInstance.allowedEmailAddressPost(emailAddress);
     System.out.println(result);
@@ -115,7 +115,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **emailAddress** | **String**| Email to be allowed. |
+ **emailAddress** | [**EmailAddress**](EmailAddress.md)|  | [optional]
 
 ### Return type
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="cancelEmailCampaignPut"></a>

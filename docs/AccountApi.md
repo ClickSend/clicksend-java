@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 <a name="forgotPasswordPut"></a>
 # **forgotPasswordPut**
-> String forgotPasswordPut(username)
+> String forgotPasswordPut(forgotPassword)
 
 Forgot password
 
@@ -250,9 +250,9 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 AccountApi apiInstance = new AccountApi();
-String username = "username_example"; // String | Username belonging to account.
+ForgotPassword forgotPassword = new ForgotPassword(); // ForgotPassword | 
 try {
-    String result = apiInstance.forgotPasswordPut(username);
+    String result = apiInstance.forgotPasswordPut(forgotPassword);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AccountApi#forgotPasswordPut");
@@ -264,7 +264,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **String**| Username belonging to account. |
+ **forgotPassword** | [**ForgotPassword**](ForgotPassword.md)|  | [optional]
 
 ### Return type
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="forgotPasswordVerifyPut"></a>
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 <a name="forgotUsernamePut"></a>
 # **forgotUsernamePut**
-> String forgotUsernamePut(email, phoneNumber)
+> String forgotUsernamePut(forgotUsername)
 
 Forgot username
 
@@ -349,10 +349,9 @@ Forgot username
 
 
 AccountApi apiInstance = new AccountApi();
-String email = "email_example"; // String | Email belonging to account.
-String phoneNumber = "phoneNumber_example"; // String | Phone number belonging to account.
+ForgotUsername forgotUsername = new ForgotUsername(); // ForgotUsername | 
 try {
-    String result = apiInstance.forgotUsernamePut(email, phoneNumber);
+    String result = apiInstance.forgotUsernamePut(forgotUsername);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AccountApi#forgotUsernamePut");
@@ -364,8 +363,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **String**| Email belonging to account. | [optional]
- **phoneNumber** | **String**| Phone number belonging to account. | [optional]
+ **forgotUsername** | [**ForgotUsername**](ForgotUsername.md)|  | [optional]
 
 ### Return type
 
@@ -377,6 +375,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

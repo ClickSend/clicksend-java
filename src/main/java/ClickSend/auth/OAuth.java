@@ -18,7 +18,7 @@ import ClickSend.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T07:23:33.062Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T09:24:25.563Z")
 public class OAuth implements Authentication {
   private String accessToken;
 

@@ -30,6 +30,8 @@ import java.io.IOException;
 import ClickSend.Model.Account;
 import ClickSend.Model.AccountForgotPasswordVerify;
 import ClickSend.Model.AccountVerify;
+import ClickSend.Model.ForgotPassword;
+import ClickSend.Model.ForgotUsername;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -538,14 +540,14 @@ public class AccountApi {
     }
     /**
      * Build call for forgotPasswordPut
-     * @param username Username belonging to account. (required)
+     * @param forgotPassword  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call forgotPasswordPutCall(String username, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call forgotPasswordPutCall(ForgotPassword forgotPassword, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = forgotPassword;
 
         // create path and map variables
         String localVarPath = "/forgot-password";
@@ -556,8 +558,6 @@ public class AccountApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        if (username != null)
-        localVarFormParams.put("username", username);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -566,7 +566,7 @@ public class AccountApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/x-www-form-urlencoded"
+            "application/json"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -588,15 +588,10 @@ public class AccountApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call forgotPasswordPutValidateBeforeCall(String username, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        
-        // verify the required parameter 'username' is set
-        if (username == null) {
-            throw new ApiException("Missing the required parameter 'username' when calling forgotPasswordPut(Async)");
-        }
+    private com.squareup.okhttp.Call forgotPasswordPutValidateBeforeCall(ForgotPassword forgotPassword, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = forgotPasswordPutCall(username, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = forgotPasswordPutCall(forgotPassword, progressListener, progressRequestListener);
         return call;
 
     }
@@ -604,24 +599,24 @@ public class AccountApi {
     /**
      * Forgot password
      * Forgot password
-     * @param username Username belonging to account. (required)
+     * @param forgotPassword  (optional)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String forgotPasswordPut(String username) throws ApiException {
-        ApiResponse<String> resp = forgotPasswordPutWithHttpInfo(username);
+    public String forgotPasswordPut(ForgotPassword forgotPassword) throws ApiException {
+        ApiResponse<String> resp = forgotPasswordPutWithHttpInfo(forgotPassword);
         return resp.getData();
     }
 
     /**
      * Forgot password
      * Forgot password
-     * @param username Username belonging to account. (required)
+     * @param forgotPassword  (optional)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> forgotPasswordPutWithHttpInfo(String username) throws ApiException {
-        com.squareup.okhttp.Call call = forgotPasswordPutValidateBeforeCall(username, null, null);
+    public ApiResponse<String> forgotPasswordPutWithHttpInfo(ForgotPassword forgotPassword) throws ApiException {
+        com.squareup.okhttp.Call call = forgotPasswordPutValidateBeforeCall(forgotPassword, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -629,12 +624,12 @@ public class AccountApi {
     /**
      * Forgot password (asynchronously)
      * Forgot password
-     * @param username Username belonging to account. (required)
+     * @param forgotPassword  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call forgotPasswordPutAsync(String username, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call forgotPasswordPutAsync(ForgotPassword forgotPassword, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -655,7 +650,7 @@ public class AccountApi {
             };
         }
 
-        com.squareup.okhttp.Call call = forgotPasswordPutValidateBeforeCall(username, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = forgotPasswordPutValidateBeforeCall(forgotPassword, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -784,15 +779,14 @@ public class AccountApi {
     }
     /**
      * Build call for forgotUsernamePut
-     * @param email Email belonging to account. (optional)
-     * @param phoneNumber Phone number belonging to account. (optional)
+     * @param forgotUsername  (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call forgotUsernamePutCall(String email, String phoneNumber, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call forgotUsernamePutCall(ForgotUsername forgotUsername, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = forgotUsername;
 
         // create path and map variables
         String localVarPath = "/forgot-username";
@@ -803,10 +797,6 @@ public class AccountApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        if (email != null)
-        localVarFormParams.put("email", email);
-        if (phoneNumber != null)
-        localVarFormParams.put("phone_number", phoneNumber);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -815,7 +805,7 @@ public class AccountApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/x-www-form-urlencoded"
+            "application/json"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -837,10 +827,10 @@ public class AccountApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call forgotUsernamePutValidateBeforeCall(String email, String phoneNumber, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call forgotUsernamePutValidateBeforeCall(ForgotUsername forgotUsername, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = forgotUsernamePutCall(email, phoneNumber, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = forgotUsernamePutCall(forgotUsername, progressListener, progressRequestListener);
         return call;
 
     }
@@ -848,26 +838,24 @@ public class AccountApi {
     /**
      * Forgot username
      * Forgot username
-     * @param email Email belonging to account. (optional)
-     * @param phoneNumber Phone number belonging to account. (optional)
+     * @param forgotUsername  (optional)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String forgotUsernamePut(String email, String phoneNumber) throws ApiException {
-        ApiResponse<String> resp = forgotUsernamePutWithHttpInfo(email, phoneNumber);
+    public String forgotUsernamePut(ForgotUsername forgotUsername) throws ApiException {
+        ApiResponse<String> resp = forgotUsernamePutWithHttpInfo(forgotUsername);
         return resp.getData();
     }
 
     /**
      * Forgot username
      * Forgot username
-     * @param email Email belonging to account. (optional)
-     * @param phoneNumber Phone number belonging to account. (optional)
+     * @param forgotUsername  (optional)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> forgotUsernamePutWithHttpInfo(String email, String phoneNumber) throws ApiException {
-        com.squareup.okhttp.Call call = forgotUsernamePutValidateBeforeCall(email, phoneNumber, null, null);
+    public ApiResponse<String> forgotUsernamePutWithHttpInfo(ForgotUsername forgotUsername) throws ApiException {
+        com.squareup.okhttp.Call call = forgotUsernamePutValidateBeforeCall(forgotUsername, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -875,13 +863,12 @@ public class AccountApi {
     /**
      * Forgot username (asynchronously)
      * Forgot username
-     * @param email Email belonging to account. (optional)
-     * @param phoneNumber Phone number belonging to account. (optional)
+     * @param forgotUsername  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call forgotUsernamePutAsync(String email, String phoneNumber, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call forgotUsernamePutAsync(ForgotUsername forgotUsername, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -902,7 +889,7 @@ public class AccountApi {
             };
         }
 
-        com.squareup.okhttp.Call call = forgotUsernamePutValidateBeforeCall(email, phoneNumber, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = forgotUsernamePutValidateBeforeCall(forgotUsername, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

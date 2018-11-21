@@ -25,55 +25,50 @@ import io.clicksend.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * SmsTemplate model
+ * ForgotUsername
  */
-@ApiModel(description = "SmsTemplate model")
 @javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T09:24:25.563Z")
+public class ForgotUsername {
+  @SerializedName("email")
+  private String email = null;
 
-public class SmsTemplate {
-  @SerializedName("template_name")
-  private String templateName = null;
+  @SerializedName("phone_number")
+  private String phoneNumber = null;
 
-  @SerializedName("body")
-  private String body = null;
-
-  public SmsTemplate() {
-    this.classType = this.getClass().getSimpleName();
-  }
-  public SmsTemplate templateName(String templateName) {
-    this.templateName = templateName;
+  public ForgotUsername email(String email) {
+    this.email = email;
     return this;
   }
 
    /**
-   * Name of template
-   * @return templateName
+   * Email belonging to account.
+   * @return email
   **/
-  @ApiModelProperty(required = true, value = "Name of template")
-  public String getTemplateName() {
-    return templateName;
+  @ApiModelProperty(value = "Email belonging to account.")
+  public String getEmail() {
+    return email;
   }
 
-  public void setTemplateName(String templateName) {
-    this.templateName = templateName;
+  public void setEmail(String email) {
+    this.email = email;
   }
 
-  public SmsTemplate body(String body) {
-    this.body = body;
+  public ForgotUsername phoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
     return this;
   }
 
    /**
-   * Body of template
-   * @return body
+   * Phone number belonging to account.
+   * @return phoneNumber
   **/
-  @ApiModelProperty(required = true, value = "Body of template")
-  public String getBody() {
-    return body;
+  @ApiModelProperty(value = "Phone number belonging to account.")
+  public String getPhoneNumber() {
+    return phoneNumber;
   }
 
-  public void setBody(String body) {
-    this.body = body;
+  public void setPhoneNumber(String phoneNumber) {
+    this.phoneNumber = phoneNumber;
   }
 
 
@@ -85,24 +80,24 @@ public class SmsTemplate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SmsTemplate smsTemplate = (SmsTemplate) o;
-    return Objects.equals(this.templateName, smsTemplate.templateName) &&
-        Objects.equals(this.body, smsTemplate.body);
+    ForgotUsername forgotUsername = (ForgotUsername) o;
+    return Objects.equals(this.email, forgotUsername.email) &&
+        Objects.equals(this.phoneNumber, forgotUsername.phoneNumber);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(templateName, body);
+    return Objects.hash(email, phoneNumber);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SmsTemplate {\n");
+    sb.append("class ForgotUsername {\n");
     
-    sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
-    sb.append("    body: ").append(toIndentedString(body)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("}");
     return sb.toString();
   }

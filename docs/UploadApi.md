@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="uploadsPost"></a>
 # **uploadsPost**
-> String uploadsPost(content, convert)
+> String uploadsPost(convert, uploadFile)
 
 Upload File
 
@@ -32,10 +32,10 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 UploadApi apiInstance = new UploadApi();
-String content = "content_example"; // String | Your base64 encoded file.
 String convert = "convert_example"; // String | 
+UploadFile uploadFile = new UploadFile(); // UploadFile | 
 try {
-    String result = apiInstance.uploadsPost(content, convert);
+    String result = apiInstance.uploadsPost(convert, uploadFile);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UploadApi#uploadsPost");
@@ -47,8 +47,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **String**| Your base64 encoded file. |
  **convert** | **String**|  |
+ **uploadFile** | [**UploadFile**](UploadFile.md)|  | [optional]
 
 ### Return type
 
@@ -60,6 +60,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

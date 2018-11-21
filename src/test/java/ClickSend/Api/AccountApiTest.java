@@ -17,6 +17,8 @@ import ClickSend.ApiException;
 import ClickSend.Model.Account;
 import ClickSend.Model.AccountForgotPasswordVerify;
 import ClickSend.Model.AccountVerify;
+import ClickSend.Model.ForgotPassword;
+import ClickSend.Model.ForgotUsername;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -107,8 +109,8 @@ public class AccountApiTest {
      */
     @Test
     public void forgotPasswordPutTest() throws ApiException {
-        String username = null;
-        String response = api.forgotPasswordPut(username);
+        ForgotPassword forgotPassword = null;
+        String response = api.forgotPasswordPut(forgotPassword);
 
         // TODO: test validations
     }
@@ -139,9 +141,8 @@ public class AccountApiTest {
      */
     @Test
     public void forgotUsernamePutTest() throws ApiException {
-        String email = null;
-        String phoneNumber = null;
-        String response = api.forgotUsernamePut(email, phoneNumber);
+        ForgotUsername forgotUsername = null;
+        String response = api.forgotUsernamePut(forgotUsername);
 
         // TODO: test validations
     }

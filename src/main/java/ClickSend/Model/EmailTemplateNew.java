@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * Model for Email Templates
  */
 @ApiModel(description = "Model for Email Templates")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T07:23:33.062Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T09:24:25.563Z")
 
 public class EmailTemplateNew {
   @SerializedName("template_name")

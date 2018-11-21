@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 <a name="smsEmailSmsStrippedStringPost"></a>
 # **smsEmailSmsStrippedStringPost**
-> String smsEmailSmsStrippedStringPost(stripString)
+> String smsEmailSmsStrippedStringPost(strippedString)
 
 Create email to sms stripped string rule
 
@@ -256,9 +256,9 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 EmailToSmsApi apiInstance = new EmailToSmsApi();
-String stripString = "stripString_example"; // String | String to be stripped.
+StrippedString strippedString = new StrippedString(); // StrippedString | StrippedString model
 try {
-    String result = apiInstance.smsEmailSmsStrippedStringPost(stripString);
+    String result = apiInstance.smsEmailSmsStrippedStringPost(strippedString);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EmailToSmsApi#smsEmailSmsStrippedStringPost");
@@ -270,7 +270,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **stripString** | **String**| String to be stripped. |
+ **strippedString** | [**StrippedString**](StrippedString.md)| StrippedString model |
 
 ### Return type
 
@@ -282,12 +282,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="smsEmailSmsStrippedStringPut"></a>
 # **smsEmailSmsStrippedStringPut**
-> String smsEmailSmsStrippedStringPut(stripString, ruleId)
+> String smsEmailSmsStrippedStringPut(url, ruleId)
 
 Update email to sms stripped string rule
 
@@ -310,10 +310,10 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 EmailToSmsApi apiInstance = new EmailToSmsApi();
-String stripString = "stripString_example"; // String | String to be stripped.
+Url url = new Url(); // Url | Url model
 Integer ruleId = 56; // Integer | Your rule id
 try {
-    String result = apiInstance.smsEmailSmsStrippedStringPut(stripString, ruleId);
+    String result = apiInstance.smsEmailSmsStrippedStringPut(url, ruleId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EmailToSmsApi#smsEmailSmsStrippedStringPut");
@@ -325,7 +325,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **stripString** | **String**| String to be stripped. |
+ **url** | [**Url**](Url.md)| Url model |
  **ruleId** | **Integer**| Your rule id |
 
 ### Return type
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="smsEmailSmsStrippedStringsGet"></a>

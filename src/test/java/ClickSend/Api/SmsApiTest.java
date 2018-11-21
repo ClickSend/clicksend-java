@@ -16,6 +16,7 @@ package ClickSend.Api;
 import ClickSend.ApiException;
 import ClickSend.Model.SmsMessageCollection;
 import ClickSend.Model.SmsTemplate;
+import ClickSend.Model.Url;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -126,7 +127,7 @@ public class SmsApiTest {
      */
     @Test
     public void smsInboundPostTest() throws ApiException {
-        String url = null;
+        Url url = null;
         String response = api.smsInboundPost(url);
 
         // TODO: test validations
@@ -207,7 +208,7 @@ public class SmsApiTest {
      */
     @Test
     public void smsReceiptsPostTest() throws ApiException {
-        String url = null;
+        Url url = null;
         String response = api.smsReceiptsPost(url);
 
         // TODO: test validations

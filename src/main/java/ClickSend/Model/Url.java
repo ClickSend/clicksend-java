@@ -25,55 +25,34 @@ import io.clicksend.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * SmsTemplate model
+ * Your url.
  */
-@ApiModel(description = "SmsTemplate model")
+@ApiModel(description = "Your url.")
 @javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T09:24:25.563Z")
 
-public class SmsTemplate {
-  @SerializedName("template_name")
-  private String templateName = null;
+public class Url {
+  @SerializedName("url")
+  private String url = null;
 
-  @SerializedName("body")
-  private String body = null;
-
-  public SmsTemplate() {
+  public Url() {
     this.classType = this.getClass().getSimpleName();
   }
-  public SmsTemplate templateName(String templateName) {
-    this.templateName = templateName;
+  public Url url(String url) {
+    this.url = url;
     return this;
   }
 
    /**
-   * Name of template
-   * @return templateName
+   * Your url.
+   * @return url
   **/
-  @ApiModelProperty(required = true, value = "Name of template")
-  public String getTemplateName() {
-    return templateName;
+  @ApiModelProperty(required = true, value = "Your url.")
+  public String getUrl() {
+    return url;
   }
 
-  public void setTemplateName(String templateName) {
-    this.templateName = templateName;
-  }
-
-  public SmsTemplate body(String body) {
-    this.body = body;
-    return this;
-  }
-
-   /**
-   * Body of template
-   * @return body
-  **/
-  @ApiModelProperty(required = true, value = "Body of template")
-  public String getBody() {
-    return body;
-  }
-
-  public void setBody(String body) {
-    this.body = body;
+  public void setUrl(String url) {
+    this.url = url;
   }
 
 
@@ -85,24 +64,22 @@ public class SmsTemplate {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SmsTemplate smsTemplate = (SmsTemplate) o;
-    return Objects.equals(this.templateName, smsTemplate.templateName) &&
-        Objects.equals(this.body, smsTemplate.body);
+    Url url = (Url) o;
+    return Objects.equals(this.url, url.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(templateName, body);
+    return Objects.hash(url);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SmsTemplate {\n");
+    sb.append("class Url {\n");
     
-    sb.append("    templateName: ").append(toIndentedString(templateName)).append("\n");
-    sb.append("    body: ").append(toIndentedString(body)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();
   }

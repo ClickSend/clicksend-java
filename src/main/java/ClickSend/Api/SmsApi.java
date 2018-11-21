@@ -29,6 +29,7 @@ import java.io.IOException;
 
 import ClickSend.Model.SmsMessageCollection;
 import ClickSend.Model.SmsTemplate;
+import ClickSend.Model.Url;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -679,14 +680,14 @@ public class SmsApi {
     }
     /**
      * Build call for smsInboundPost
-     * @param url Your url. (required)
+     * @param url Url model (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsInboundPostCall(String url, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call smsInboundPostCall(Url url, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = url;
 
         // create path and map variables
         String localVarPath = "/sms/inbound";
@@ -697,8 +698,6 @@ public class SmsApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        if (url != null)
-        localVarFormParams.put("url", url);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -707,7 +706,7 @@ public class SmsApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/x-www-form-urlencoded"
+            "application/json"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -729,7 +728,7 @@ public class SmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsInboundPostValidateBeforeCall(String url, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsInboundPostValidateBeforeCall(Url url, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'url' is set
         if (url == null) {
@@ -745,11 +744,11 @@ public class SmsApi {
     /**
      * Create inbound sms
      * Create inbound sms
-     * @param url Your url. (required)
+     * @param url Url model (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsInboundPost(String url) throws ApiException {
+    public String smsInboundPost(Url url) throws ApiException {
         ApiResponse<String> resp = smsInboundPostWithHttpInfo(url);
         return resp.getData();
     }
@@ -757,11 +756,11 @@ public class SmsApi {
     /**
      * Create inbound sms
      * Create inbound sms
-     * @param url Your url. (required)
+     * @param url Url model (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsInboundPostWithHttpInfo(String url) throws ApiException {
+    public ApiResponse<String> smsInboundPostWithHttpInfo(Url url) throws ApiException {
         com.squareup.okhttp.Call call = smsInboundPostValidateBeforeCall(url, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -770,12 +769,12 @@ public class SmsApi {
     /**
      * Create inbound sms (asynchronously)
      * Create inbound sms
-     * @param url Your url. (required)
+     * @param url Url model (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsInboundPostAsync(String url, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsInboundPostAsync(Url url, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1290,14 +1289,14 @@ public class SmsApi {
     }
     /**
      * Build call for smsReceiptsPost
-     * @param url Your url. (required)
+     * @param url Url model (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsReceiptsPostCall(String url, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call smsReceiptsPostCall(Url url, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = url;
 
         // create path and map variables
         String localVarPath = "/sms/receipts";
@@ -1308,8 +1307,6 @@ public class SmsApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-        if (url != null)
-        localVarFormParams.put("url", url);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -1318,7 +1315,7 @@ public class SmsApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/x-www-form-urlencoded"
+            "application/json"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -1340,7 +1337,7 @@ public class SmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsReceiptsPostValidateBeforeCall(String url, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsReceiptsPostValidateBeforeCall(Url url, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'url' is set
         if (url == null) {
@@ -1356,11 +1353,11 @@ public class SmsApi {
     /**
      * Add a delivery receipt
      * Add a delivery receipt
-     * @param url Your url. (required)
+     * @param url Url model (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsReceiptsPost(String url) throws ApiException {
+    public String smsReceiptsPost(Url url) throws ApiException {
         ApiResponse<String> resp = smsReceiptsPostWithHttpInfo(url);
         return resp.getData();
     }
@@ -1368,11 +1365,11 @@ public class SmsApi {
     /**
      * Add a delivery receipt
      * Add a delivery receipt
-     * @param url Your url. (required)
+     * @param url Url model (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsReceiptsPostWithHttpInfo(String url) throws ApiException {
+    public ApiResponse<String> smsReceiptsPostWithHttpInfo(Url url) throws ApiException {
         com.squareup.okhttp.Call call = smsReceiptsPostValidateBeforeCall(url, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1381,12 +1378,12 @@ public class SmsApi {
     /**
      * Add a delivery receipt (asynchronously)
      * Add a delivery receipt
-     * @param url Your url. (required)
+     * @param url Url model (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsReceiptsPostAsync(String url, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsReceiptsPostAsync(Url url, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

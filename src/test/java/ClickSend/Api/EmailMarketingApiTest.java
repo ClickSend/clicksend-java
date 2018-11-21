@@ -14,6 +14,7 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
+import ClickSend.Model.EmailAddress;
 import ClickSend.Model.EmailCampaign;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -59,7 +60,7 @@ public class EmailMarketingApiTest {
      */
     @Test
     public void allowedEmailAddressPostTest() throws ApiException {
-        String emailAddress = null;
+        EmailAddress emailAddress = null;
         String response = api.allowedEmailAddressPost(emailAddress);
 
         // TODO: test validations
