@@ -55,7 +55,7 @@ public class UploadApi {
 
     /**
      * Build call for uploadsPost
-     * @param content Base64-encoded file contents (required)
+     * @param content Your base64 encoded file. (required)
      * @param convert  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
@@ -63,7 +63,7 @@ public class UploadApi {
      * @throws ApiException If fail to serialize the request body object
      */
     public com.squareup.okhttp.Call uploadsPostCall(String content, String convert, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = content;
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/uploads";
@@ -76,6 +76,8 @@ public class UploadApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        if (content != null)
+        localVarFormParams.put("content", content);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -84,7 +86,7 @@ public class UploadApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/json"
+            "application/x-www-form-urlencoded"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -127,7 +129,7 @@ public class UploadApi {
     /**
      * Upload File
      * Upload File
-     * @param content Base64-encoded file contents (required)
+     * @param content Your base64 encoded file. (required)
      * @param convert  (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -140,7 +142,7 @@ public class UploadApi {
     /**
      * Upload File
      * Upload File
-     * @param content Base64-encoded file contents (required)
+     * @param content Your base64 encoded file. (required)
      * @param convert  (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -154,7 +156,7 @@ public class UploadApi {
     /**
      * Upload File (asynchronously)
      * Upload File
-     * @param content Base64-encoded file contents (required)
+     * @param content Your base64 encoded file. (required)
      * @param convert  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call

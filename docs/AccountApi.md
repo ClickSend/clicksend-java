@@ -250,7 +250,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 AccountApi apiInstance = new AccountApi();
-String username = "username_example"; // String | Username belonging to account
+String username = "username_example"; // String | Username belonging to account.
 try {
     String result = apiInstance.forgotPasswordPut(username);
     System.out.println(result);
@@ -264,7 +264,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **String**| Username belonging to account |
+ **username** | **String**| Username belonging to account. |
 
 ### Return type
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 <a name="forgotPasswordVerifyPut"></a>
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 <a name="forgotUsernamePut"></a>
 # **forgotUsernamePut**
-> String forgotUsernamePut(email)
+> String forgotUsernamePut(email, phoneNumber)
 
 Forgot username
 
@@ -349,9 +349,10 @@ Forgot username
 
 
 AccountApi apiInstance = new AccountApi();
-String email = "email_example"; // String | Email belonging to account
+String email = "email_example"; // String | Email belonging to account.
+String phoneNumber = "phoneNumber_example"; // String | Phone number belonging to account.
 try {
-    String result = apiInstance.forgotUsernamePut(email);
+    String result = apiInstance.forgotUsernamePut(email, phoneNumber);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AccountApi#forgotUsernamePut");
@@ -363,7 +364,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **String**| Email belonging to account |
+ **email** | **String**| Email belonging to account. | [optional]
+ **phoneNumber** | **String**| Phone number belonging to account. | [optional]
 
 ### Return type
 
@@ -375,6 +377,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 

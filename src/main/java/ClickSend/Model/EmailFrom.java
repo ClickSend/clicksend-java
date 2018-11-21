@@ -28,11 +28,11 @@ import java.io.IOException;
  * Email being sent from
  */
 @ApiModel(description = "Email being sent from")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-19T02:40:45.147Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T07:23:33.062Z")
 
 public class EmailFrom {
-  @SerializedName("email")
-  private String email = null;
+  @SerializedName("email_address_id")
+  private String emailAddressId = null;
 
   @SerializedName("name")
   private String name = null;
@@ -40,22 +40,22 @@ public class EmailFrom {
   public EmailFrom() {
     this.classType = this.getClass().getSimpleName();
   }
-  public EmailFrom email(String email) {
-    this.email = email;
+  public EmailFrom emailAddressId(String emailAddressId) {
+    this.emailAddressId = emailAddressId;
     return this;
   }
 
    /**
-   * Email of the recipient.
-   * @return email
+   * Email address id of the recipient.
+   * @return emailAddressId
   **/
-  @ApiModelProperty(required = true, value = "Email of the recipient.")
-  public String getEmail() {
-    return email;
+  @ApiModelProperty(required = true, value = "Email address id of the recipient.")
+  public String getEmailAddressId() {
+    return emailAddressId;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void setEmailAddressId(String emailAddressId) {
+    this.emailAddressId = emailAddressId;
   }
 
   public EmailFrom name(String name) {
@@ -86,13 +86,13 @@ public class EmailFrom {
       return false;
     }
     EmailFrom emailFrom = (EmailFrom) o;
-    return Objects.equals(this.email, emailFrom.email) &&
+    return Objects.equals(this.emailAddressId, emailFrom.emailAddressId) &&
         Objects.equals(this.name, emailFrom.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, name);
+    return Objects.hash(emailAddressId, name);
   }
 
 
@@ -101,7 +101,7 @@ public class EmailFrom {
     StringBuilder sb = new StringBuilder();
     sb.append("class EmailFrom {\n");
     
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    emailAddressId: ").append(toIndentedString(emailAddressId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();

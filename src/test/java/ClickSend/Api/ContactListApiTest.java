@@ -15,6 +15,7 @@ package ClickSend.Api;
 
 import ClickSend.ApiException;
 import ClickSend.Model.ContactListImport;
+import ClickSend.Model.Fields;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -142,7 +143,8 @@ public class ContactListApiTest {
     @Test
     public void listsRemoveDuplicatesByListIdPutTest() throws ApiException {
         Integer listId = null;
-        String response = api.listsRemoveDuplicatesByListIdPut(listId);
+        Fields fields = null;
+        String response = api.listsRemoveDuplicatesByListIdPut(listId, fields);
 
         // TODO: test validations
     }

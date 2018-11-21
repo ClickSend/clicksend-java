@@ -322,7 +322,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
-String url = "url_example"; // String | Your url
+String url = "url_example"; // String | Your url.
 try {
     String result = apiInstance.smsInboundPost(url);
     System.out.println(result);
@@ -336,7 +336,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **String**| Your url |
+ **url** | **String**| Your url. |
 
 ### Return type
 
@@ -348,7 +348,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 <a name="smsInboundReadPut"></a>
@@ -594,7 +594,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
-String url = "url_example"; // String | Your url
+String url = "url_example"; // String | Your url.
 try {
     String result = apiInstance.smsReceiptsPost(url);
     System.out.println(result);
@@ -608,7 +608,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | **String**| Your url |
+ **url** | **String**| Your url. |
 
 ### Return type
 
@@ -620,7 +620,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 <a name="smsReceiptsReadPut"></a>

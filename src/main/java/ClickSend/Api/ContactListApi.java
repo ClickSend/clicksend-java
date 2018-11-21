@@ -28,6 +28,7 @@ import java.io.IOException;
 
 
 import ClickSend.Model.ContactListImport;
+import ClickSend.Model.Fields;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -814,13 +815,14 @@ public class ContactListApi {
     /**
      * Build call for listsRemoveDuplicatesByListIdPut
      * @param listId Your list id (required)
+     * @param fields Fields model (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call listsRemoveDuplicatesByListIdPutCall(Integer listId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call listsRemoveDuplicatesByListIdPutCall(Integer listId, Fields fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = fields;
 
         // create path and map variables
         String localVarPath = "/lists/{list_id}/remove-duplicates"
@@ -862,15 +864,20 @@ public class ContactListApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call listsRemoveDuplicatesByListIdPutValidateBeforeCall(Integer listId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call listsRemoveDuplicatesByListIdPutValidateBeforeCall(Integer listId, Fields fields, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'listId' is set
         if (listId == null) {
             throw new ApiException("Missing the required parameter 'listId' when calling listsRemoveDuplicatesByListIdPut(Async)");
         }
         
+        // verify the required parameter 'fields' is set
+        if (fields == null) {
+            throw new ApiException("Missing the required parameter 'fields' when calling listsRemoveDuplicatesByListIdPut(Async)");
+        }
+        
 
-        com.squareup.okhttp.Call call = listsRemoveDuplicatesByListIdPutCall(listId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsRemoveDuplicatesByListIdPutCall(listId, fields, progressListener, progressRequestListener);
         return call;
 
     }
@@ -879,11 +886,12 @@ public class ContactListApi {
      * Remove duplicate contacts
      * Remove duplicate contacts
      * @param listId Your list id (required)
+     * @param fields Fields model (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String listsRemoveDuplicatesByListIdPut(Integer listId) throws ApiException {
-        ApiResponse<String> resp = listsRemoveDuplicatesByListIdPutWithHttpInfo(listId);
+    public String listsRemoveDuplicatesByListIdPut(Integer listId, Fields fields) throws ApiException {
+        ApiResponse<String> resp = listsRemoveDuplicatesByListIdPutWithHttpInfo(listId, fields);
         return resp.getData();
     }
 
@@ -891,11 +899,12 @@ public class ContactListApi {
      * Remove duplicate contacts
      * Remove duplicate contacts
      * @param listId Your list id (required)
+     * @param fields Fields model (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> listsRemoveDuplicatesByListIdPutWithHttpInfo(Integer listId) throws ApiException {
-        com.squareup.okhttp.Call call = listsRemoveDuplicatesByListIdPutValidateBeforeCall(listId, null, null);
+    public ApiResponse<String> listsRemoveDuplicatesByListIdPutWithHttpInfo(Integer listId, Fields fields) throws ApiException {
+        com.squareup.okhttp.Call call = listsRemoveDuplicatesByListIdPutValidateBeforeCall(listId, fields, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -904,11 +913,12 @@ public class ContactListApi {
      * Remove duplicate contacts (asynchronously)
      * Remove duplicate contacts
      * @param listId Your list id (required)
+     * @param fields Fields model (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listsRemoveDuplicatesByListIdPutAsync(Integer listId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call listsRemoveDuplicatesByListIdPutAsync(Integer listId, Fields fields, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -929,7 +939,7 @@ public class ContactListApi {
             };
         }
 
-        com.squareup.okhttp.Call call = listsRemoveDuplicatesByListIdPutValidateBeforeCall(listId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsRemoveDuplicatesByListIdPutValidateBeforeCall(listId, fields, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

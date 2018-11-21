@@ -140,7 +140,8 @@ public class AccountApiTest {
     @Test
     public void forgotUsernamePutTest() throws ApiException {
         String email = null;
-        String response = api.forgotUsernamePut(email);
+        String phoneNumber = null;
+        String response = api.forgotUsernamePut(email, phoneNumber);
 
         // TODO: test validations
     }

@@ -549,14 +549,14 @@ public class EmailToSmsApi {
     }
     /**
      * Build call for smsEmailSmsStrippedStringPost
-     * @param strippedString String to be stripped. (required)
+     * @param stripString String to be stripped. (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsEmailSmsStrippedStringPostCall(String strippedString, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = strippedString;
+    public com.squareup.okhttp.Call smsEmailSmsStrippedStringPostCall(String stripString, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/sms/email-sms-stripped-strings";
@@ -567,6 +567,8 @@ public class EmailToSmsApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        if (stripString != null)
+        localVarFormParams.put("strip-string", stripString);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -575,7 +577,7 @@ public class EmailToSmsApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/json"
+            "application/x-www-form-urlencoded"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -597,15 +599,15 @@ public class EmailToSmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsEmailSmsStrippedStringPostValidateBeforeCall(String strippedString, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsEmailSmsStrippedStringPostValidateBeforeCall(String stripString, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        // verify the required parameter 'strippedString' is set
-        if (strippedString == null) {
-            throw new ApiException("Missing the required parameter 'strippedString' when calling smsEmailSmsStrippedStringPost(Async)");
+        // verify the required parameter 'stripString' is set
+        if (stripString == null) {
+            throw new ApiException("Missing the required parameter 'stripString' when calling smsEmailSmsStrippedStringPost(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPostCall(strippedString, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPostCall(stripString, progressListener, progressRequestListener);
         return call;
 
     }
@@ -613,24 +615,24 @@ public class EmailToSmsApi {
     /**
      * Create email to sms stripped string rule
      * Create email to sms stripped string rules
-     * @param strippedString String to be stripped. (required)
+     * @param stripString String to be stripped. (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsEmailSmsStrippedStringPost(String strippedString) throws ApiException {
-        ApiResponse<String> resp = smsEmailSmsStrippedStringPostWithHttpInfo(strippedString);
+    public String smsEmailSmsStrippedStringPost(String stripString) throws ApiException {
+        ApiResponse<String> resp = smsEmailSmsStrippedStringPostWithHttpInfo(stripString);
         return resp.getData();
     }
 
     /**
      * Create email to sms stripped string rule
      * Create email to sms stripped string rules
-     * @param strippedString String to be stripped. (required)
+     * @param stripString String to be stripped. (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsEmailSmsStrippedStringPostWithHttpInfo(String strippedString) throws ApiException {
-        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPostValidateBeforeCall(strippedString, null, null);
+    public ApiResponse<String> smsEmailSmsStrippedStringPostWithHttpInfo(String stripString) throws ApiException {
+        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPostValidateBeforeCall(stripString, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -638,12 +640,12 @@ public class EmailToSmsApi {
     /**
      * Create email to sms stripped string rule (asynchronously)
      * Create email to sms stripped string rules
-     * @param strippedString String to be stripped. (required)
+     * @param stripString String to be stripped. (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsEmailSmsStrippedStringPostAsync(String strippedString, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsEmailSmsStrippedStringPostAsync(String stripString, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -664,22 +666,22 @@ public class EmailToSmsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPostValidateBeforeCall(strippedString, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPostValidateBeforeCall(stripString, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
      * Build call for smsEmailSmsStrippedStringPut
+     * @param stripString String to be stripped. (required)
      * @param ruleId Your rule id (required)
-     * @param strippedString String to be stripped. (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsEmailSmsStrippedStringPutCall(Integer ruleId, String strippedString, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = strippedString;
+    public com.squareup.okhttp.Call smsEmailSmsStrippedStringPutCall(String stripString, Integer ruleId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/sms/email-sms-stripped-strings/{rule_id}"
@@ -691,6 +693,8 @@ public class EmailToSmsApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        if (stripString != null)
+        localVarFormParams.put("strip-string", stripString);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -699,7 +703,7 @@ public class EmailToSmsApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/json"
+            "application/x-www-form-urlencoded"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
@@ -721,20 +725,20 @@ public class EmailToSmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsEmailSmsStrippedStringPutValidateBeforeCall(Integer ruleId, String strippedString, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsEmailSmsStrippedStringPutValidateBeforeCall(String stripString, Integer ruleId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'stripString' is set
+        if (stripString == null) {
+            throw new ApiException("Missing the required parameter 'stripString' when calling smsEmailSmsStrippedStringPut(Async)");
+        }
         
         // verify the required parameter 'ruleId' is set
         if (ruleId == null) {
             throw new ApiException("Missing the required parameter 'ruleId' when calling smsEmailSmsStrippedStringPut(Async)");
         }
         
-        // verify the required parameter 'strippedString' is set
-        if (strippedString == null) {
-            throw new ApiException("Missing the required parameter 'strippedString' when calling smsEmailSmsStrippedStringPut(Async)");
-        }
-        
 
-        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPutCall(ruleId, strippedString, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPutCall(stripString, ruleId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -742,26 +746,26 @@ public class EmailToSmsApi {
     /**
      * Update email to sms stripped string rule
      * Update email to sms stripped string rule
+     * @param stripString String to be stripped. (required)
      * @param ruleId Your rule id (required)
-     * @param strippedString String to be stripped. (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsEmailSmsStrippedStringPut(Integer ruleId, String strippedString) throws ApiException {
-        ApiResponse<String> resp = smsEmailSmsStrippedStringPutWithHttpInfo(ruleId, strippedString);
+    public String smsEmailSmsStrippedStringPut(String stripString, Integer ruleId) throws ApiException {
+        ApiResponse<String> resp = smsEmailSmsStrippedStringPutWithHttpInfo(stripString, ruleId);
         return resp.getData();
     }
 
     /**
      * Update email to sms stripped string rule
      * Update email to sms stripped string rule
+     * @param stripString String to be stripped. (required)
      * @param ruleId Your rule id (required)
-     * @param strippedString String to be stripped. (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsEmailSmsStrippedStringPutWithHttpInfo(Integer ruleId, String strippedString) throws ApiException {
-        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPutValidateBeforeCall(ruleId, strippedString, null, null);
+    public ApiResponse<String> smsEmailSmsStrippedStringPutWithHttpInfo(String stripString, Integer ruleId) throws ApiException {
+        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPutValidateBeforeCall(stripString, ruleId, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -769,13 +773,13 @@ public class EmailToSmsApi {
     /**
      * Update email to sms stripped string rule (asynchronously)
      * Update email to sms stripped string rule
+     * @param stripString String to be stripped. (required)
      * @param ruleId Your rule id (required)
-     * @param strippedString String to be stripped. (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsEmailSmsStrippedStringPutAsync(Integer ruleId, String strippedString, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsEmailSmsStrippedStringPutAsync(String stripString, Integer ruleId, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -796,7 +800,7 @@ public class EmailToSmsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPutValidateBeforeCall(ruleId, strippedString, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsEmailSmsStrippedStringPutValidateBeforeCall(stripString, ruleId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -28,7 +28,7 @@ import java.io.IOException;
  * SmsTemplate model
  */
 @ApiModel(description = "SmsTemplate model")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-19T02:40:45.147Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T07:23:33.062Z")
 
 public class SmsTemplate {
   @SerializedName("template_name")

@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 
 <a name="listsRemoveDuplicatesByListIdPut"></a>
 # **listsRemoveDuplicatesByListIdPut**
-> String listsRemoveDuplicatesByListIdPut(listId)
+> String listsRemoveDuplicatesByListIdPut(listId, fields)
 
 Remove duplicate contacts
 
@@ -369,8 +369,9 @@ BasicAuth.setPassword("YOUR PASSWORD");
 
 ContactListApi apiInstance = new ContactListApi();
 Integer listId = 56; // Integer | Your list id
+Fields fields = new Fields(); // Fields | Fields model
 try {
-    String result = apiInstance.listsRemoveDuplicatesByListIdPut(listId);
+    String result = apiInstance.listsRemoveDuplicatesByListIdPut(listId, fields);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactListApi#listsRemoveDuplicatesByListIdPut");
@@ -383,6 +384,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **Integer**| Your list id |
+ **fields** | [**Fields**](Fields.md)| Fields model |
 
 ### Return type
 

@@ -107,8 +107,8 @@ public class EmailToSmsApiTest {
      */
     @Test
     public void smsEmailSmsStrippedStringPostTest() throws ApiException {
-        String strippedString = null;
-        String response = api.smsEmailSmsStrippedStringPost(strippedString);
+        String stripString = null;
+        String response = api.smsEmailSmsStrippedStringPost(stripString);
 
         // TODO: test validations
     }
@@ -123,9 +123,9 @@ public class EmailToSmsApiTest {
      */
     @Test
     public void smsEmailSmsStrippedStringPutTest() throws ApiException {
+        String stripString = null;
         Integer ruleId = null;
-        String strippedString = null;
-        String response = api.smsEmailSmsStrippedStringPut(ruleId, strippedString);
+        String response = api.smsEmailSmsStrippedStringPut(stripString, ruleId);
 
         // TODO: test validations
     }

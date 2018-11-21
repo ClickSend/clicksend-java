@@ -32,7 +32,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 UploadApi apiInstance = new UploadApi();
-String content = "content_example"; // String | Base64-encoded file contents
+String content = "content_example"; // String | Your base64 encoded file.
 String convert = "convert_example"; // String | 
 try {
     String result = apiInstance.uploadsPost(content, convert);
@@ -47,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **content** | **String**| Base64-encoded file contents |
+ **content** | **String**| Your base64 encoded file. |
  **convert** | **String**|  |
 
 ### Return type
@@ -60,6 +60,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 

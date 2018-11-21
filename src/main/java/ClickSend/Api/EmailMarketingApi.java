@@ -188,7 +188,7 @@ public class EmailMarketingApi {
      * @throws ApiException If fail to serialize the request body object
      */
     public com.squareup.okhttp.Call allowedEmailAddressPostCall(String emailAddress, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = emailAddress;
+        Object localVarPostBody = null;
 
         // create path and map variables
         String localVarPath = "/email/addresses";
@@ -199,6 +199,8 @@ public class EmailMarketingApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        if (emailAddress != null)
+        localVarFormParams.put("email_address", emailAddress);
 
         final String[] localVarAccepts = {
             "application/json"
@@ -207,7 +209,7 @@ public class EmailMarketingApi {
         if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
         final String[] localVarContentTypes = {
-            "application/json"
+            "application/x-www-form-urlencoded"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
         localVarHeaderParams.put("Content-Type", localVarContentType);
