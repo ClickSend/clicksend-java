@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * EmailAddress
  */
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-22T06:20:26.951Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-22T09:03:34.582Z")
 public class EmailAddress {
   @SerializedName("email_address")
   private String emailAddress = null;
