@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 <a name="listsByListIdPut"></a>
 # **listsByListIdPut**
-> String listsByListIdPut(listId, listName)
+> String listsByListIdPut(listId, list)
 
 Update specific contact list
 
@@ -147,9 +147,9 @@ BasicAuth.setPassword("YOUR PASSWORD");
 
 ContactListApi apiInstance = new ContactListApi();
 Integer listId = 56; // Integer | Your list id
-String listName = "listName_example"; // String | Your new list name
+List list = new List(); // List | List model
 try {
-    String result = apiInstance.listsByListIdPut(listId, listName);
+    String result = apiInstance.listsByListIdPut(listId, list);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactListApi#listsByListIdPut");
@@ -162,7 +162,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **Integer**| Your list id |
- **listName** | **String**| Your new list name |
+ **list** | [**List**](List.md)| List model |
 
 ### Return type
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 <a name="listsPost"></a>
 # **listsPost**
-> String listsPost(listName)
+> String listsPost(list)
 
 Create new contact list
 
@@ -314,9 +314,9 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 ContactListApi apiInstance = new ContactListApi();
-String listName = "listName_example"; // String | Your contact list name
+List list = new List(); // List | List model
 try {
-    String result = apiInstance.listsPost(listName);
+    String result = apiInstance.listsPost(list);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactListApi#listsPost");
@@ -328,7 +328,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **listName** | **String**| Your contact list name |
+ **list** | [**List**](List.md)| List model |
 
 ### Return type
 

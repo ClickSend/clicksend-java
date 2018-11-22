@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 <a name="smsEmailSmsStrippedStringPut"></a>
 # **smsEmailSmsStrippedStringPut**
-> String smsEmailSmsStrippedStringPut(url, ruleId)
+> String smsEmailSmsStrippedStringPut(strippedString, ruleId)
 
 Update email to sms stripped string rule
 
@@ -310,10 +310,10 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 EmailToSmsApi apiInstance = new EmailToSmsApi();
-Url url = new Url(); // Url | Url model
+StrippedString strippedString = new StrippedString(); // StrippedString | StrippedString model
 Integer ruleId = 56; // Integer | Your rule id
 try {
-    String result = apiInstance.smsEmailSmsStrippedStringPut(url, ruleId);
+    String result = apiInstance.smsEmailSmsStrippedStringPut(strippedString, ruleId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EmailToSmsApi#smsEmailSmsStrippedStringPut");
@@ -325,7 +325,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **url** | [**Url**](Url.md)| Url model |
+ **strippedString** | [**StrippedString**](StrippedString.md)| StrippedString model |
  **ruleId** | **Integer**| Your rule id |
 
 ### Return type

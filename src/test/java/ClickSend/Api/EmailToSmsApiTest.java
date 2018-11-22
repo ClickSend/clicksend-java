@@ -16,7 +16,6 @@ package ClickSend.Api;
 import ClickSend.ApiException;
 import ClickSend.Model.EmailSMSAddress;
 import ClickSend.Model.StrippedString;
-import ClickSend.Model.Url;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -125,9 +124,9 @@ public class EmailToSmsApiTest {
      */
     @Test
     public void smsEmailSmsStrippedStringPutTest() throws ApiException {
-        Url url = null;
+        StrippedString strippedString = null;
         Integer ruleId = null;
-        String response = api.smsEmailSmsStrippedStringPut(url, ruleId);
+        String response = api.smsEmailSmsStrippedStringPut(strippedString, ruleId);
 
         // TODO: test validations
     }

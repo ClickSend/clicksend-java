@@ -25,11 +25,10 @@ import io.clicksend.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Email being sent from
+ * From Email object.
  */
-@ApiModel(description = "Email being sent from")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T09:24:25.563Z")
-
+@ApiModel(description = "From Email object.")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-22T06:20:26.951Z")
 public class EmailFrom {
   @SerializedName("email_address_id")
   private String emailAddressId = null;
@@ -37,9 +36,6 @@ public class EmailFrom {
   @SerializedName("name")
   private String name = null;
 
-  public EmailFrom() {
-    this.classType = this.getClass().getSimpleName();
-  }
   public EmailFrom emailAddressId(String emailAddressId) {
     this.emailAddressId = emailAddressId;
     return this;

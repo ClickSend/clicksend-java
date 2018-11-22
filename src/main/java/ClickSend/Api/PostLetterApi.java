@@ -66,7 +66,7 @@ public class PostLetterApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/post/letters/export";
+        String localVarPath = "/post/letters/history/export";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

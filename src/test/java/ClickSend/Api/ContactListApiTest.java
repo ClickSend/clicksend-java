@@ -76,8 +76,8 @@ public class ContactListApiTest {
     @Test
     public void listsByListIdPutTest() throws ApiException {
         Integer listId = null;
-        String listName = null;
-        String response = api.listsByListIdPut(listId, listName);
+        List list = null;
+        String response = api.listsByListIdPut(listId, list);
 
         // TODO: test validations
     }
@@ -126,8 +126,8 @@ public class ContactListApiTest {
      */
     @Test
     public void listsPostTest() throws ApiException {
-        String listName = null;
-        String response = api.listsPost(listName);
+        List list = null;
+        String response = api.listsPost(list);
 
         // TODO: test validations
     }

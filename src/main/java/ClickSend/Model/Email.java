@@ -34,7 +34,7 @@ import java.util.List;
  * Send Email
  */
 @ApiModel(description = "Send Email")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-21T09:24:25.563Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-22T06:20:26.951Z")
 
 public class Email {
   @SerializedName("to")
@@ -47,7 +47,7 @@ public class Email {
   private List<EmailRecipient> bcc = null;
 
   @SerializedName("from")
-  private List<EmailFrom> from = new ArrayList<EmailFrom>();
+  private EmailFrom from = null;
 
   @SerializedName("subject")
   private String subject = null;
@@ -139,26 +139,21 @@ public class Email {
     this.bcc = bcc;
   }
 
-  public Email from(List<EmailFrom> from) {
+  public Email from(EmailFrom from) {
     this.from = from;
     return this;
   }
 
-  public Email addFromItem(EmailFrom fromItem) {
-    this.from.add(fromItem);
-    return this;
-  }
-
    /**
-   * From Email object.
+   * Get from
    * @return from
   **/
-  @ApiModelProperty(required = true, value = "From Email object.")
-  public List<EmailFrom> getFrom() {
+  @ApiModelProperty(required = true, value = "")
+  public EmailFrom getFrom() {
     return from;
   }
 
-  public void setFrom(List<EmailFrom> from) {
+  public void setFrom(EmailFrom from) {
     this.from = from;
   }
 
