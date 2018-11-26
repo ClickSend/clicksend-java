@@ -15,6 +15,7 @@ package ClickSend.Model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import ClickSend.Model.FieldsFields;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,346 +29,31 @@ import java.io.IOException;
  * Contains all details for the main contact.
  */
 @ApiModel(description = "Contains all details for the main contact.")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-22T09:03:34.582Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-26T02:01:45.635Z")
 
 public class Fields {
-  @SerializedName("phone_number")
-  private String phoneNumber = null;
-
-  @SerializedName("custom_1")
-  private String custom1 = null;
-
-  @SerializedName("email")
-  private String email = null;
-
-  @SerializedName("fax_number")
-  private String faxNumber = null;
-
-  @SerializedName("first_name")
-  private String firstName = null;
-
-  @SerializedName("address_line_1")
-  private String addressLine1 = null;
-
-  @SerializedName("address_line_2")
-  private String addressLine2 = null;
-
-  @SerializedName("address_city")
-  private String addressCity = null;
-
-  @SerializedName("address_state")
-  private String addressState = null;
-
-  @SerializedName("address_postal_code")
-  private String addressPostalCode = null;
-
-  @SerializedName("address_country")
-  private String addressCountry = null;
-
-  @SerializedName("organization_name")
-  private String organizationName = null;
-
-  @SerializedName("custom_2")
-  private String custom2 = null;
-
-  @SerializedName("custom_3")
-  private String custom3 = null;
-
-  @SerializedName("custom_4")
-  private String custom4 = null;
-
-  @SerializedName("last_name")
-  private String lastName = null;
+  @SerializedName("fields")
+  private FieldsFields fields = null;
 
   public Fields() {
     this.classType = this.getClass().getSimpleName();
   }
-  public Fields phoneNumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
+  public Fields fields(FieldsFields fields) {
+    this.fields = fields;
     return this;
   }
 
    /**
-   * Your phone number in E.164 format. Must be provided if no fax number or email.
-   * @return phoneNumber
-  **/
-  @ApiModelProperty(value = "Your phone number in E.164 format. Must be provided if no fax number or email.")
-  public String getPhoneNumber() {
-    return phoneNumber;
-  }
-
-  public void setPhoneNumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
-  }
-
-  public Fields custom1(String custom1) {
-    this.custom1 = custom1;
-    return this;
-  }
-
-   /**
-   * 
-   * @return custom1
+   * Get fields
+   * @return fields
   **/
   @ApiModelProperty(value = "")
-  public String getCustom1() {
-    return custom1;
+  public FieldsFields getFields() {
+    return fields;
   }
 
-  public void setCustom1(String custom1) {
-    this.custom1 = custom1;
-  }
-
-  public Fields email(String email) {
-    this.email = email;
-    return this;
-  }
-
-   /**
-   * Your email. Must be provided if no phone number or fax number.
-   * @return email
-  **/
-  @ApiModelProperty(value = "Your email. Must be provided if no phone number or fax number.")
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public Fields faxNumber(String faxNumber) {
-    this.faxNumber = faxNumber;
-    return this;
-  }
-
-   /**
-   * Your fax number. Must be provided if no phone number or email.
-   * @return faxNumber
-  **/
-  @ApiModelProperty(value = "Your fax number. Must be provided if no phone number or email.")
-  public String getFaxNumber() {
-    return faxNumber;
-  }
-
-  public void setFaxNumber(String faxNumber) {
-    this.faxNumber = faxNumber;
-  }
-
-  public Fields firstName(String firstName) {
-    this.firstName = firstName;
-    return this;
-  }
-
-   /**
-   * Your first name.
-   * @return firstName
-  **/
-  @ApiModelProperty(value = "Your first name.")
-  public String getFirstName() {
-    return firstName;
-  }
-
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
-
-  public Fields addressLine1(String addressLine1) {
-    this.addressLine1 = addressLine1;
-    return this;
-  }
-
-   /**
-   * Your street address
-   * @return addressLine1
-  **/
-  @ApiModelProperty(value = "Your street address")
-  public String getAddressLine1() {
-    return addressLine1;
-  }
-
-  public void setAddressLine1(String addressLine1) {
-    this.addressLine1 = addressLine1;
-  }
-
-  public Fields addressLine2(String addressLine2) {
-    this.addressLine2 = addressLine2;
-    return this;
-  }
-
-   /**
-   * 
-   * @return addressLine2
-  **/
-  @ApiModelProperty(value = "")
-  public String getAddressLine2() {
-    return addressLine2;
-  }
-
-  public void setAddressLine2(String addressLine2) {
-    this.addressLine2 = addressLine2;
-  }
-
-  public Fields addressCity(String addressCity) {
-    this.addressCity = addressCity;
-    return this;
-  }
-
-   /**
-   * Your nearest city
-   * @return addressCity
-  **/
-  @ApiModelProperty(value = "Your nearest city")
-  public String getAddressCity() {
-    return addressCity;
-  }
-
-  public void setAddressCity(String addressCity) {
-    this.addressCity = addressCity;
-  }
-
-  public Fields addressState(String addressState) {
-    this.addressState = addressState;
-    return this;
-  }
-
-   /**
-   * Your current state
-   * @return addressState
-  **/
-  @ApiModelProperty(value = "Your current state")
-  public String getAddressState() {
-    return addressState;
-  }
-
-  public void setAddressState(String addressState) {
-    this.addressState = addressState;
-  }
-
-  public Fields addressPostalCode(String addressPostalCode) {
-    this.addressPostalCode = addressPostalCode;
-    return this;
-  }
-
-   /**
-   * Your current postcode
-   * @return addressPostalCode
-  **/
-  @ApiModelProperty(value = "Your current postcode")
-  public String getAddressPostalCode() {
-    return addressPostalCode;
-  }
-
-  public void setAddressPostalCode(String addressPostalCode) {
-    this.addressPostalCode = addressPostalCode;
-  }
-
-  public Fields addressCountry(String addressCountry) {
-    this.addressCountry = addressCountry;
-    return this;
-  }
-
-   /**
-   * Your current country
-   * @return addressCountry
-  **/
-  @ApiModelProperty(value = "Your current country")
-  public String getAddressCountry() {
-    return addressCountry;
-  }
-
-  public void setAddressCountry(String addressCountry) {
-    this.addressCountry = addressCountry;
-  }
-
-  public Fields organizationName(String organizationName) {
-    this.organizationName = organizationName;
-    return this;
-  }
-
-   /**
-   * Your organisation name
-   * @return organizationName
-  **/
-  @ApiModelProperty(value = "Your organisation name")
-  public String getOrganizationName() {
-    return organizationName;
-  }
-
-  public void setOrganizationName(String organizationName) {
-    this.organizationName = organizationName;
-  }
-
-  public Fields custom2(String custom2) {
-    this.custom2 = custom2;
-    return this;
-  }
-
-   /**
-   * 
-   * @return custom2
-  **/
-  @ApiModelProperty(value = "")
-  public String getCustom2() {
-    return custom2;
-  }
-
-  public void setCustom2(String custom2) {
-    this.custom2 = custom2;
-  }
-
-  public Fields custom3(String custom3) {
-    this.custom3 = custom3;
-    return this;
-  }
-
-   /**
-   * 
-   * @return custom3
-  **/
-  @ApiModelProperty(value = "")
-  public String getCustom3() {
-    return custom3;
-  }
-
-  public void setCustom3(String custom3) {
-    this.custom3 = custom3;
-  }
-
-  public Fields custom4(String custom4) {
-    this.custom4 = custom4;
-    return this;
-  }
-
-   /**
-   * 
-   * @return custom4
-  **/
-  @ApiModelProperty(value = "")
-  public String getCustom4() {
-    return custom4;
-  }
-
-  public void setCustom4(String custom4) {
-    this.custom4 = custom4;
-  }
-
-  public Fields lastName(String lastName) {
-    this.lastName = lastName;
-    return this;
-  }
-
-   /**
-   * Your last name
-   * @return lastName
-  **/
-  @ApiModelProperty(value = "Your last name")
-  public String getLastName() {
-    return lastName;
-  }
-
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
+  public void setFields(FieldsFields fields) {
+    this.fields = fields;
   }
 
 
@@ -380,27 +66,12 @@ public class Fields {
       return false;
     }
     Fields fields = (Fields) o;
-    return Objects.equals(this.phoneNumber, fields.phoneNumber) &&
-        Objects.equals(this.custom1, fields.custom1) &&
-        Objects.equals(this.email, fields.email) &&
-        Objects.equals(this.faxNumber, fields.faxNumber) &&
-        Objects.equals(this.firstName, fields.firstName) &&
-        Objects.equals(this.addressLine1, fields.addressLine1) &&
-        Objects.equals(this.addressLine2, fields.addressLine2) &&
-        Objects.equals(this.addressCity, fields.addressCity) &&
-        Objects.equals(this.addressState, fields.addressState) &&
-        Objects.equals(this.addressPostalCode, fields.addressPostalCode) &&
-        Objects.equals(this.addressCountry, fields.addressCountry) &&
-        Objects.equals(this.organizationName, fields.organizationName) &&
-        Objects.equals(this.custom2, fields.custom2) &&
-        Objects.equals(this.custom3, fields.custom3) &&
-        Objects.equals(this.custom4, fields.custom4) &&
-        Objects.equals(this.lastName, fields.lastName);
+    return Objects.equals(this.fields, fields.fields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(phoneNumber, custom1, email, faxNumber, firstName, addressLine1, addressLine2, addressCity, addressState, addressPostalCode, addressCountry, organizationName, custom2, custom3, custom4, lastName);
+    return Objects.hash(fields);
   }
 
 
@@ -409,22 +80,7 @@ public class Fields {
     StringBuilder sb = new StringBuilder();
     sb.append("class Fields {\n");
     
-    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
-    sb.append("    custom1: ").append(toIndentedString(custom1)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
-    sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
-    sb.append("    addressLine1: ").append(toIndentedString(addressLine1)).append("\n");
-    sb.append("    addressLine2: ").append(toIndentedString(addressLine2)).append("\n");
-    sb.append("    addressCity: ").append(toIndentedString(addressCity)).append("\n");
-    sb.append("    addressState: ").append(toIndentedString(addressState)).append("\n");
-    sb.append("    addressPostalCode: ").append(toIndentedString(addressPostalCode)).append("\n");
-    sb.append("    addressCountry: ").append(toIndentedString(addressCountry)).append("\n");
-    sb.append("    organizationName: ").append(toIndentedString(organizationName)).append("\n");
-    sb.append("    custom2: ").append(toIndentedString(custom2)).append("\n");
-    sb.append("    custom3: ").append(toIndentedString(custom3)).append("\n");
-    sb.append("    custom4: ").append(toIndentedString(custom4)).append("\n");
-    sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    fields: ").append(toIndentedString(fields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

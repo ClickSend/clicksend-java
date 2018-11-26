@@ -25,12 +25,11 @@ import io.clicksend.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Contains all details for the main contact.
+ * From Email object.
  */
-@ApiModel(description = "Contains all details for the main contact.")
+@ApiModel(description = "From Email object.")
 @javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-26T02:01:45.635Z")
-
-public class Contact {
+public class FieldsFields {
   @SerializedName("phone_number")
   private String phoneNumber = null;
 
@@ -79,10 +78,7 @@ public class Contact {
   @SerializedName("last_name")
   private String lastName = null;
 
-  public Contact() {
-    this.classType = this.getClass().getSimpleName();
-  }
-  public Contact phoneNumber(String phoneNumber) {
+  public FieldsFields phoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
     return this;
   }
@@ -91,7 +87,7 @@ public class Contact {
    * Your phone number in E.164 format. Must be provided if no fax number or email.
    * @return phoneNumber
   **/
-  @ApiModelProperty(required = true, value = "Your phone number in E.164 format. Must be provided if no fax number or email.")
+  @ApiModelProperty(value = "Your phone number in E.164 format. Must be provided if no fax number or email.")
   public String getPhoneNumber() {
     return phoneNumber;
   }
@@ -100,7 +96,7 @@ public class Contact {
     this.phoneNumber = phoneNumber;
   }
 
-  public Contact custom1(String custom1) {
+  public FieldsFields custom1(String custom1) {
     this.custom1 = custom1;
     return this;
   }
@@ -109,7 +105,7 @@ public class Contact {
    * 
    * @return custom1
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getCustom1() {
     return custom1;
   }
@@ -118,7 +114,7 @@ public class Contact {
     this.custom1 = custom1;
   }
 
-  public Contact email(String email) {
+  public FieldsFields email(String email) {
     this.email = email;
     return this;
   }
@@ -136,7 +132,7 @@ public class Contact {
     this.email = email;
   }
 
-  public Contact faxNumber(String faxNumber) {
+  public FieldsFields faxNumber(String faxNumber) {
     this.faxNumber = faxNumber;
     return this;
   }
@@ -154,7 +150,7 @@ public class Contact {
     this.faxNumber = faxNumber;
   }
 
-  public Contact firstName(String firstName) {
+  public FieldsFields firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
@@ -172,7 +168,7 @@ public class Contact {
     this.firstName = firstName;
   }
 
-  public Contact addressLine1(String addressLine1) {
+  public FieldsFields addressLine1(String addressLine1) {
     this.addressLine1 = addressLine1;
     return this;
   }
@@ -190,7 +186,7 @@ public class Contact {
     this.addressLine1 = addressLine1;
   }
 
-  public Contact addressLine2(String addressLine2) {
+  public FieldsFields addressLine2(String addressLine2) {
     this.addressLine2 = addressLine2;
     return this;
   }
@@ -208,7 +204,7 @@ public class Contact {
     this.addressLine2 = addressLine2;
   }
 
-  public Contact addressCity(String addressCity) {
+  public FieldsFields addressCity(String addressCity) {
     this.addressCity = addressCity;
     return this;
   }
@@ -226,7 +222,7 @@ public class Contact {
     this.addressCity = addressCity;
   }
 
-  public Contact addressState(String addressState) {
+  public FieldsFields addressState(String addressState) {
     this.addressState = addressState;
     return this;
   }
@@ -244,7 +240,7 @@ public class Contact {
     this.addressState = addressState;
   }
 
-  public Contact addressPostalCode(String addressPostalCode) {
+  public FieldsFields addressPostalCode(String addressPostalCode) {
     this.addressPostalCode = addressPostalCode;
     return this;
   }
@@ -262,7 +258,7 @@ public class Contact {
     this.addressPostalCode = addressPostalCode;
   }
 
-  public Contact addressCountry(String addressCountry) {
+  public FieldsFields addressCountry(String addressCountry) {
     this.addressCountry = addressCountry;
     return this;
   }
@@ -280,7 +276,7 @@ public class Contact {
     this.addressCountry = addressCountry;
   }
 
-  public Contact organizationName(String organizationName) {
+  public FieldsFields organizationName(String organizationName) {
     this.organizationName = organizationName;
     return this;
   }
@@ -298,7 +294,7 @@ public class Contact {
     this.organizationName = organizationName;
   }
 
-  public Contact custom2(String custom2) {
+  public FieldsFields custom2(String custom2) {
     this.custom2 = custom2;
     return this;
   }
@@ -316,7 +312,7 @@ public class Contact {
     this.custom2 = custom2;
   }
 
-  public Contact custom3(String custom3) {
+  public FieldsFields custom3(String custom3) {
     this.custom3 = custom3;
     return this;
   }
@@ -334,7 +330,7 @@ public class Contact {
     this.custom3 = custom3;
   }
 
-  public Contact custom4(String custom4) {
+  public FieldsFields custom4(String custom4) {
     this.custom4 = custom4;
     return this;
   }
@@ -352,7 +348,7 @@ public class Contact {
     this.custom4 = custom4;
   }
 
-  public Contact lastName(String lastName) {
+  public FieldsFields lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
@@ -379,23 +375,23 @@ public class Contact {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Contact contact = (Contact) o;
-    return Objects.equals(this.phoneNumber, contact.phoneNumber) &&
-        Objects.equals(this.custom1, contact.custom1) &&
-        Objects.equals(this.email, contact.email) &&
-        Objects.equals(this.faxNumber, contact.faxNumber) &&
-        Objects.equals(this.firstName, contact.firstName) &&
-        Objects.equals(this.addressLine1, contact.addressLine1) &&
-        Objects.equals(this.addressLine2, contact.addressLine2) &&
-        Objects.equals(this.addressCity, contact.addressCity) &&
-        Objects.equals(this.addressState, contact.addressState) &&
-        Objects.equals(this.addressPostalCode, contact.addressPostalCode) &&
-        Objects.equals(this.addressCountry, contact.addressCountry) &&
-        Objects.equals(this.organizationName, contact.organizationName) &&
-        Objects.equals(this.custom2, contact.custom2) &&
-        Objects.equals(this.custom3, contact.custom3) &&
-        Objects.equals(this.custom4, contact.custom4) &&
-        Objects.equals(this.lastName, contact.lastName);
+    FieldsFields fieldsFields = (FieldsFields) o;
+    return Objects.equals(this.phoneNumber, fieldsFields.phoneNumber) &&
+        Objects.equals(this.custom1, fieldsFields.custom1) &&
+        Objects.equals(this.email, fieldsFields.email) &&
+        Objects.equals(this.faxNumber, fieldsFields.faxNumber) &&
+        Objects.equals(this.firstName, fieldsFields.firstName) &&
+        Objects.equals(this.addressLine1, fieldsFields.addressLine1) &&
+        Objects.equals(this.addressLine2, fieldsFields.addressLine2) &&
+        Objects.equals(this.addressCity, fieldsFields.addressCity) &&
+        Objects.equals(this.addressState, fieldsFields.addressState) &&
+        Objects.equals(this.addressPostalCode, fieldsFields.addressPostalCode) &&
+        Objects.equals(this.addressCountry, fieldsFields.addressCountry) &&
+        Objects.equals(this.organizationName, fieldsFields.organizationName) &&
+        Objects.equals(this.custom2, fieldsFields.custom2) &&
+        Objects.equals(this.custom3, fieldsFields.custom3) &&
+        Objects.equals(this.custom4, fieldsFields.custom4) &&
+        Objects.equals(this.lastName, fieldsFields.lastName);
   }
 
   @Override
@@ -407,7 +403,7 @@ public class Contact {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Contact {\n");
+    sb.append("class FieldsFields {\n");
     
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    custom1: ").append(toIndentedString(custom1)).append("\n");
