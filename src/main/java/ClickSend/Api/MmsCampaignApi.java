@@ -66,7 +66,7 @@ public class MmsCampaignApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/mms-campaign/{mms_campaign_id}"
+        String localVarPath = "/mms-campaigns/{mms_campaign_id}"
             .replaceAll("\\{" + "mms_campaign_id" + "\\}", apiClient.escapeString(mmsCampaignId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();

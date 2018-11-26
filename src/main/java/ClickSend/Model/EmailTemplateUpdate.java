@@ -28,7 +28,7 @@ import java.io.IOException;
  * Model for Email Templates
  */
 @ApiModel(description = "Model for Email Templates")
-@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-26T02:01:45.635Z")
+@javax.annotation.Generated(value = "io.clicksend.codegen.languages.JavaClientCodegen", date = "2018-11-26T06:00:29.628Z")
 
 public class EmailTemplateUpdate {
   @SerializedName("template_name")
