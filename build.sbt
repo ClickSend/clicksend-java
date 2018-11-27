@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "io.clicksend",
-    name := "clicksend-java-client",
+    organization := "io.swagger",
+    name := "swagger-java-client",
     version := "1.0.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
@@ -9,7 +9,7 @@ lazy val root = (project in file(".")).
     publishArtifact in (Compile, packageDoc) := false,
     resolvers += Resolver.mavenLocal,
     libraryDependencies ++= Seq(
-      "io.clicksend" % "clicksend-annotations" % "1.5.17",
+      "io.swagger" % "swagger-annotations" % "1.5.17",
       "com.squareup.okhttp" % "okhttp" % "2.7.5",
       "com.squareup.okhttp" % "logging-interceptor" % "2.7.5",
       "com.google.code.gson" % "gson" % "2.8.1",

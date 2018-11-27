@@ -1,7 +1,7 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-group = 'io.clicksend'
+group = 'io.swagger'
 version = '1.0.0'
 
 buildscript {
@@ -83,7 +83,7 @@ if(hasProperty('target') && target == 'android') {
 
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'clicksend-java-client'
+            pom.artifactId = 'swagger-java-client'
         }
     }
 
@@ -94,7 +94,7 @@ if(hasProperty('target') && target == 'android') {
 }
 
 dependencies {
-    compile 'io.clicksend:clicksend-annotations:1.5.17'
+    compile 'io.swagger:swagger-annotations:1.5.17'
     compile 'com.squareup.okhttp:okhttp:2.7.5'
     compile 'com.squareup.okhttp:logging-interceptor:2.7.5'
     compile 'com.google.code.gson:gson:2.8.1'
