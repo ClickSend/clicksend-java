@@ -28,7 +28,7 @@ import java.io.IOException;
  * Base model for Fax Messages
  */
 @ApiModel(description = "Base model for Fax Messages")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T06:45:24.430Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T07:21:22.587Z")
 
 public class FaxMessage {
   @SerializedName("source")
@@ -56,7 +56,7 @@ public class FaxMessage {
   private String fromEmail = null;
 
   public FaxMessage() {
-    this.classType = this.getClass().getSimpleName();
+    //this.classType = this.getClass().getSimpleName();
   }
   public FaxMessage source(String source) {
     this.source = source;

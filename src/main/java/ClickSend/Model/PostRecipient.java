@@ -28,7 +28,7 @@ import java.io.IOException;
  * PostRecipient model
  */
 @ApiModel(description = "PostRecipient model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T06:45:24.430Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T07:21:22.587Z")
 
 public class PostRecipient {
   @SerializedName("address_name")
@@ -59,7 +59,7 @@ public class PostRecipient {
   private Integer schedule = 0;
 
   public PostRecipient() {
-    this.classType = this.getClass().getSimpleName();
+    //this.classType = this.getClass().getSimpleName();
   }
   public PostRecipient addressName(String addressName) {
     this.addressName = addressName;

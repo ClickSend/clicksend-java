@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * Model for Email Templates
  */
 @ApiModel(description = "Model for Email Templates")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T06:45:24.430Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T07:21:22.587Z")
 
 public class EmailTemplateNew {
   @SerializedName("template_name")
@@ -39,7 +39,7 @@ public class EmailTemplateNew {
   private BigDecimal templateIdMaster = null;
 
   public EmailTemplateNew() {
-    this.classType = this.getClass().getSimpleName();
+    //this.classType = this.getClass().getSimpleName();
   }
   public EmailTemplateNew templateName(String templateName) {
     this.templateName = templateName;

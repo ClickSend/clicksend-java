@@ -28,14 +28,14 @@ import java.io.IOException;
  * String to be stripped.
  */
 @ApiModel(description = "String to be stripped.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T06:45:24.430Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T07:21:22.587Z")
 
 public class StrippedString {
   @SerializedName("strip_string")
   private String stripString = null;
 
   public StrippedString() {
-    this.classType = this.getClass().getSimpleName();
+    //this.classType = this.getClass().getSimpleName();
   }
   public StrippedString stripString(String stripString) {
     this.stripString = stripString;

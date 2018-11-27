@@ -28,7 +28,7 @@ import java.io.IOException;
  * Model for Email Templates
  */
 @ApiModel(description = "Model for Email Templates")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T06:45:24.430Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T07:21:22.587Z")
 
 public class EmailTemplateUpdate {
   @SerializedName("template_name")
@@ -38,7 +38,7 @@ public class EmailTemplateUpdate {
   private String body = null;
 
   public EmailTemplateUpdate() {
-    this.classType = this.getClass().getSimpleName();
+    //this.classType = this.getClass().getSimpleName();
   }
   public EmailTemplateUpdate templateName(String templateName) {
     this.templateName = templateName;

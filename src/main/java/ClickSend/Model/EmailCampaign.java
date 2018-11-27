@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * Campaign Model for Email
  */
 @ApiModel(description = "Campaign Model for Email")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T06:45:24.430Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T07:21:22.587Z")
 
 public class EmailCampaign {
   @SerializedName("name")
@@ -57,7 +57,7 @@ public class EmailCampaign {
   private Integer schedule = 0;
 
   public EmailCampaign() {
-    this.classType = this.getClass().getSimpleName();
+    //this.classType = this.getClass().getSimpleName();
   }
   public EmailCampaign name(String name) {
     this.name = name;

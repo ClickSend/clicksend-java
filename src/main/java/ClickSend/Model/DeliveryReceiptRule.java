@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * Model for a Delivery Receipt
  */
 @ApiModel(description = "Model for a Delivery Receipt")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T06:45:24.430Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T07:21:22.587Z")
 
 public class DeliveryReceiptRule {
   @SerializedName("rule_name")
@@ -48,7 +48,7 @@ public class DeliveryReceiptRule {
   private BigDecimal enabled = null;
 
   public DeliveryReceiptRule() {
-    this.classType = this.getClass().getSimpleName();
+    //this.classType = this.getClass().getSimpleName();
   }
   public DeliveryReceiptRule ruleName(String ruleName) {
     this.ruleName = ruleName;

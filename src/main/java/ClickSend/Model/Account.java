@@ -28,7 +28,7 @@ import java.io.IOException;
  * Complete account details needed for the user.
  */
 @ApiModel(description = "Complete account details needed for the user.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T06:45:24.430Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T07:21:22.587Z")
 
 public class Account {
   @SerializedName("username")
@@ -56,7 +56,7 @@ public class Account {
   private String country = null;
 
   public Account() {
-    this.classType = this.getClass().getSimpleName();
+    //this.classType = this.getClass().getSimpleName();
   }
   public Account username(String username) {
     this.username = username;
