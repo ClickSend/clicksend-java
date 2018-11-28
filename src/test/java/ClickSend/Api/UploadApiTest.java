@@ -42,9 +42,9 @@ public class UploadApiTest {
      */
     @Test
     public void uploadsPostTest() throws ApiException {
-        String convert = null;
         UploadFile uploadFile = null;
-        String response = api.uploadsPost(convert, uploadFile);
+        String convert = null;
+        String response = api.uploadsPost(uploadFile, convert);
 
         // TODO: test validations
     }

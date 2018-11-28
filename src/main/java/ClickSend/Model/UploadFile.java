@@ -25,23 +25,28 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * UploadFile
+ * Your file to be uploaded.
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-27T07:21:22.587Z")
+@ApiModel(description = "Your file to be uploaded.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-28T01:52:44.515Z")
+
 public class UploadFile {
   @SerializedName("content")
   private String content = null;
 
+  public UploadFile() {
+    //this.classType = this.getClass().getSimpleName();
+  }
   public UploadFile content(String content) {
     this.content = content;
     return this;
   }
 
    /**
-   * Your base64 encoded file.
+   * Your base64 encoded file string.
    * @return content
   **/
-  @ApiModelProperty(required = true, value = "Your base64 encoded file.")
+  @ApiModelProperty(required = true, value = "Your base64 encoded file string.")
   public String getContent() {
     return content;
   }
