@@ -31,7 +31,7 @@ import java.util.List;
  * PostLetter model
  */
 @ApiModel(description = "PostLetter model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-28T01:52:44.515Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-29T01:51:37.212Z")
 
 public class PostLetter {
   @SerializedName("file_url")
@@ -48,6 +48,9 @@ public class PostLetter {
 
   @SerializedName("colour")
   private Integer colour = 0;
+
+  @SerializedName("priority_post")
+  private Integer priorityPost = 0;
 
   @SerializedName("source")
   private String source = "sdk";
@@ -150,6 +153,24 @@ public class PostLetter {
     this.colour = colour;
   }
 
+  public PostLetter priorityPost(Integer priorityPost) {
+    this.priorityPost = priorityPost;
+    return this;
+  }
+
+   /**
+   * Whether letter is priority
+   * @return priorityPost
+  **/
+  @ApiModelProperty(example = "0", value = "Whether letter is priority")
+  public Integer getPriorityPost() {
+    return priorityPost;
+  }
+
+  public void setPriorityPost(Integer priorityPost) {
+    this.priorityPost = priorityPost;
+  }
+
   public PostLetter source(String source) {
     this.source = source;
     return this;
@@ -183,12 +204,13 @@ public class PostLetter {
         Objects.equals(this.templateUsed, postLetter.templateUsed) &&
         Objects.equals(this.duplex, postLetter.duplex) &&
         Objects.equals(this.colour, postLetter.colour) &&
+        Objects.equals(this.priorityPost, postLetter.priorityPost) &&
         Objects.equals(this.source, postLetter.source);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fileUrl, recipients, templateUsed, duplex, colour, source);
+    return Objects.hash(fileUrl, recipients, templateUsed, duplex, colour, priorityPost, source);
   }
 
 
@@ -202,6 +224,7 @@ public class PostLetter {
     sb.append("    templateUsed: ").append(toIndentedString(templateUsed)).append("\n");
     sb.append("    duplex: ").append(toIndentedString(duplex)).append("\n");
     sb.append("    colour: ").append(toIndentedString(colour)).append("\n");
+    sb.append("    priorityPost: ").append(toIndentedString(priorityPost)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("}");
     return sb.toString();

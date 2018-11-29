@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * AccountForgotPasswordVerify
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-28T01:52:44.515Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-29T01:51:37.212Z")
 
 public class AccountForgotPasswordVerify {
   @SerializedName("subaccount_id")

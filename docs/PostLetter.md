@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **templateUsed** | **Integer** | Whether using our template |  [optional]
 **duplex** | **Integer** | Whether letter is duplex |  [optional]
 **colour** | **Integer** | Whether letter is in colour |  [optional]
+**priorityPost** | **Integer** | Whether letter is priority |  [optional]
 **source** | **String** | Source being sent from |  [optional]
 
 

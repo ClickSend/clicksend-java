@@ -31,7 +31,7 @@ import java.util.List;
  * Array of SmsMessage items
  */
 @ApiModel(description = "Array of SmsMessage items")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-28T01:52:44.515Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-29T01:51:37.212Z")
 
 public class SmsMessageCollection {
   @SerializedName("messages")
