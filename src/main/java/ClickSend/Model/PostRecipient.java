@@ -28,7 +28,7 @@ import java.io.IOException;
  * PostRecipient model
  */
 @ApiModel(description = "PostRecipient model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-29T01:51:37.212Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-29T02:35:20.946Z")
 
 public class PostRecipient {
   @SerializedName("address_name")
@@ -106,7 +106,7 @@ public class PostRecipient {
    * Second line of address
    * @return addressLine2
   **/
-  @ApiModelProperty(required = true, value = "Second line of address")
+  @ApiModelProperty(value = "Second line of address")
   public String getAddressLine2() {
     return addressLine2;
   }

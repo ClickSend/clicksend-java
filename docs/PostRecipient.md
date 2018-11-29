@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **addressName** | **String** | Name of address | 
 **addressLine1** | **String** | First line of address | 
-**addressLine2** | **String** | Second line of address | 
+**addressLine2** | **String** | Second line of address |  [optional]
 **addressCity** | **String** | City | 
 **addressState** | **String** | State | 
 **addressPostalCode** | **String** | Postal code | 

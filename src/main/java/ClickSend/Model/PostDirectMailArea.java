@@ -28,7 +28,7 @@ import java.io.IOException;
  * PostDirectMailArea model
  */
 @ApiModel(description = "PostDirectMailArea model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-29T01:51:37.212Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-29T02:35:20.946Z")
 
 public class PostDirectMailArea {
   @SerializedName("location_id")
