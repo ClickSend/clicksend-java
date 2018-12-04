@@ -110,9 +110,10 @@ public class SmsApiTest {
      */
     @Test
     public void smsInboundGetTest() throws ApiException {
+        String q = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.smsInboundGet(page, limit);
+        String response = api.smsInboundGet(q, page, limit);
 
         // TODO: test validations
     }
@@ -191,9 +192,10 @@ public class SmsApiTest {
      */
     @Test
     public void smsReceiptsGetTest() throws ApiException {
+        String q = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.smsReceiptsGet(page, limit);
+        String response = api.smsReceiptsGet(q, page, limit);
 
         // TODO: test validations
     }

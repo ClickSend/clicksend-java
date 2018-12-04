@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 <a name="smsDeliveryReceiptAutomationsGet"></a>
 # **smsDeliveryReceiptAutomationsGet**
-> String smsDeliveryReceiptAutomationsGet(page, limit)
+> String smsDeliveryReceiptAutomationsGet(q, page, limit)
 
 Get all sms delivery receipt automations
 
@@ -254,10 +254,11 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsDeliveryReceiptRulesApi apiInstance = new SmsDeliveryReceiptRulesApi();
+String q = "q_example"; // String | Your keyword or query.
 Integer page = 1; // Integer | Page number
 Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.smsDeliveryReceiptAutomationsGet(page, limit);
+    String result = apiInstance.smsDeliveryReceiptAutomationsGet(q, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SmsDeliveryReceiptRulesApi#smsDeliveryReceiptAutomationsGet");
@@ -269,6 +270,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **String**| Your keyword or query. |
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 

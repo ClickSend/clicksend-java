@@ -107,9 +107,10 @@ public class VoiceDeliveryReceiptRulesApiTest {
      */
     @Test
     public void voiceDeliveryReceiptAutomationsGetTest() throws ApiException {
+        String q = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.voiceDeliveryReceiptAutomationsGet(page, limit);
+        String response = api.voiceDeliveryReceiptAutomationsGet(q, page, limit);
 
         // TODO: test validations
     }

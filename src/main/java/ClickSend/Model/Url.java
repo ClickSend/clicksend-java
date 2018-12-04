@@ -28,7 +28,7 @@ import java.io.IOException;
  * Your url.
  */
 @ApiModel(description = "Your url.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-11-29T02:35:20.946Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-04T02:01:12.247Z")
 
 public class Url {
   @SerializedName("url")

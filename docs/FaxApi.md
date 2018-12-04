@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 <a name="faxReceiptsGet"></a>
 # **faxReceiptsGet**
-> String faxReceiptsGet()
+> String faxReceiptsGet(q, page, limit)
 
 Get List of Fax Receipts
 
@@ -208,8 +208,11 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 FaxApi apiInstance = new FaxApi();
+String q = "q_example"; // String | Your keyword or query.
+Integer page = 1; // Integer | Page number
+Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.faxReceiptsGet();
+    String result = apiInstance.faxReceiptsGet(q, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling FaxApi#faxReceiptsGet");
@@ -218,7 +221,12 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **q** | **String**| Your keyword or query. |
+ **page** | **Integer**| Page number | [optional] [default to 1]
+ **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 

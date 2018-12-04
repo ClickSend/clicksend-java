@@ -107,9 +107,10 @@ public class SmsDeliveryReceiptRulesApiTest {
      */
     @Test
     public void smsDeliveryReceiptAutomationsGetTest() throws ApiException {
+        String q = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.smsDeliveryReceiptAutomationsGet(page, limit);
+        String response = api.smsDeliveryReceiptAutomationsGet(q, page, limit);
 
         // TODO: test validations
     }

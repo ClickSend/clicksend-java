@@ -95,7 +95,10 @@ public class FaxApiTest {
      */
     @Test
     public void faxReceiptsGetTest() throws ApiException {
-        String response = api.faxReceiptsGet();
+        String q = null;
+        Integer page = null;
+        Integer limit = null;
+        String response = api.faxReceiptsGet(q, page, limit);
 
         // TODO: test validations
     }

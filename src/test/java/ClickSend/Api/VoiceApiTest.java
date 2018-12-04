@@ -139,9 +139,10 @@ public class VoiceApiTest {
      */
     @Test
     public void voiceReceiptsGetTest() throws ApiException {
+        String q = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.voiceReceiptsGet(page, limit);
+        String response = api.voiceReceiptsGet(q, page, limit);
 
         // TODO: test validations
     }

@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 <a name="smsInboundGet"></a>
 # **smsInboundGet**
-> String smsInboundGet(page, limit)
+> String smsInboundGet(q, page, limit)
 
 Get all inbound sms
 
@@ -266,10 +266,11 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
+String q = "q_example"; // String | Your keyword or query.
 Integer page = 1; // Integer | Page number
 Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.smsInboundGet(page, limit);
+    String result = apiInstance.smsInboundGet(q, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SmsApi#smsInboundGet");
@@ -281,6 +282,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **String**| Your keyword or query. |
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 
@@ -515,7 +517,7 @@ Name | Type | Description  | Notes
 
 <a name="smsReceiptsGet"></a>
 # **smsReceiptsGet**
-> String smsReceiptsGet(page, limit)
+> String smsReceiptsGet(q, page, limit)
 
 Get all delivery receipts
 
@@ -538,10 +540,11 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
+String q = "q_example"; // String | Your keyword or query.
 Integer page = 1; // Integer | Page number
 Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.smsReceiptsGet(page, limit);
+    String result = apiInstance.smsReceiptsGet(q, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SmsApi#smsReceiptsGet");
@@ -553,6 +556,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **String**| Your keyword or query. |
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 

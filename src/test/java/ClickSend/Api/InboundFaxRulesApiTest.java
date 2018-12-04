@@ -107,9 +107,10 @@ public class InboundFaxRulesApiTest {
      */
     @Test
     public void faxInboundAutomationsGetTest() throws ApiException {
+        String q = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.faxInboundAutomationsGet(page, limit);
+        String response = api.faxInboundAutomationsGet(q, page, limit);
 
         // TODO: test validations
     }

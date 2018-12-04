@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 <a name="listsContactsByListIdPost"></a>
 # **listsContactsByListIdPost**
-> String listsContactsByListIdPost(contact, listId, page, limit)
+> String listsContactsByListIdPost(contact, listId)
 
 Create new contact
 
@@ -268,10 +268,8 @@ BasicAuth.setPassword("YOUR PASSWORD");
 ContactApi apiInstance = new ContactApi();
 Contact contact = new Contact(); // Contact | Contact model
 Integer listId = 56; // Integer | List id
-Integer page = 1; // Integer | Page number
-Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.listsContactsByListIdPost(contact, listId, page, limit);
+    String result = apiInstance.listsContactsByListIdPost(contact, listId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactApi#listsContactsByListIdPost");
@@ -285,8 +283,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model |
  **listId** | **Integer**| List id |
- **page** | **Integer**| Page number | [optional] [default to 1]
- **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 
 ### Return type
 

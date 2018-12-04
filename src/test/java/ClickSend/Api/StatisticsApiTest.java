@@ -32,21 +32,6 @@ public class StatisticsApiTest {
 
     
     /**
-     * Get mms statistics
-     *
-     * Get mms statistics
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void statisticsMmsGetTest() throws ApiException {
-        String response = api.statisticsMmsGet();
-
-        // TODO: test validations
-    }
-    
-    /**
      * Get sms statistics
      *
      * Get sms statistics

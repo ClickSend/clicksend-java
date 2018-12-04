@@ -107,9 +107,10 @@ public class EmailDeliveryReceiptRulesApiTest {
      */
     @Test
     public void emailDeliveryReceiptAutomationsGetTest() throws ApiException {
+        String q = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.emailDeliveryReceiptAutomationsGet(page, limit);
+        String response = api.emailDeliveryReceiptAutomationsGet(q, page, limit);
 
         // TODO: test validations
     }

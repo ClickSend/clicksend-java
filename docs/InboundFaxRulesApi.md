@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 <a name="faxInboundAutomationsGet"></a>
 # **faxInboundAutomationsGet**
-> String faxInboundAutomationsGet(page, limit)
+> String faxInboundAutomationsGet(q, page, limit)
 
 Get all inbound fax automations
 
@@ -254,10 +254,11 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 InboundFaxRulesApi apiInstance = new InboundFaxRulesApi();
+String q = "q_example"; // String | Your keyword or query.
 Integer page = 1; // Integer | Page number
 Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.faxInboundAutomationsGet(page, limit);
+    String result = apiInstance.faxInboundAutomationsGet(q, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InboundFaxRulesApi#faxInboundAutomationsGet");
@@ -269,6 +270,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **String**| Your keyword or query. |
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 

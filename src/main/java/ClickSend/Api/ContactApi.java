@@ -601,14 +601,12 @@ public class ContactApi {
      * Build call for listsContactsByListIdPost
      * @param contact Contact model (required)
      * @param listId List id (required)
-     * @param page Page number (optional, default to 1)
-     * @param limit Number of records per page (optional, default to 10)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call listsContactsByListIdPostCall(Contact contact, Integer listId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call listsContactsByListIdPostCall(Contact contact, Integer listId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = contact;
 
         // create path and map variables
@@ -617,10 +615,6 @@ public class ContactApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (page != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
-        if (limit != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -655,7 +649,7 @@ public class ContactApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call listsContactsByListIdPostValidateBeforeCall(Contact contact, Integer listId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call listsContactsByListIdPostValidateBeforeCall(Contact contact, Integer listId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'contact' is set
         if (contact == null) {
@@ -668,7 +662,7 @@ public class ContactApi {
         }
         
 
-        com.squareup.okhttp.Call call = listsContactsByListIdPostCall(contact, listId, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsContactsByListIdPostCall(contact, listId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -678,13 +672,11 @@ public class ContactApi {
      * Create new contact
      * @param contact Contact model (required)
      * @param listId List id (required)
-     * @param page Page number (optional, default to 1)
-     * @param limit Number of records per page (optional, default to 10)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String listsContactsByListIdPost(Contact contact, Integer listId, Integer page, Integer limit) throws ApiException {
-        ApiResponse<String> resp = listsContactsByListIdPostWithHttpInfo(contact, listId, page, limit);
+    public String listsContactsByListIdPost(Contact contact, Integer listId) throws ApiException {
+        ApiResponse<String> resp = listsContactsByListIdPostWithHttpInfo(contact, listId);
         return resp.getData();
     }
 
@@ -693,13 +685,11 @@ public class ContactApi {
      * Create new contact
      * @param contact Contact model (required)
      * @param listId List id (required)
-     * @param page Page number (optional, default to 1)
-     * @param limit Number of records per page (optional, default to 10)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> listsContactsByListIdPostWithHttpInfo(Contact contact, Integer listId, Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = listsContactsByListIdPostValidateBeforeCall(contact, listId, page, limit, null, null);
+    public ApiResponse<String> listsContactsByListIdPostWithHttpInfo(Contact contact, Integer listId) throws ApiException {
+        com.squareup.okhttp.Call call = listsContactsByListIdPostValidateBeforeCall(contact, listId, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -709,13 +699,11 @@ public class ContactApi {
      * Create new contact
      * @param contact Contact model (required)
      * @param listId List id (required)
-     * @param page Page number (optional, default to 1)
-     * @param limit Number of records per page (optional, default to 10)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listsContactsByListIdPostAsync(Contact contact, Integer listId, Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call listsContactsByListIdPostAsync(Contact contact, Integer listId, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -736,7 +724,7 @@ public class ContactApi {
             };
         }
 
-        com.squareup.okhttp.Call call = listsContactsByListIdPostValidateBeforeCall(contact, listId, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsContactsByListIdPostValidateBeforeCall(contact, listId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -556,6 +556,7 @@ public class SmsDeliveryReceiptRulesApi {
     }
     /**
      * Build call for smsDeliveryReceiptAutomationsGet
+     * @param q Your keyword or query. (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @param progressListener Progress listener
@@ -563,7 +564,7 @@ public class SmsDeliveryReceiptRulesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsDeliveryReceiptAutomationsGetCall(Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call smsDeliveryReceiptAutomationsGetCall(String q, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -571,6 +572,8 @@ public class SmsDeliveryReceiptRulesApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (q != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("q", q));
         if (page != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
         if (limit != null)
@@ -609,10 +612,15 @@ public class SmsDeliveryReceiptRulesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsDeliveryReceiptAutomationsGetValidateBeforeCall(Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsDeliveryReceiptAutomationsGetValidateBeforeCall(String q, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'q' is set
+        if (q == null) {
+            throw new ApiException("Missing the required parameter 'q' when calling smsDeliveryReceiptAutomationsGet(Async)");
+        }
         
 
-        com.squareup.okhttp.Call call = smsDeliveryReceiptAutomationsGetCall(page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsDeliveryReceiptAutomationsGetCall(q, page, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -620,26 +628,28 @@ public class SmsDeliveryReceiptRulesApi {
     /**
      * Get all sms delivery receipt automations
      * Get all sms delivery receipt automations
+     * @param q Your keyword or query. (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsDeliveryReceiptAutomationsGet(Integer page, Integer limit) throws ApiException {
-        ApiResponse<String> resp = smsDeliveryReceiptAutomationsGetWithHttpInfo(page, limit);
+    public String smsDeliveryReceiptAutomationsGet(String q, Integer page, Integer limit) throws ApiException {
+        ApiResponse<String> resp = smsDeliveryReceiptAutomationsGetWithHttpInfo(q, page, limit);
         return resp.getData();
     }
 
     /**
      * Get all sms delivery receipt automations
      * Get all sms delivery receipt automations
+     * @param q Your keyword or query. (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsDeliveryReceiptAutomationsGetWithHttpInfo(Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = smsDeliveryReceiptAutomationsGetValidateBeforeCall(page, limit, null, null);
+    public ApiResponse<String> smsDeliveryReceiptAutomationsGetWithHttpInfo(String q, Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = smsDeliveryReceiptAutomationsGetValidateBeforeCall(q, page, limit, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -647,13 +657,14 @@ public class SmsDeliveryReceiptRulesApi {
     /**
      * Get all sms delivery receipt automations (asynchronously)
      * Get all sms delivery receipt automations
+     * @param q Your keyword or query. (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsDeliveryReceiptAutomationsGetAsync(Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsDeliveryReceiptAutomationsGetAsync(String q, Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -674,7 +685,7 @@ public class SmsDeliveryReceiptRulesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = smsDeliveryReceiptAutomationsGetValidateBeforeCall(page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsDeliveryReceiptAutomationsGetValidateBeforeCall(q, page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

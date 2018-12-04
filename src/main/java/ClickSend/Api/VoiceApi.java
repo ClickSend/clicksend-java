@@ -788,6 +788,7 @@ public class VoiceApi {
     }
     /**
      * Build call for voiceReceiptsGet
+     * @param q Your keyword or query. (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @param progressListener Progress listener
@@ -795,7 +796,7 @@ public class VoiceApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call voiceReceiptsGetCall(Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call voiceReceiptsGetCall(String q, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -803,6 +804,8 @@ public class VoiceApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (q != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("q", q));
         if (page != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
         if (limit != null)
@@ -841,10 +844,15 @@ public class VoiceApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call voiceReceiptsGetValidateBeforeCall(Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call voiceReceiptsGetValidateBeforeCall(String q, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'q' is set
+        if (q == null) {
+            throw new ApiException("Missing the required parameter 'q' when calling voiceReceiptsGet(Async)");
+        }
         
 
-        com.squareup.okhttp.Call call = voiceReceiptsGetCall(page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = voiceReceiptsGetCall(q, page, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -852,26 +860,28 @@ public class VoiceApi {
     /**
      * Get all voice receipts
      * Get all voice receipts
+     * @param q Your keyword or query. (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String voiceReceiptsGet(Integer page, Integer limit) throws ApiException {
-        ApiResponse<String> resp = voiceReceiptsGetWithHttpInfo(page, limit);
+    public String voiceReceiptsGet(String q, Integer page, Integer limit) throws ApiException {
+        ApiResponse<String> resp = voiceReceiptsGetWithHttpInfo(q, page, limit);
         return resp.getData();
     }
 
     /**
      * Get all voice receipts
      * Get all voice receipts
+     * @param q Your keyword or query. (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> voiceReceiptsGetWithHttpInfo(Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = voiceReceiptsGetValidateBeforeCall(page, limit, null, null);
+    public ApiResponse<String> voiceReceiptsGetWithHttpInfo(String q, Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = voiceReceiptsGetValidateBeforeCall(q, page, limit, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -879,13 +889,14 @@ public class VoiceApi {
     /**
      * Get all voice receipts (asynchronously)
      * Get all voice receipts
+     * @param q Your keyword or query. (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call voiceReceiptsGetAsync(Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call voiceReceiptsGetAsync(String q, Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -906,7 +917,7 @@ public class VoiceApi {
             };
         }
 
-        com.squareup.okhttp.Call call = voiceReceiptsGetValidateBeforeCall(page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = voiceReceiptsGetValidateBeforeCall(q, page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -114,9 +114,7 @@ public class ContactApiTest {
     public void listsContactsByListIdPostTest() throws ApiException {
         Contact contact = null;
         Integer listId = null;
-        Integer page = null;
-        Integer limit = null;
-        String response = api.listsContactsByListIdPost(contact, listId, page, limit);
+        String response = api.listsContactsByListIdPost(contact, listId);
 
         // TODO: test validations
     }
