@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 <a name="smsInboundAutomationsGet"></a>
 # **smsInboundAutomationsGet**
-> String smsInboundAutomationsGet(page, limit)
+> String smsInboundAutomationsGet(q, page, limit)
 
 Get all inbound sms automations
 
@@ -254,10 +254,11 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 InboundSmsRulesApi apiInstance = new InboundSmsRulesApi();
+String q = "q_example"; // String | Your keyword or query.
 Integer page = 1; // Integer | Page number
 Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.smsInboundAutomationsGet(page, limit);
+    String result = apiInstance.smsInboundAutomationsGet(q, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling InboundSmsRulesApi#smsInboundAutomationsGet");
@@ -269,6 +270,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **String**| Your keyword or query. | [optional]
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 

@@ -14,6 +14,7 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
+import java.math.BigDecimal;
 import ClickSend.Model.SmsMessageCollection;
 import ClickSend.Model.SmsTemplate;
 import ClickSend.Model.Url;
@@ -137,6 +138,22 @@ public class SmsApiTest {
     /**
      * Mark inbound SMS as read
      *
+     * Mark specific inbound SMS as read
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void smsInboundReadByMessageIdPutTest() throws ApiException {
+        String messageId = null;
+        String response = api.smsInboundReadByMessageIdPut(messageId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Mark inbound SMS as read
+     *
      * Mark all inbound SMS as read optionally before a certain date
      *
      * @throws ApiException
@@ -144,7 +161,7 @@ public class SmsApiTest {
      */
     @Test
     public void smsInboundReadPutTest() throws ApiException {
-        String dateBefore = null;
+        BigDecimal dateBefore = null;
         String response = api.smsInboundReadPut(dateBefore);
 
         // TODO: test validations
@@ -192,10 +209,9 @@ public class SmsApiTest {
      */
     @Test
     public void smsReceiptsGetTest() throws ApiException {
-        String q = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.smsReceiptsGet(q, page, limit);
+        String response = api.smsReceiptsGet(page, limit);
 
         // TODO: test validations
     }
@@ -226,7 +242,7 @@ public class SmsApiTest {
      */
     @Test
     public void smsReceiptsReadPutTest() throws ApiException {
-        String dateBefore = null;
+        BigDecimal dateBefore = null;
         String response = api.smsReceiptsReadPut(dateBefore);
 
         // TODO: test validations

@@ -556,6 +556,7 @@ public class InboundSmsRulesApi {
     }
     /**
      * Build call for smsInboundAutomationsGet
+     * @param q Your keyword or query. (optional)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @param progressListener Progress listener
@@ -563,7 +564,7 @@ public class InboundSmsRulesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsInboundAutomationsGetCall(Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call smsInboundAutomationsGetCall(String q, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -571,6 +572,8 @@ public class InboundSmsRulesApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (q != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("q", q));
         if (page != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
         if (limit != null)
@@ -609,10 +612,10 @@ public class InboundSmsRulesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsInboundAutomationsGetValidateBeforeCall(Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsInboundAutomationsGetValidateBeforeCall(String q, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = smsInboundAutomationsGetCall(page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsInboundAutomationsGetCall(q, page, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -620,26 +623,28 @@ public class InboundSmsRulesApi {
     /**
      * Get all inbound sms automations
      * Get all inbound sms automations
+     * @param q Your keyword or query. (optional)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsInboundAutomationsGet(Integer page, Integer limit) throws ApiException {
-        ApiResponse<String> resp = smsInboundAutomationsGetWithHttpInfo(page, limit);
+    public String smsInboundAutomationsGet(String q, Integer page, Integer limit) throws ApiException {
+        ApiResponse<String> resp = smsInboundAutomationsGetWithHttpInfo(q, page, limit);
         return resp.getData();
     }
 
     /**
      * Get all inbound sms automations
      * Get all inbound sms automations
+     * @param q Your keyword or query. (optional)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsInboundAutomationsGetWithHttpInfo(Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = smsInboundAutomationsGetValidateBeforeCall(page, limit, null, null);
+    public ApiResponse<String> smsInboundAutomationsGetWithHttpInfo(String q, Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = smsInboundAutomationsGetValidateBeforeCall(q, page, limit, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -647,13 +652,14 @@ public class InboundSmsRulesApi {
     /**
      * Get all inbound sms automations (asynchronously)
      * Get all inbound sms automations
+     * @param q Your keyword or query. (optional)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsInboundAutomationsGetAsync(Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsInboundAutomationsGetAsync(String q, Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -674,7 +680,7 @@ public class InboundSmsRulesApi {
             };
         }
 
-        com.squareup.okhttp.Call call = smsInboundAutomationsGetValidateBeforeCall(page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsInboundAutomationsGetValidateBeforeCall(q, page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**smsHistoryGet**](SmsApi.md#smsHistoryGet) | **GET** /sms/history | Get all sms history
 [**smsInboundGet**](SmsApi.md#smsInboundGet) | **GET** /sms/inbound | Get all inbound sms
 [**smsInboundPost**](SmsApi.md#smsInboundPost) | **POST** /sms/inbound | Create inbound sms
+[**smsInboundReadByMessageIdPut**](SmsApi.md#smsInboundReadByMessageIdPut) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**smsInboundReadPut**](SmsApi.md#smsInboundReadPut) | **PUT** /sms/inbound-read | Mark inbound SMS as read
 [**smsPricePost**](SmsApi.md#smsPricePost) | **POST** /sms/price | Calculate sms price
 [**smsReceiptsByMessageIdGet**](SmsApi.md#smsReceiptsByMessageIdGet) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
@@ -353,6 +354,60 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+<a name="smsInboundReadByMessageIdPut"></a>
+# **smsInboundReadByMessageIdPut**
+> String smsInboundReadByMessageIdPut(messageId)
+
+Mark inbound SMS as read
+
+Mark specific inbound SMS as read
+
+### Example
+```java
+// Import classes:
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.SmsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: BasicAuth
+HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+BasicAuth.setUsername("YOUR USERNAME");
+BasicAuth.setPassword("YOUR PASSWORD");
+
+SmsApi apiInstance = new SmsApi();
+String messageId = "messageId_example"; // String | Message ID
+try {
+    String result = apiInstance.smsInboundReadByMessageIdPut(messageId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling SmsApi#smsInboundReadByMessageIdPut");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **messageId** | **String**| Message ID |
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
 <a name="smsInboundReadPut"></a>
 # **smsInboundReadPut**
 > String smsInboundReadPut(dateBefore)
@@ -378,7 +433,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
-String dateBefore = "dateBefore_example"; // String | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+BigDecimal dateBefore = new BigDecimal(); // BigDecimal | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
 try {
     String result = apiInstance.smsInboundReadPut(dateBefore);
     System.out.println(result);
@@ -392,7 +447,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **String**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional]
+ **dateBefore** | **BigDecimal**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional]
 
 ### Return type
 
@@ -517,7 +572,7 @@ Name | Type | Description  | Notes
 
 <a name="smsReceiptsGet"></a>
 # **smsReceiptsGet**
-> String smsReceiptsGet(q, page, limit)
+> String smsReceiptsGet(page, limit)
 
 Get all delivery receipts
 
@@ -540,11 +595,10 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
-String q = "q_example"; // String | Your keyword or query.
 Integer page = 1; // Integer | Page number
 Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.smsReceiptsGet(q, page, limit);
+    String result = apiInstance.smsReceiptsGet(page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SmsApi#smsReceiptsGet");
@@ -556,7 +610,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **String**| Your keyword or query. | [optional]
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 
@@ -652,7 +705,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
-String dateBefore = "dateBefore_example"; // String | Mark all as read before this timestamp
+BigDecimal dateBefore = new BigDecimal(); // BigDecimal | Mark all as read before this timestamp
 try {
     String result = apiInstance.smsReceiptsReadPut(dateBefore);
     System.out.println(result);
@@ -666,7 +719,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **String**| Mark all as read before this timestamp | [optional]
+ **dateBefore** | **BigDecimal**| Mark all as read before this timestamp | [optional]
 
 ### Return type
 

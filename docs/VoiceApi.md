@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 <a name="voiceReceiptsGet"></a>
 # **voiceReceiptsGet**
-> String voiceReceiptsGet(q, page, limit)
+> String voiceReceiptsGet(page, limit)
 
 Get all voice receipts
 
@@ -361,11 +361,10 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 VoiceApi apiInstance = new VoiceApi();
-String q = "q_example"; // String | Your keyword or query.
 Integer page = 1; // Integer | Page number
 Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.voiceReceiptsGet(q, page, limit);
+    String result = apiInstance.voiceReceiptsGet(page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling VoiceApi#voiceReceiptsGet");
@@ -377,7 +376,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **q** | **String**| Your keyword or query. | [optional]
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
 

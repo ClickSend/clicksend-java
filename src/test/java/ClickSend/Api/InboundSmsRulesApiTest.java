@@ -107,9 +107,10 @@ public class InboundSmsRulesApiTest {
      */
     @Test
     public void smsInboundAutomationsGetTest() throws ApiException {
+        String q = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.smsInboundAutomationsGet(page, limit);
+        String response = api.smsInboundAutomationsGet(q, page, limit);
 
         // TODO: test validations
     }

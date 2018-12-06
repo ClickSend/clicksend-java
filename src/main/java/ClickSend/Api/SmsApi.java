@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import java.math.BigDecimal;
 import ClickSend.Model.SmsMessageCollection;
 import ClickSend.Model.SmsTemplate;
 import ClickSend.Model.Url;
@@ -807,6 +808,129 @@ public class SmsApi {
         return call;
     }
     /**
+     * Build call for smsInboundReadByMessageIdPut
+     * @param messageId Message ID (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call smsInboundReadByMessageIdPutCall(String messageId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/sms/inbound-read/{message_id}"
+            .replaceAll("\\{" + "message_id" + "\\}", apiClient.escapeString(messageId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth" };
+        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call smsInboundReadByMessageIdPutValidateBeforeCall(String messageId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'messageId' is set
+        if (messageId == null) {
+            throw new ApiException("Missing the required parameter 'messageId' when calling smsInboundReadByMessageIdPut(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = smsInboundReadByMessageIdPutCall(messageId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Mark inbound SMS as read
+     * Mark specific inbound SMS as read
+     * @param messageId Message ID (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public String smsInboundReadByMessageIdPut(String messageId) throws ApiException {
+        ApiResponse<String> resp = smsInboundReadByMessageIdPutWithHttpInfo(messageId);
+        return resp.getData();
+    }
+
+    /**
+     * Mark inbound SMS as read
+     * Mark specific inbound SMS as read
+     * @param messageId Message ID (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<String> smsInboundReadByMessageIdPutWithHttpInfo(String messageId) throws ApiException {
+        com.squareup.okhttp.Call call = smsInboundReadByMessageIdPutValidateBeforeCall(messageId, null, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Mark inbound SMS as read (asynchronously)
+     * Mark specific inbound SMS as read
+     * @param messageId Message ID (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call smsInboundReadByMessageIdPutAsync(String messageId, final ApiCallback<String> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = smsInboundReadByMessageIdPutValidateBeforeCall(messageId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for smsInboundReadPut
      * @param dateBefore An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
      * @param progressListener Progress listener
@@ -814,7 +938,7 @@ public class SmsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsInboundReadPutCall(String dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call smsInboundReadPutCall(BigDecimal dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = dateBefore;
 
         // create path and map variables
@@ -856,7 +980,7 @@ public class SmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsInboundReadPutValidateBeforeCall(String dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsInboundReadPutValidateBeforeCall(BigDecimal dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
         com.squareup.okhttp.Call call = smsInboundReadPutCall(dateBefore, progressListener, progressRequestListener);
@@ -871,7 +995,7 @@ public class SmsApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsInboundReadPut(String dateBefore) throws ApiException {
+    public String smsInboundReadPut(BigDecimal dateBefore) throws ApiException {
         ApiResponse<String> resp = smsInboundReadPutWithHttpInfo(dateBefore);
         return resp.getData();
     }
@@ -883,7 +1007,7 @@ public class SmsApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsInboundReadPutWithHttpInfo(String dateBefore) throws ApiException {
+    public ApiResponse<String> smsInboundReadPutWithHttpInfo(BigDecimal dateBefore) throws ApiException {
         com.squareup.okhttp.Call call = smsInboundReadPutValidateBeforeCall(dateBefore, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -897,7 +1021,7 @@ public class SmsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsInboundReadPutAsync(String dateBefore, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsInboundReadPutAsync(BigDecimal dateBefore, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1170,7 +1294,6 @@ public class SmsApi {
     }
     /**
      * Build call for smsReceiptsGet
-     * @param q Your keyword or query. (optional)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @param progressListener Progress listener
@@ -1178,7 +1301,7 @@ public class SmsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsReceiptsGetCall(String q, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call smsReceiptsGetCall(Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1186,8 +1309,6 @@ public class SmsApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (q != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("q", q));
         if (page != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
         if (limit != null)
@@ -1226,10 +1347,10 @@ public class SmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsReceiptsGetValidateBeforeCall(String q, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsReceiptsGetValidateBeforeCall(Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = smsReceiptsGetCall(q, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsReceiptsGetCall(page, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -1237,28 +1358,26 @@ public class SmsApi {
     /**
      * Get all delivery receipts
      * Get all delivery receipts
-     * @param q Your keyword or query. (optional)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsReceiptsGet(String q, Integer page, Integer limit) throws ApiException {
-        ApiResponse<String> resp = smsReceiptsGetWithHttpInfo(q, page, limit);
+    public String smsReceiptsGet(Integer page, Integer limit) throws ApiException {
+        ApiResponse<String> resp = smsReceiptsGetWithHttpInfo(page, limit);
         return resp.getData();
     }
 
     /**
      * Get all delivery receipts
      * Get all delivery receipts
-     * @param q Your keyword or query. (optional)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsReceiptsGetWithHttpInfo(String q, Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = smsReceiptsGetValidateBeforeCall(q, page, limit, null, null);
+    public ApiResponse<String> smsReceiptsGetWithHttpInfo(Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = smsReceiptsGetValidateBeforeCall(page, limit, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -1266,14 +1385,13 @@ public class SmsApi {
     /**
      * Get all delivery receipts (asynchronously)
      * Get all delivery receipts
-     * @param q Your keyword or query. (optional)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsReceiptsGetAsync(String q, Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsReceiptsGetAsync(Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1294,7 +1412,7 @@ public class SmsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = smsReceiptsGetValidateBeforeCall(q, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsReceiptsGetValidateBeforeCall(page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -1429,7 +1547,7 @@ public class SmsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsReceiptsReadPutCall(String dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call smsReceiptsReadPutCall(BigDecimal dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = dateBefore;
 
         // create path and map variables
@@ -1471,7 +1589,7 @@ public class SmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsReceiptsReadPutValidateBeforeCall(String dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsReceiptsReadPutValidateBeforeCall(BigDecimal dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
         com.squareup.okhttp.Call call = smsReceiptsReadPutCall(dateBefore, progressListener, progressRequestListener);
@@ -1486,7 +1604,7 @@ public class SmsApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsReceiptsReadPut(String dateBefore) throws ApiException {
+    public String smsReceiptsReadPut(BigDecimal dateBefore) throws ApiException {
         ApiResponse<String> resp = smsReceiptsReadPutWithHttpInfo(dateBefore);
         return resp.getData();
     }
@@ -1498,7 +1616,7 @@ public class SmsApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsReceiptsReadPutWithHttpInfo(String dateBefore) throws ApiException {
+    public ApiResponse<String> smsReceiptsReadPutWithHttpInfo(BigDecimal dateBefore) throws ApiException {
         com.squareup.okhttp.Call call = smsReceiptsReadPutValidateBeforeCall(dateBefore, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1512,7 +1630,7 @@ public class SmsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsReceiptsReadPutAsync(String dateBefore, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsReceiptsReadPutAsync(BigDecimal dateBefore, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
