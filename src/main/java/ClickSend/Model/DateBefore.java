@@ -23,21 +23,22 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.math.BigDecimal;
 
 /**
  * All dates before specified timestam.
  */
 @ApiModel(description = "All dates before specified timestam.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-06T02:42:46.800Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-06T02:53:51.581Z")
 
 public class DateBefore {
   @SerializedName("date_before")
-  private String dateBefore = null;
+  private BigDecimal dateBefore = null;
 
   public DateBefore() {
     //this.classType = this.getClass().getSimpleName();
   }
-  public DateBefore dateBefore(String dateBefore) {
+  public DateBefore dateBefore(BigDecimal dateBefore) {
     this.dateBefore = dateBefore;
     return this;
   }
@@ -47,11 +48,11 @@ public class DateBefore {
    * @return dateBefore
   **/
   @ApiModelProperty(value = "An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.")
-  public String getDateBefore() {
+  public BigDecimal getDateBefore() {
     return dateBefore;
   }
 
-  public void setDateBefore(String dateBefore) {
+  public void setDateBefore(BigDecimal dateBefore) {
     this.dateBefore = dateBefore;
   }
 

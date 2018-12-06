@@ -28,7 +28,7 @@ import java.io.IOException;
  * Credit card model
  */
 @ApiModel(description = "Credit card model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-06T02:42:46.800Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-06T02:53:51.581Z")
 
 public class CreditCard {
   @SerializedName("number")
