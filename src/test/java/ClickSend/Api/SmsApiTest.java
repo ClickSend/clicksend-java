@@ -14,7 +14,7 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
-import java.math.BigDecimal;
+import ClickSend.Model.DateBefore;
 import ClickSend.Model.SmsMessageCollection;
 import ClickSend.Model.SmsTemplate;
 import ClickSend.Model.Url;
@@ -161,7 +161,7 @@ public class SmsApiTest {
      */
     @Test
     public void smsInboundReadPutTest() throws ApiException {
-        BigDecimal dateBefore = null;
+        DateBefore dateBefore = null;
         String response = api.smsInboundReadPut(dateBefore);
 
         // TODO: test validations
@@ -242,7 +242,7 @@ public class SmsApiTest {
      */
     @Test
     public void smsReceiptsReadPutTest() throws ApiException {
-        BigDecimal dateBefore = null;
+        DateBefore dateBefore = null;
         String response = api.smsReceiptsReadPut(dateBefore);
 
         // TODO: test validations

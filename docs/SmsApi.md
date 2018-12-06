@@ -433,7 +433,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
-BigDecimal dateBefore = new BigDecimal(); // BigDecimal | An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+DateBefore dateBefore = new DateBefore(); // DateBefore | DateBefore model
 try {
     String result = apiInstance.smsInboundReadPut(dateBefore);
     System.out.println(result);
@@ -447,7 +447,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **BigDecimal**| An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. | [optional]
+ **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional]
 
 ### Return type
 
@@ -705,7 +705,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
-BigDecimal dateBefore = new BigDecimal(); // BigDecimal | Mark all as read before this timestamp
+DateBefore dateBefore = new DateBefore(); // DateBefore | DateBefore model
 try {
     String result = apiInstance.smsReceiptsReadPut(dateBefore);
     System.out.println(result);
@@ -719,7 +719,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateBefore** | **BigDecimal**| Mark all as read before this timestamp | [optional]
+ **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional]
 
 ### Return type
 

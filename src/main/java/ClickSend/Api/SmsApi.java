@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import java.math.BigDecimal;
+import ClickSend.Model.DateBefore;
 import ClickSend.Model.SmsMessageCollection;
 import ClickSend.Model.SmsTemplate;
 import ClickSend.Model.Url;
@@ -932,13 +932,13 @@ public class SmsApi {
     }
     /**
      * Build call for smsInboundReadPut
-     * @param dateBefore An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
+     * @param dateBefore DateBefore model (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsInboundReadPutCall(BigDecimal dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call smsInboundReadPutCall(DateBefore dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = dateBefore;
 
         // create path and map variables
@@ -980,7 +980,7 @@ public class SmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsInboundReadPutValidateBeforeCall(BigDecimal dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsInboundReadPutValidateBeforeCall(DateBefore dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
         com.squareup.okhttp.Call call = smsInboundReadPutCall(dateBefore, progressListener, progressRequestListener);
@@ -991,11 +991,11 @@ public class SmsApi {
     /**
      * Mark inbound SMS as read
      * Mark all inbound SMS as read optionally before a certain date
-     * @param dateBefore An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
+     * @param dateBefore DateBefore model (optional)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsInboundReadPut(BigDecimal dateBefore) throws ApiException {
+    public String smsInboundReadPut(DateBefore dateBefore) throws ApiException {
         ApiResponse<String> resp = smsInboundReadPutWithHttpInfo(dateBefore);
         return resp.getData();
     }
@@ -1003,11 +1003,11 @@ public class SmsApi {
     /**
      * Mark inbound SMS as read
      * Mark all inbound SMS as read optionally before a certain date
-     * @param dateBefore An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
+     * @param dateBefore DateBefore model (optional)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsInboundReadPutWithHttpInfo(BigDecimal dateBefore) throws ApiException {
+    public ApiResponse<String> smsInboundReadPutWithHttpInfo(DateBefore dateBefore) throws ApiException {
         com.squareup.okhttp.Call call = smsInboundReadPutValidateBeforeCall(dateBefore, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1016,12 +1016,12 @@ public class SmsApi {
     /**
      * Mark inbound SMS as read (asynchronously)
      * Mark all inbound SMS as read optionally before a certain date
-     * @param dateBefore An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read. (optional)
+     * @param dateBefore DateBefore model (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsInboundReadPutAsync(BigDecimal dateBefore, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsInboundReadPutAsync(DateBefore dateBefore, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1541,13 +1541,13 @@ public class SmsApi {
     }
     /**
      * Build call for smsReceiptsReadPut
-     * @param dateBefore Mark all as read before this timestamp (optional)
+     * @param dateBefore DateBefore model (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsReceiptsReadPutCall(BigDecimal dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call smsReceiptsReadPutCall(DateBefore dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = dateBefore;
 
         // create path and map variables
@@ -1589,7 +1589,7 @@ public class SmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsReceiptsReadPutValidateBeforeCall(BigDecimal dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsReceiptsReadPutValidateBeforeCall(DateBefore dateBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
         com.squareup.okhttp.Call call = smsReceiptsReadPutCall(dateBefore, progressListener, progressRequestListener);
@@ -1600,11 +1600,11 @@ public class SmsApi {
     /**
      * Mark delivery receipts as read
      * Mark delivery receipts as read
-     * @param dateBefore Mark all as read before this timestamp (optional)
+     * @param dateBefore DateBefore model (optional)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsReceiptsReadPut(BigDecimal dateBefore) throws ApiException {
+    public String smsReceiptsReadPut(DateBefore dateBefore) throws ApiException {
         ApiResponse<String> resp = smsReceiptsReadPutWithHttpInfo(dateBefore);
         return resp.getData();
     }
@@ -1612,11 +1612,11 @@ public class SmsApi {
     /**
      * Mark delivery receipts as read
      * Mark delivery receipts as read
-     * @param dateBefore Mark all as read before this timestamp (optional)
+     * @param dateBefore DateBefore model (optional)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsReceiptsReadPutWithHttpInfo(BigDecimal dateBefore) throws ApiException {
+    public ApiResponse<String> smsReceiptsReadPutWithHttpInfo(DateBefore dateBefore) throws ApiException {
         com.squareup.okhttp.Call call = smsReceiptsReadPutValidateBeforeCall(dateBefore, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -1625,12 +1625,12 @@ public class SmsApi {
     /**
      * Mark delivery receipts as read (asynchronously)
      * Mark delivery receipts as read
-     * @param dateBefore Mark all as read before this timestamp (optional)
+     * @param dateBefore DateBefore model (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsReceiptsReadPutAsync(BigDecimal dateBefore, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsReceiptsReadPutAsync(DateBefore dateBefore, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

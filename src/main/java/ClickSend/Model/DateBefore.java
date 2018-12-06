@@ -25,51 +25,34 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * From Email object.
+ * All dates before specified timestam.
  */
-@ApiModel(description = "From Email object.")
+@ApiModel(description = "All dates before specified timestam.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-06T02:42:46.800Z")
-public class EmailFrom {
-  @SerializedName("email_address_id")
-  private String emailAddressId = null;
 
-  @SerializedName("name")
-  private String name = null;
+public class DateBefore {
+  @SerializedName("date_before")
+  private String dateBefore = null;
 
-  public EmailFrom emailAddressId(String emailAddressId) {
-    this.emailAddressId = emailAddressId;
+  public DateBefore() {
+    //this.classType = this.getClass().getSimpleName();
+  }
+  public DateBefore dateBefore(String dateBefore) {
+    this.dateBefore = dateBefore;
     return this;
   }
 
    /**
-   * Email address id of the recipient.
-   * @return emailAddressId
+   * An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.
+   * @return dateBefore
   **/
-  @ApiModelProperty(required = true, value = "Email address id of the recipient.")
-  public String getEmailAddressId() {
-    return emailAddressId;
+  @ApiModelProperty(value = "An optional timestamp - mark all as read before this timestamp. If not given, all messages will be marked as read.")
+  public String getDateBefore() {
+    return dateBefore;
   }
 
-  public void setEmailAddressId(String emailAddressId) {
-    this.emailAddressId = emailAddressId;
-  }
-
-  public EmailFrom name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Name of the recipient.
-   * @return name
-  **/
-  @ApiModelProperty(value = "Name of the recipient.")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
+  public void setDateBefore(String dateBefore) {
+    this.dateBefore = dateBefore;
   }
 
 
@@ -81,24 +64,22 @@ public class EmailFrom {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EmailFrom emailFrom = (EmailFrom) o;
-    return Objects.equals(this.emailAddressId, emailFrom.emailAddressId) &&
-        Objects.equals(this.name, emailFrom.name);
+    DateBefore dateBefore = (DateBefore) o;
+    return Objects.equals(this.dateBefore, dateBefore.dateBefore);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(emailAddressId, name);
+    return Objects.hash(dateBefore);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EmailFrom {\n");
+    sb.append("class DateBefore {\n");
     
-    sb.append("    emailAddressId: ").append(toIndentedString(emailAddressId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    dateBefore: ").append(toIndentedString(dateBefore)).append("\n");
     sb.append("}");
     return sb.toString();
   }
