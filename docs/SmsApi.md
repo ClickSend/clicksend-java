@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 <a name="smsHistoryGet"></a>
 # **smsHistoryGet**
-> String smsHistoryGet(dateFrom, dateTo, page, limit)
+> String smsHistoryGet(q, dateFrom, dateTo, page, limit)
 
 Get all sms history
 
@@ -207,12 +207,13 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 SmsApi apiInstance = new SmsApi();
+String q = "q_example"; // String | Custom query Example: from:{number},status_code:201.
 Integer dateFrom = 56; // Integer | Start date
 Integer dateTo = 56; // Integer | End date
 Integer page = 1; // Integer | Page number
 Integer limit = 10; // Integer | Number of records per page
 try {
-    String result = apiInstance.smsHistoryGet(dateFrom, dateTo, page, limit);
+    String result = apiInstance.smsHistoryGet(q, dateFrom, dateTo, page, limit);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SmsApi#smsHistoryGet");
@@ -224,6 +225,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **q** | **String**| Custom query Example: from:{number},status_code:201. | [optional]
  **dateFrom** | **Integer**| Start date | [optional]
  **dateTo** | **Integer**| End date | [optional]
  **page** | **Integer**| Page number | [optional] [default to 1]

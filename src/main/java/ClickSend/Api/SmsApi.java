@@ -419,6 +419,7 @@ public class SmsApi {
     }
     /**
      * Build call for smsHistoryGet
+     * @param q Custom query Example: from:{number},status_code:201. (optional)
      * @param dateFrom Start date (optional)
      * @param dateTo End date (optional)
      * @param page Page number (optional, default to 1)
@@ -428,7 +429,7 @@ public class SmsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call smsHistoryGetCall(Integer dateFrom, Integer dateTo, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call smsHistoryGetCall(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -436,6 +437,8 @@ public class SmsApi {
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (q != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("q", q));
         if (dateFrom != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("date_from", dateFrom));
         if (dateTo != null)
@@ -478,10 +481,10 @@ public class SmsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call smsHistoryGetValidateBeforeCall(Integer dateFrom, Integer dateTo, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call smsHistoryGetValidateBeforeCall(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = smsHistoryGetCall(dateFrom, dateTo, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsHistoryGetCall(q, dateFrom, dateTo, page, limit, progressListener, progressRequestListener);
         return call;
 
     }
@@ -489,6 +492,7 @@ public class SmsApi {
     /**
      * Get all sms history
      * Get all sms history
+     * @param q Custom query Example: from:{number},status_code:201. (optional)
      * @param dateFrom Start date (optional)
      * @param dateTo End date (optional)
      * @param page Page number (optional, default to 1)
@@ -496,14 +500,15 @@ public class SmsApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String smsHistoryGet(Integer dateFrom, Integer dateTo, Integer page, Integer limit) throws ApiException {
-        ApiResponse<String> resp = smsHistoryGetWithHttpInfo(dateFrom, dateTo, page, limit);
+    public String smsHistoryGet(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit) throws ApiException {
+        ApiResponse<String> resp = smsHistoryGetWithHttpInfo(q, dateFrom, dateTo, page, limit);
         return resp.getData();
     }
 
     /**
      * Get all sms history
      * Get all sms history
+     * @param q Custom query Example: from:{number},status_code:201. (optional)
      * @param dateFrom Start date (optional)
      * @param dateTo End date (optional)
      * @param page Page number (optional, default to 1)
@@ -511,8 +516,8 @@ public class SmsApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> smsHistoryGetWithHttpInfo(Integer dateFrom, Integer dateTo, Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = smsHistoryGetValidateBeforeCall(dateFrom, dateTo, page, limit, null, null);
+    public ApiResponse<String> smsHistoryGetWithHttpInfo(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = smsHistoryGetValidateBeforeCall(q, dateFrom, dateTo, page, limit, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -520,6 +525,7 @@ public class SmsApi {
     /**
      * Get all sms history (asynchronously)
      * Get all sms history
+     * @param q Custom query Example: from:{number},status_code:201. (optional)
      * @param dateFrom Start date (optional)
      * @param dateTo End date (optional)
      * @param page Page number (optional, default to 1)
@@ -528,7 +534,7 @@ public class SmsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call smsHistoryGetAsync(Integer dateFrom, Integer dateTo, Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call smsHistoryGetAsync(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -549,7 +555,7 @@ public class SmsApi {
             };
         }
 
-        com.squareup.okhttp.Call call = smsHistoryGetValidateBeforeCall(dateFrom, dateTo, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = smsHistoryGetValidateBeforeCall(q, dateFrom, dateTo, page, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

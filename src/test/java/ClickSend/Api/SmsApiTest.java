@@ -92,11 +92,12 @@ public class SmsApiTest {
      */
     @Test
     public void smsHistoryGetTest() throws ApiException {
+        String q = null;
         Integer dateFrom = null;
         Integer dateTo = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.smsHistoryGet(dateFrom, dateTo, page, limit);
+        String response = api.smsHistoryGet(q, dateFrom, dateTo, page, limit);
 
         // TODO: test validations
     }
