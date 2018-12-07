@@ -14,7 +14,9 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
+import ClickSend.Model.DateBefore;
 import ClickSend.Model.FaxMessageCollection;
+import ClickSend.Model.Url;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -86,9 +88,9 @@ public class FaxApiTest {
     }
     
     /**
-     * Get List of Fax Receipts
+     * Get all delivery receipts
      *
-     * Get List of Fax Receipts
+     * Get all delivery receipts
      *
      * @throws ApiException
      *          if the Api call fails
@@ -98,6 +100,38 @@ public class FaxApiTest {
         Integer page = null;
         Integer limit = null;
         String response = api.faxReceiptsGet(page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Add a delivery receipt
+     *
+     * Add a delivery receipt
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void faxReceiptsPostTest() throws ApiException {
+        Url url = null;
+        String response = api.faxReceiptsPost(url);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Mark delivery receipts as read
+     *
+     * Mark delivery receipts as read
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void faxReceiptsReadPutTest() throws ApiException {
+        DateBefore dateBefore = null;
+        String response = api.faxReceiptsReadPut(dateBefore);
 
         // TODO: test validations
     }

@@ -294,6 +294,139 @@ public class AccountApi {
         return call;
     }
     /**
+     * Build call for accountUseageBySubaccountGet
+     * @param year Year to filter by (yyyy) (required)
+     * @param month Month to filter by (mm) (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call accountUseageBySubaccountGetCall(Integer year, Integer month, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/account/usage/{year}/{month}/subaccount"
+            .replaceAll("\\{" + "year" + "\\}", apiClient.escapeString(year.toString()))
+            .replaceAll("\\{" + "month" + "\\}", apiClient.escapeString(month.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call accountUseageBySubaccountGetValidateBeforeCall(Integer year, Integer month, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'year' is set
+        if (year == null) {
+            throw new ApiException("Missing the required parameter 'year' when calling accountUseageBySubaccountGet(Async)");
+        }
+        
+        // verify the required parameter 'month' is set
+        if (month == null) {
+            throw new ApiException("Missing the required parameter 'month' when calling accountUseageBySubaccountGet(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = accountUseageBySubaccountGetCall(year, month, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get account useage by subaccount
+     * Get account useage by subaccount
+     * @param year Year to filter by (yyyy) (required)
+     * @param month Month to filter by (mm) (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public String accountUseageBySubaccountGet(Integer year, Integer month) throws ApiException {
+        ApiResponse<String> resp = accountUseageBySubaccountGetWithHttpInfo(year, month);
+        return resp.getData();
+    }
+
+    /**
+     * Get account useage by subaccount
+     * Get account useage by subaccount
+     * @param year Year to filter by (yyyy) (required)
+     * @param month Month to filter by (mm) (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<String> accountUseageBySubaccountGetWithHttpInfo(Integer year, Integer month) throws ApiException {
+        com.squareup.okhttp.Call call = accountUseageBySubaccountGetValidateBeforeCall(year, month, null, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get account useage by subaccount (asynchronously)
+     * Get account useage by subaccount
+     * @param year Year to filter by (yyyy) (required)
+     * @param month Month to filter by (mm) (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call accountUseageBySubaccountGetAsync(Integer year, Integer month, final ApiCallback<String> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = accountUseageBySubaccountGetValidateBeforeCall(year, month, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for accountVerifySendPut
      * @param accountVerify Account details (required)
      * @param progressListener Progress listener

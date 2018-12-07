@@ -14,6 +14,7 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
+import ClickSend.Model.DateBefore;
 import ClickSend.Model.MmsMessageCollection;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -44,6 +45,39 @@ public class MmsApiTest {
     public void mmsPricePostTest() throws ApiException {
         MmsMessageCollection mmsMessages = null;
         String response = api.mmsPricePost(mmsMessages);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get all delivery receipts
+     *
+     * Get all delivery receipts
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void mmsReceiptsGetTest() throws ApiException {
+        Integer page = null;
+        Integer limit = null;
+        String response = api.mmsReceiptsGet(page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Mark delivery receipts as read
+     *
+     * Mark delivery receipts as read
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void mmsReceiptsReadPutTest() throws ApiException {
+        DateBefore dateBefore = null;
+        String response = api.mmsReceiptsReadPut(dateBefore);
 
         // TODO: test validations
     }

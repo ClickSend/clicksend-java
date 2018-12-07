@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ForgotUsername
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-06T04:34:11.497Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T01:32:21.097Z")
 public class ForgotUsername {
   @SerializedName("email")
   private String email = null;

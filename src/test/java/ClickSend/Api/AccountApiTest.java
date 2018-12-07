@@ -68,6 +68,23 @@ public class AccountApiTest {
     }
     
     /**
+     * Get account useage by subaccount
+     *
+     * Get account useage by subaccount
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void accountUseageBySubaccountGetTest() throws ApiException {
+        Integer year = null;
+        Integer month = null;
+        String response = api.accountUseageBySubaccountGet(year, month);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Send account activation token
      *
      * Send account activation token

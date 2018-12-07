@@ -10,7 +10,9 @@ Method | HTTP request | Description
 [**voiceHistoryGet**](VoiceApi.md#voiceHistoryGet) | **GET** /voice/history | Get all voice history
 [**voiceLangGet**](VoiceApi.md#voiceLangGet) | **GET** /voice/lang | Get all voice languages
 [**voicePricePost**](VoiceApi.md#voicePricePost) | **POST** /voice/price | Calculate voice price
-[**voiceReceiptsGet**](VoiceApi.md#voiceReceiptsGet) | **GET** /voice/receipts | Get all voice receipts
+[**voiceReceiptsGet**](VoiceApi.md#voiceReceiptsGet) | **GET** /voice/receipts | Get all delivery receipts
+[**voiceReceiptsPost**](VoiceApi.md#voiceReceiptsPost) | **POST** /voice/receipts | Add a delivery receipt
+[**voiceReceiptsReadPut**](VoiceApi.md#voiceReceiptsReadPut) | **PUT** /voice/receipts-read | Mark delivery receipts as read
 [**voiceSendPost**](VoiceApi.md#voiceSendPost) | **POST** /voice/send | Send voice message(s)
 
 
@@ -340,9 +342,9 @@ Name | Type | Description  | Notes
 # **voiceReceiptsGet**
 > String voiceReceiptsGet(page, limit)
 
-Get all voice receipts
+Get all delivery receipts
 
-Get all voice receipts
+Get all delivery receipts
 
 ### Example
 ```java
@@ -378,6 +380,114 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="voiceReceiptsPost"></a>
+# **voiceReceiptsPost**
+> String voiceReceiptsPost(url)
+
+Add a delivery receipt
+
+Add a delivery receipt
+
+### Example
+```java
+// Import classes:
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.VoiceApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: BasicAuth
+HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+BasicAuth.setUsername("YOUR USERNAME");
+BasicAuth.setPassword("YOUR PASSWORD");
+
+VoiceApi apiInstance = new VoiceApi();
+Url url = new Url(); // Url | Url model
+try {
+    String result = apiInstance.voiceReceiptsPost(url);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling VoiceApi#voiceReceiptsPost");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **url** | [**Url**](Url.md)| Url model |
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="voiceReceiptsReadPut"></a>
+# **voiceReceiptsReadPut**
+> String voiceReceiptsReadPut(dateBefore)
+
+Mark delivery receipts as read
+
+Mark delivery receipts as read
+
+### Example
+```java
+// Import classes:
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.VoiceApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: BasicAuth
+HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+BasicAuth.setUsername("YOUR USERNAME");
+BasicAuth.setPassword("YOUR PASSWORD");
+
+VoiceApi apiInstance = new VoiceApi();
+DateBefore dateBefore = new DateBefore(); // DateBefore | DateBefore model
+try {
+    String result = apiInstance.voiceReceiptsReadPut(dateBefore);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling VoiceApi#voiceReceiptsReadPut");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional]
 
 ### Return type
 

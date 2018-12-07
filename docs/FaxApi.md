@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**faxHistoryGet**](FaxApi.md#faxHistoryGet) | **GET** /fax/history | Get a list of Fax History.
 [**faxPricePost**](FaxApi.md#faxPricePost) | **POST** /fax/price | Calculate Total Price for Fax Messages sent
 [**faxReceiptsByMessageIdGet**](FaxApi.md#faxReceiptsByMessageIdGet) | **GET** /fax/receipts/{message_id} | Get a single fax receipt based on message id.
-[**faxReceiptsGet**](FaxApi.md#faxReceiptsGet) | **GET** /fax/receipts | Get List of Fax Receipts
+[**faxReceiptsGet**](FaxApi.md#faxReceiptsGet) | **GET** /fax/receipts | Get all delivery receipts
+[**faxReceiptsPost**](FaxApi.md#faxReceiptsPost) | **POST** /fax/receipts | Add a delivery receipt
+[**faxReceiptsReadPut**](FaxApi.md#faxReceiptsReadPut) | **PUT** /fax/receipts-read | Mark delivery receipts as read
 [**faxSendPost**](FaxApi.md#faxSendPost) | **POST** /fax/send | Send a fax using supplied supported file-types.
 
 
@@ -187,9 +189,9 @@ Name | Type | Description  | Notes
 # **faxReceiptsGet**
 > String faxReceiptsGet(page, limit)
 
-Get List of Fax Receipts
+Get all delivery receipts
 
-Get List of Fax Receipts
+Get all delivery receipts
 
 ### Example
 ```java
@@ -225,6 +227,114 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="faxReceiptsPost"></a>
+# **faxReceiptsPost**
+> String faxReceiptsPost(url)
+
+Add a delivery receipt
+
+Add a delivery receipt
+
+### Example
+```java
+// Import classes:
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.FaxApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: BasicAuth
+HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+BasicAuth.setUsername("YOUR USERNAME");
+BasicAuth.setPassword("YOUR PASSWORD");
+
+FaxApi apiInstance = new FaxApi();
+Url url = new Url(); // Url | Url model
+try {
+    String result = apiInstance.faxReceiptsPost(url);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling FaxApi#faxReceiptsPost");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **url** | [**Url**](Url.md)| Url model |
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="faxReceiptsReadPut"></a>
+# **faxReceiptsReadPut**
+> String faxReceiptsReadPut(dateBefore)
+
+Mark delivery receipts as read
+
+Mark delivery receipts as read
+
+### Example
+```java
+// Import classes:
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.FaxApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: BasicAuth
+HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+BasicAuth.setUsername("YOUR USERNAME");
+BasicAuth.setPassword("YOUR PASSWORD");
+
+FaxApi apiInstance = new FaxApi();
+DateBefore dateBefore = new DateBefore(); // DateBefore | DateBefore model
+try {
+    String result = apiInstance.faxReceiptsReadPut(dateBefore);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling FaxApi#faxReceiptsReadPut");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dateBefore** | [**DateBefore**](DateBefore.md)| DateBefore model | [optional]
 
 ### Return type
 

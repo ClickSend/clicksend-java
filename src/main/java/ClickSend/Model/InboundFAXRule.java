@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * Model for Inbound FAX Rules
  */
 @ApiModel(description = "Model for Inbound FAX Rules")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-06T04:34:11.497Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T01:32:21.097Z")
 
 public class InboundFAXRule {
   @SerializedName("dedicated_number")

@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**accountGet**](AccountApi.md#accountGet) | **GET** /account | Get account information
 [**accountPost**](AccountApi.md#accountPost) | **POST** /account | Create a new account
+[**accountUseageBySubaccountGet**](AccountApi.md#accountUseageBySubaccountGet) | **GET** /account/usage/{year}/{month}/subaccount | Get account useage by subaccount
 [**accountVerifySendPut**](AccountApi.md#accountVerifySendPut) | **PUT** /account-verify/send | Send account activation token
 [**accountVerifyVerifyByActivationTokenPut**](AccountApi.md#accountVerifyVerifyByActivationTokenPut) | **PUT** /account-verify/verify/{activation_token} | Verify new account
 [**forgotPasswordPut**](AccountApi.md#forgotPasswordPut) | **PUT** /forgot-password | Forgot password
@@ -103,6 +104,62 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account** | [**Account**](Account.md)| Account model |
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="accountUseageBySubaccountGet"></a>
+# **accountUseageBySubaccountGet**
+> String accountUseageBySubaccountGet(year, month)
+
+Get account useage by subaccount
+
+Get account useage by subaccount
+
+### Example
+```java
+// Import classes:
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.AccountApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: BasicAuth
+HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+BasicAuth.setUsername("YOUR USERNAME");
+BasicAuth.setPassword("YOUR PASSWORD");
+
+AccountApi apiInstance = new AccountApi();
+Integer year = 56; // Integer | Year to filter by (yyyy)
+Integer month = 56; // Integer | Month to filter by (mm)
+try {
+    String result = apiInstance.accountUseageBySubaccountGet(year, month);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling AccountApi#accountUseageBySubaccountGet");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **year** | **Integer**| Year to filter by (yyyy) |
+ **month** | **Integer**| Month to filter by (mm) |
 
 ### Return type
 

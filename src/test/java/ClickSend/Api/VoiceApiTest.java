@@ -14,6 +14,8 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
+import ClickSend.Model.DateBefore;
+import ClickSend.Model.Url;
 import ClickSend.Model.VoiceMessageCollection;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -130,9 +132,9 @@ public class VoiceApiTest {
     }
     
     /**
-     * Get all voice receipts
+     * Get all delivery receipts
      *
-     * Get all voice receipts
+     * Get all delivery receipts
      *
      * @throws ApiException
      *          if the Api call fails
@@ -142,6 +144,38 @@ public class VoiceApiTest {
         Integer page = null;
         Integer limit = null;
         String response = api.voiceReceiptsGet(page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Add a delivery receipt
+     *
+     * Add a delivery receipt
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void voiceReceiptsPostTest() throws ApiException {
+        Url url = null;
+        String response = api.voiceReceiptsPost(url);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Mark delivery receipts as read
+     *
+     * Mark delivery receipts as read
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void voiceReceiptsReadPutTest() throws ApiException {
+        DateBefore dateBefore = null;
+        String response = api.voiceReceiptsReadPut(dateBefore);
 
         // TODO: test validations
     }
