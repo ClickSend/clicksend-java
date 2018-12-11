@@ -29,9 +29,9 @@ import java.math.BigDecimal;
  * Model for Inbound FAX Rules
  */
 @ApiModel(description = "Model for Inbound FAX Rules")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T01:32:21.097Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-11T02:11:39.647Z")
 
-public class InboundFAXRule {
+public class InboundFaxRule {
   @SerializedName("dedicated_number")
   private String dedicatedNumber = null;
 
@@ -47,10 +47,10 @@ public class InboundFAXRule {
   @SerializedName("enabled")
   private BigDecimal enabled = null;
 
-  public InboundFAXRule() {
+  public InboundFaxRule() {
     //this.classType = this.getClass().getSimpleName();
   }
-  public InboundFAXRule dedicatedNumber(String dedicatedNumber) {
+  public InboundFaxRule dedicatedNumber(String dedicatedNumber) {
     this.dedicatedNumber = dedicatedNumber;
     return this;
   }
@@ -68,7 +68,7 @@ public class InboundFAXRule {
     this.dedicatedNumber = dedicatedNumber;
   }
 
-  public InboundFAXRule ruleName(String ruleName) {
+  public InboundFaxRule ruleName(String ruleName) {
     this.ruleName = ruleName;
     return this;
   }
@@ -86,7 +86,7 @@ public class InboundFAXRule {
     this.ruleName = ruleName;
   }
 
-  public InboundFAXRule action(String action) {
+  public InboundFaxRule action(String action) {
     this.action = action;
     return this;
   }
@@ -104,7 +104,7 @@ public class InboundFAXRule {
     this.action = action;
   }
 
-  public InboundFAXRule actionAddress(String actionAddress) {
+  public InboundFaxRule actionAddress(String actionAddress) {
     this.actionAddress = actionAddress;
     return this;
   }
@@ -122,7 +122,7 @@ public class InboundFAXRule {
     this.actionAddress = actionAddress;
   }
 
-  public InboundFAXRule enabled(BigDecimal enabled) {
+  public InboundFaxRule enabled(BigDecimal enabled) {
     this.enabled = enabled;
     return this;
   }
@@ -149,12 +149,12 @@ public class InboundFAXRule {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InboundFAXRule inboundFAXRule = (InboundFAXRule) o;
-    return Objects.equals(this.dedicatedNumber, inboundFAXRule.dedicatedNumber) &&
-        Objects.equals(this.ruleName, inboundFAXRule.ruleName) &&
-        Objects.equals(this.action, inboundFAXRule.action) &&
-        Objects.equals(this.actionAddress, inboundFAXRule.actionAddress) &&
-        Objects.equals(this.enabled, inboundFAXRule.enabled);
+    InboundFaxRule inboundFaxRule = (InboundFaxRule) o;
+    return Objects.equals(this.dedicatedNumber, inboundFaxRule.dedicatedNumber) &&
+        Objects.equals(this.ruleName, inboundFaxRule.ruleName) &&
+        Objects.equals(this.action, inboundFaxRule.action) &&
+        Objects.equals(this.actionAddress, inboundFaxRule.actionAddress) &&
+        Objects.equals(this.enabled, inboundFaxRule.enabled);
   }
 
   @Override
@@ -166,7 +166,7 @@ public class InboundFAXRule {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InboundFAXRule {\n");
+    sb.append("class InboundFaxRule {\n");
     
     sb.append("    dedicatedNumber: ").append(toIndentedString(dedicatedNumber)).append("\n");
     sb.append("    ruleName: ").append(toIndentedString(ruleName)).append("\n");

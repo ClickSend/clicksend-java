@@ -14,7 +14,7 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
-import ClickSend.Model.InboundFAXRule;
+import ClickSend.Model.InboundFaxRule;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -74,7 +74,7 @@ public class InboundFaxRulesApiTest {
      */
     @Test
     public void faxInboundAutomationPostTest() throws ApiException {
-        InboundFAXRule inboundFaxRule = null;
+        InboundFaxRule inboundFaxRule = null;
         String response = api.faxInboundAutomationPost(inboundFaxRule);
 
         // TODO: test validations
@@ -91,7 +91,7 @@ public class InboundFaxRulesApiTest {
     @Test
     public void faxInboundAutomationPutTest() throws ApiException {
         Integer inboundRuleId = null;
-        InboundFAXRule inboundFaxRule = null;
+        InboundFaxRule inboundFaxRule = null;
         String response = api.faxInboundAutomationPut(inboundRuleId, inboundFaxRule);
 
         // TODO: test validations

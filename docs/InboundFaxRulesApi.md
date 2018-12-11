@@ -144,7 +144,7 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 InboundFaxRulesApi apiInstance = new InboundFaxRulesApi();
-InboundFAXRule inboundFaxRule = new InboundFAXRule(); // InboundFAXRule | Inbound fax rule model
+InboundFaxRule inboundFaxRule = new InboundFaxRule(); // InboundFaxRule | Inbound fax rule model
 try {
     String result = apiInstance.faxInboundAutomationPost(inboundFaxRule);
     System.out.println(result);
@@ -158,7 +158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inboundFaxRule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model |
+ **inboundFaxRule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model |
 
 ### Return type
 
@@ -199,7 +199,7 @@ BasicAuth.setPassword("YOUR PASSWORD");
 
 InboundFaxRulesApi apiInstance = new InboundFaxRulesApi();
 Integer inboundRuleId = 56; // Integer | Inbound rule id
-InboundFAXRule inboundFaxRule = new InboundFAXRule(); // InboundFAXRule | Inbound fax rule model
+InboundFaxRule inboundFaxRule = new InboundFaxRule(); // InboundFaxRule | Inbound fax rule model
 try {
     String result = apiInstance.faxInboundAutomationPut(inboundRuleId, inboundFaxRule);
     System.out.println(result);
@@ -214,7 +214,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **inboundRuleId** | **Integer**| Inbound rule id |
- **inboundFaxRule** | [**InboundFAXRule**](InboundFAXRule.md)| Inbound fax rule model |
+ **inboundFaxRule** | [**InboundFaxRule**](InboundFaxRule.md)| Inbound fax rule model |
 
 ### Return type
 

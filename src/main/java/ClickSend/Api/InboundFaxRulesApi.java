@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ClickSend.Model.InboundFAXRule;
+import ClickSend.Model.InboundFaxRule;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -308,7 +308,7 @@ public class InboundFaxRulesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call faxInboundAutomationPostCall(InboundFAXRule inboundFaxRule, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call faxInboundAutomationPostCall(InboundFaxRule inboundFaxRule, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = inboundFaxRule;
 
         // create path and map variables
@@ -350,7 +350,7 @@ public class InboundFaxRulesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call faxInboundAutomationPostValidateBeforeCall(InboundFAXRule inboundFaxRule, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call faxInboundAutomationPostValidateBeforeCall(InboundFaxRule inboundFaxRule, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'inboundFaxRule' is set
         if (inboundFaxRule == null) {
@@ -370,7 +370,7 @@ public class InboundFaxRulesApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String faxInboundAutomationPost(InboundFAXRule inboundFaxRule) throws ApiException {
+    public String faxInboundAutomationPost(InboundFaxRule inboundFaxRule) throws ApiException {
         ApiResponse<String> resp = faxInboundAutomationPostWithHttpInfo(inboundFaxRule);
         return resp.getData();
     }
@@ -382,7 +382,7 @@ public class InboundFaxRulesApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> faxInboundAutomationPostWithHttpInfo(InboundFAXRule inboundFaxRule) throws ApiException {
+    public ApiResponse<String> faxInboundAutomationPostWithHttpInfo(InboundFaxRule inboundFaxRule) throws ApiException {
         com.squareup.okhttp.Call call = faxInboundAutomationPostValidateBeforeCall(inboundFaxRule, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -396,7 +396,7 @@ public class InboundFaxRulesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call faxInboundAutomationPostAsync(InboundFAXRule inboundFaxRule, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call faxInboundAutomationPostAsync(InboundFaxRule inboundFaxRule, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -431,7 +431,7 @@ public class InboundFaxRulesApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call faxInboundAutomationPutCall(Integer inboundRuleId, InboundFAXRule inboundFaxRule, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call faxInboundAutomationPutCall(Integer inboundRuleId, InboundFaxRule inboundFaxRule, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = inboundFaxRule;
 
         // create path and map variables
@@ -474,7 +474,7 @@ public class InboundFaxRulesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call faxInboundAutomationPutValidateBeforeCall(Integer inboundRuleId, InboundFAXRule inboundFaxRule, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call faxInboundAutomationPutValidateBeforeCall(Integer inboundRuleId, InboundFaxRule inboundFaxRule, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'inboundRuleId' is set
         if (inboundRuleId == null) {
@@ -500,7 +500,7 @@ public class InboundFaxRulesApi {
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String faxInboundAutomationPut(Integer inboundRuleId, InboundFAXRule inboundFaxRule) throws ApiException {
+    public String faxInboundAutomationPut(Integer inboundRuleId, InboundFaxRule inboundFaxRule) throws ApiException {
         ApiResponse<String> resp = faxInboundAutomationPutWithHttpInfo(inboundRuleId, inboundFaxRule);
         return resp.getData();
     }
@@ -513,7 +513,7 @@ public class InboundFaxRulesApi {
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> faxInboundAutomationPutWithHttpInfo(Integer inboundRuleId, InboundFAXRule inboundFaxRule) throws ApiException {
+    public ApiResponse<String> faxInboundAutomationPutWithHttpInfo(Integer inboundRuleId, InboundFaxRule inboundFaxRule) throws ApiException {
         com.squareup.okhttp.Call call = faxInboundAutomationPutValidateBeforeCall(inboundRuleId, inboundFaxRule, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -528,7 +528,7 @@ public class InboundFaxRulesApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call faxInboundAutomationPutAsync(Integer inboundRuleId, InboundFAXRule inboundFaxRule, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call faxInboundAutomationPutAsync(Integer inboundRuleId, InboundFaxRule inboundFaxRule, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
