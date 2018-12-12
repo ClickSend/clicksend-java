@@ -25,50 +25,34 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * ForgotUsername
+ * Your contact list.
  */
+@ApiModel(description = "Your contact list.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-12T01:14:14.552Z")
-public class ForgotUsername {
-  @SerializedName("email")
-  private String email = null;
 
-  @SerializedName("phone_number")
-  private String phoneNumber = null;
+public class ContactList {
+  @SerializedName("list_name")
+  private String listName = null;
 
-  public ForgotUsername email(String email) {
-    this.email = email;
+  public ContactList() {
+    //this.classType = this.getClass().getSimpleName();
+  }
+  public ContactList listName(String listName) {
+    this.listName = listName;
     return this;
   }
 
    /**
-   * Email belonging to account.
-   * @return email
+   * Your list name.
+   * @return listName
   **/
-  @ApiModelProperty(value = "Email belonging to account.")
-  public String getEmail() {
-    return email;
+  @ApiModelProperty(required = true, value = "Your list name.")
+  public String getListName() {
+    return listName;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public ForgotUsername phoneNumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
-    return this;
-  }
-
-   /**
-   * Phone number belonging to account.
-   * @return phoneNumber
-  **/
-  @ApiModelProperty(value = "Phone number belonging to account.")
-  public String getPhoneNumber() {
-    return phoneNumber;
-  }
-
-  public void setPhoneNumber(String phoneNumber) {
-    this.phoneNumber = phoneNumber;
+  public void setListName(String listName) {
+    this.listName = listName;
   }
 
 
@@ -80,24 +64,22 @@ public class ForgotUsername {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ForgotUsername forgotUsername = (ForgotUsername) o;
-    return Objects.equals(this.email, forgotUsername.email) &&
-        Objects.equals(this.phoneNumber, forgotUsername.phoneNumber);
+    ContactList contactList = (ContactList) o;
+    return Objects.equals(this.listName, contactList.listName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(email, phoneNumber);
+    return Objects.hash(listName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ForgotUsername {\n");
+    sb.append("class ContactList {\n");
     
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
+    sb.append("    listName: ").append(toIndentedString(listName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

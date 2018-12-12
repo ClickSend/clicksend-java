@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 <a name="listsByListIdPut"></a>
 # **listsByListIdPut**
-> String listsByListIdPut(listId, list)
+> String listsByListIdPut(listId, contactList)
 
 Update specific contact list
 
@@ -147,9 +147,9 @@ BasicAuth.setPassword("YOUR PASSWORD");
 
 ContactListApi apiInstance = new ContactListApi();
 Integer listId = 56; // Integer | Your list id
-List list = new List(); // List | List model
+ContactList contactList = new ContactList(); // ContactList | Contact list model
 try {
-    String result = apiInstance.listsByListIdPut(listId, list);
+    String result = apiInstance.listsByListIdPut(listId, contactList);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactListApi#listsByListIdPut");
@@ -162,7 +162,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **listId** | **Integer**| Your list id |
- **list** | [**List**](List.md)| List model |
+ **contactList** | [**ContactList**](ContactList.md)| Contact list model |
 
 ### Return type
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 <a name="listsPost"></a>
 # **listsPost**
-> String listsPost(list)
+> String listsPost(contactList)
 
 Create new contact list
 
@@ -314,9 +314,9 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 ContactListApi apiInstance = new ContactListApi();
-List list = new List(); // List | List model
+ContactList contactList = new ContactList(); // ContactList | Contact list model
 try {
-    String result = apiInstance.listsPost(list);
+    String result = apiInstance.listsPost(contactList);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactListApi#listsPost");
@@ -328,7 +328,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **list** | [**List**](List.md)| List model |
+ **contactList** | [**ContactList**](ContactList.md)| Contact list model |
 
 ### Return type
 

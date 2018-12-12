@@ -14,6 +14,7 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
+import ClickSend.Model.ContactList;
 import ClickSend.Model.ContactListImport;
 import ClickSend.Model.Fields;
 import org.junit.Test;
@@ -76,8 +77,8 @@ public class ContactListApiTest {
     @Test
     public void listsByListIdPutTest() throws ApiException {
         Integer listId = null;
-        List list = null;
-        String response = api.listsByListIdPut(listId, list);
+        ContactList contactList = null;
+        String response = api.listsByListIdPut(listId, contactList);
 
         // TODO: test validations
     }
@@ -126,8 +127,8 @@ public class ContactListApiTest {
      */
     @Test
     public void listsPostTest() throws ApiException {
-        List list = null;
-        String response = api.listsPost(list);
+        ContactList contactList = null;
+        String response = api.listsPost(contactList);
 
         // TODO: test validations
     }

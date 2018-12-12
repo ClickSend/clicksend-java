@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * Model for Inbound SMS Rules
  */
 @ApiModel(description = "Model for Inbound SMS Rules")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-11T02:11:39.647Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-12T01:14:14.552Z")
 
 public class InboundSMSRule {
   @SerializedName("dedicated_number")

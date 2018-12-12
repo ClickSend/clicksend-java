@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import ClickSend.Model.ContactList;
 import ClickSend.Model.ContactListImport;
 import ClickSend.Model.Fields;
 
@@ -304,14 +305,14 @@ public class ContactListApi {
     /**
      * Build call for listsByListIdPut
      * @param listId Your list id (required)
-     * @param list List model (required)
+     * @param contactList Contact list model (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call listsByListIdPutCall(Integer listId, List list, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = list;
+    public com.squareup.okhttp.Call listsByListIdPutCall(Integer listId, ContactList contactList, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = contactList;
 
         // create path and map variables
         String localVarPath = "/lists/{list_id}"
@@ -353,20 +354,20 @@ public class ContactListApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call listsByListIdPutValidateBeforeCall(Integer listId, List list, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call listsByListIdPutValidateBeforeCall(Integer listId, ContactList contactList, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'listId' is set
         if (listId == null) {
             throw new ApiException("Missing the required parameter 'listId' when calling listsByListIdPut(Async)");
         }
         
-        // verify the required parameter 'list' is set
-        if (list == null) {
-            throw new ApiException("Missing the required parameter 'list' when calling listsByListIdPut(Async)");
+        // verify the required parameter 'contactList' is set
+        if (contactList == null) {
+            throw new ApiException("Missing the required parameter 'contactList' when calling listsByListIdPut(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = listsByListIdPutCall(listId, list, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsByListIdPutCall(listId, contactList, progressListener, progressRequestListener);
         return call;
 
     }
@@ -375,12 +376,12 @@ public class ContactListApi {
      * Update specific contact list
      * Update specific contact list
      * @param listId Your list id (required)
-     * @param list List model (required)
+     * @param contactList Contact list model (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String listsByListIdPut(Integer listId, List list) throws ApiException {
-        ApiResponse<String> resp = listsByListIdPutWithHttpInfo(listId, list);
+    public String listsByListIdPut(Integer listId, ContactList contactList) throws ApiException {
+        ApiResponse<String> resp = listsByListIdPutWithHttpInfo(listId, contactList);
         return resp.getData();
     }
 
@@ -388,12 +389,12 @@ public class ContactListApi {
      * Update specific contact list
      * Update specific contact list
      * @param listId Your list id (required)
-     * @param list List model (required)
+     * @param contactList Contact list model (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> listsByListIdPutWithHttpInfo(Integer listId, List list) throws ApiException {
-        com.squareup.okhttp.Call call = listsByListIdPutValidateBeforeCall(listId, list, null, null);
+    public ApiResponse<String> listsByListIdPutWithHttpInfo(Integer listId, ContactList contactList) throws ApiException {
+        com.squareup.okhttp.Call call = listsByListIdPutValidateBeforeCall(listId, contactList, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -402,12 +403,12 @@ public class ContactListApi {
      * Update specific contact list (asynchronously)
      * Update specific contact list
      * @param listId Your list id (required)
-     * @param list List model (required)
+     * @param contactList Contact list model (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listsByListIdPutAsync(Integer listId, List list, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call listsByListIdPutAsync(Integer listId, ContactList contactList, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -428,7 +429,7 @@ public class ContactListApi {
             };
         }
 
-        com.squareup.okhttp.Call call = listsByListIdPutValidateBeforeCall(listId, list, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsByListIdPutValidateBeforeCall(listId, contactList, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
@@ -692,14 +693,14 @@ public class ContactListApi {
     }
     /**
      * Build call for listsPost
-     * @param list List model (required)
+     * @param contactList Contact list model (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call listsPostCall(List list, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = list;
+    public com.squareup.okhttp.Call listsPostCall(ContactList contactList, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = contactList;
 
         // create path and map variables
         String localVarPath = "/lists";
@@ -740,15 +741,15 @@ public class ContactListApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call listsPostValidateBeforeCall(List list, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call listsPostValidateBeforeCall(ContactList contactList, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        // verify the required parameter 'list' is set
-        if (list == null) {
-            throw new ApiException("Missing the required parameter 'list' when calling listsPost(Async)");
+        // verify the required parameter 'contactList' is set
+        if (contactList == null) {
+            throw new ApiException("Missing the required parameter 'contactList' when calling listsPost(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = listsPostCall(list, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsPostCall(contactList, progressListener, progressRequestListener);
         return call;
 
     }
@@ -756,24 +757,24 @@ public class ContactListApi {
     /**
      * Create new contact list
      * Create new contact list
-     * @param list List model (required)
+     * @param contactList Contact list model (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String listsPost(List list) throws ApiException {
-        ApiResponse<String> resp = listsPostWithHttpInfo(list);
+    public String listsPost(ContactList contactList) throws ApiException {
+        ApiResponse<String> resp = listsPostWithHttpInfo(contactList);
         return resp.getData();
     }
 
     /**
      * Create new contact list
      * Create new contact list
-     * @param list List model (required)
+     * @param contactList Contact list model (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> listsPostWithHttpInfo(List list) throws ApiException {
-        com.squareup.okhttp.Call call = listsPostValidateBeforeCall(list, null, null);
+    public ApiResponse<String> listsPostWithHttpInfo(ContactList contactList) throws ApiException {
+        com.squareup.okhttp.Call call = listsPostValidateBeforeCall(contactList, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -781,12 +782,12 @@ public class ContactListApi {
     /**
      * Create new contact list (asynchronously)
      * Create new contact list
-     * @param list List model (required)
+     * @param contactList Contact list model (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listsPostAsync(List list, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call listsPostAsync(ContactList contactList, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -807,7 +808,7 @@ public class ContactListApi {
             };
         }
 
-        com.squareup.okhttp.Call call = listsPostValidateBeforeCall(list, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsPostValidateBeforeCall(contactList, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

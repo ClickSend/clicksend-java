@@ -34,7 +34,7 @@ import java.util.List;
  * Send Email
  */
 @ApiModel(description = "Send Email")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-11T02:11:39.647Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-12T01:14:14.552Z")
 
 public class Email {
   @SerializedName("to")
