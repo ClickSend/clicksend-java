@@ -31,7 +31,7 @@ import java.util.List;
  * Array of FaxMessage items
  */
 @ApiModel(description = "Array of FaxMessage items")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-12T01:14:14.552Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-01-25T01:12:11.324Z")
 
 public class FaxMessageCollection {
   @SerializedName("messages")
