@@ -31,7 +31,7 @@ import java.util.List;
  * Array of MmsMessage items
  */
 @ApiModel(description = "Array of MmsMessage items")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-01-29T05:54:30.940Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-01-30T01:33:52.840Z")
 
 public class MmsMessageCollection {
   @SerializedName("media_file")
