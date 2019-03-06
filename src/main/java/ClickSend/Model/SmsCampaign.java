@@ -28,7 +28,7 @@ import java.io.IOException;
  * Campaign Model for SMS
  */
 @ApiModel(description = "Campaign Model for SMS")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-01-30T02:35:43.252Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-06T00:35:57.043Z")
 
 public class SmsCampaign {
   @SerializedName("list_id")
@@ -45,6 +45,9 @@ public class SmsCampaign {
 
   @SerializedName("schedule")
   private Integer schedule = 0;
+
+  @SerializedName("url_to_shorten")
+  private String urlToShorten = null;
 
   public SmsCampaign() {
     //this.classType = this.getClass().getSimpleName();
@@ -139,6 +142,24 @@ public class SmsCampaign {
     this.schedule = schedule;
   }
 
+  public SmsCampaign urlToShorten(String urlToShorten) {
+    this.urlToShorten = urlToShorten;
+    return this;
+  }
+
+   /**
+   * url to be shortened add http://smsg.io/xxxxx&#x60; to the body as a placeholder.
+   * @return urlToShorten
+  **/
+  @ApiModelProperty(value = "url to be shortened add http://smsg.io/xxxxx` to the body as a placeholder.")
+  public String getUrlToShorten() {
+    return urlToShorten;
+  }
+
+  public void setUrlToShorten(String urlToShorten) {
+    this.urlToShorten = urlToShorten;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -153,12 +174,13 @@ public class SmsCampaign {
         Objects.equals(this.name, smsCampaign.name) &&
         Objects.equals(this.body, smsCampaign.body) &&
         Objects.equals(this.from, smsCampaign.from) &&
-        Objects.equals(this.schedule, smsCampaign.schedule);
+        Objects.equals(this.schedule, smsCampaign.schedule) &&
+        Objects.equals(this.urlToShorten, smsCampaign.urlToShorten);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(listId, name, body, from, schedule);
+    return Objects.hash(listId, name, body, from, schedule, urlToShorten);
   }
 
 
@@ -172,6 +194,7 @@ public class SmsCampaign {
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
+    sb.append("    urlToShorten: ").append(toIndentedString(urlToShorten)).append("\n");
     sb.append("}");
     return sb.toString();
   }
