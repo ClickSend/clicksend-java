@@ -31,7 +31,7 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>com.clicksend</groupId>
+  <groupId>com.github.clicksend</groupId>
   <artifactId>clicksend-java-client</artifactId>
   <version>1.0.0</version>
   <scope>compile</scope>
@@ -43,7 +43,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.clicksend:clicksend-java-client:1.0.0"
+compile "com.github.clicksend:clicksend-java-client:1.0.0"
 ```
 
 ### Others

@@ -1,7 +1,7 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-group = 'com.clicksend'
+group = 'com.github.clicksend'
 version = '1.0.0'
 
 buildscript {

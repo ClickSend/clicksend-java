@@ -28,7 +28,7 @@ import java.io.IOException;
  * Your file to be uploaded.
  */
 @ApiModel(description = "Your file to be uploaded.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-28T04:57:53.047Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-28T05:44:48.104Z")
 
 public class UploadFile {
   @SerializedName("content")
