@@ -28,7 +28,7 @@ import java.io.IOException;
  * VoiceMessage fields: source, to, list_id, body, lang, voice, schedule, custom_string, country
  */
 @ApiModel(description = "VoiceMessage fields: source, to, list_id, body, lang, voice, schedule, custom_string, country")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-05-31T04:25:09.442Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-07-19T08:23:35.231Z")
 
 public class VoiceMessage {
   @SerializedName("to")
@@ -76,7 +76,7 @@ public class VoiceMessage {
    * Your phone number in E.164 format.
    * @return to
   **/
-  @ApiModelProperty(required = true, value = "Your phone number in E.164 format.")
+  @ApiModelProperty(value = "Your phone number in E.164 format.")
   public String getTo() {
     return to;
   }
