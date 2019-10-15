@@ -28,7 +28,7 @@ import java.io.IOException;
  * Base model for all address-related objects.
  */
 @ApiModel(description = "Base model for all address-related objects.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-15T01:41:46.934Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-15T02:45:14.495Z")
 
 public class Address {
   @SerializedName("address_name")

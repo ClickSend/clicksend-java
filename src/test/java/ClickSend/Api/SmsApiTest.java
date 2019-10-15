@@ -185,22 +185,6 @@ public class SmsApiTest {
     }
     
     /**
-     * Mark specific delivery receipt as read
-     *
-     * Mark specific delivery receipt as read
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void smsReceiptReadByMessageIdPutTest() throws ApiException {
-        String messageId = null;
-        String response = api.smsReceiptReadByMessageIdPut(messageId);
-
-        // TODO: test validations
-    }
-    
-    /**
      * Get a Specific Delivery Receipt
      *
      * Get a Specific Delivery Receipt

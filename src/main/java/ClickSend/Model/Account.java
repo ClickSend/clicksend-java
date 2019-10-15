@@ -28,7 +28,7 @@ import java.io.IOException;
  * Complete account details needed for the user.
  */
 @ApiModel(description = "Complete account details needed for the user.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-15T01:41:46.934Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-15T02:45:14.495Z")
 
 public class Account {
   @SerializedName("username")

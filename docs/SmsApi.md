@@ -13,7 +13,6 @@ Method | HTTP request | Description
 [**smsInboundReadByMessageIdPut**](SmsApi.md#smsInboundReadByMessageIdPut) | **PUT** /sms/inbound-read/{message_id} | Mark inbound SMS as read
 [**smsInboundReadPut**](SmsApi.md#smsInboundReadPut) | **PUT** /sms/inbound-read | Mark inbound SMS as read
 [**smsPricePost**](SmsApi.md#smsPricePost) | **POST** /sms/price | Calculate sms price
-[**smsReceiptReadByMessageIdPut**](SmsApi.md#smsReceiptReadByMessageIdPut) | **PUT** /sms/receipts-read/{message_id} | Mark specific delivery receipt as read
 [**smsReceiptsByMessageIdGet**](SmsApi.md#smsReceiptsByMessageIdGet) | **GET** /sms/receipts/{message_id} | Get a Specific Delivery Receipt
 [**smsReceiptsGet**](SmsApi.md#smsReceiptsGet) | **GET** /sms/receipts | Get all delivery receipts
 [**smsReceiptsPost**](SmsApi.md#smsReceiptsPost) | **POST** /sms/receipts | Add a delivery receipt
@@ -505,60 +504,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **smsMessages** | [**SmsMessageCollection**](SmsMessageCollection.md)| SmsMessageCollection model |
-
-### Return type
-
-**String**
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="smsReceiptReadByMessageIdPut"></a>
-# **smsReceiptReadByMessageIdPut**
-> String smsReceiptReadByMessageIdPut(messageId)
-
-Mark specific delivery receipt as read
-
-Mark specific delivery receipt as read
-
-### Example
-```java
-// Import classes:
-//import ClickSend.ApiClient;
-//import ClickSend.ApiException;
-//import ClickSend.Configuration;
-//import ClickSend.auth.*;
-//import ClickSend.Api.SmsApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure HTTP basic authorization: BasicAuth
-HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
-BasicAuth.setUsername("YOUR USERNAME");
-BasicAuth.setPassword("YOUR PASSWORD");
-
-SmsApi apiInstance = new SmsApi();
-String messageId = "messageId_example"; // String | The message ID you want to mark as read
-try {
-    String result = apiInstance.smsReceiptReadByMessageIdPut(messageId);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling SmsApi#smsReceiptReadByMessageIdPut");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **messageId** | **String**| The message ID you want to mark as read |
 
 ### Return type
 
