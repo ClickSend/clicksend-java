@@ -28,7 +28,7 @@ import java.io.IOException;
  * Verifies an account by token that should have been sent to the user&#39;s phone
  */
 @ApiModel(description = "Verifies an account by token that should have been sent to the user's phone")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-07-19T08:23:35.231Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-15T01:41:46.934Z")
 
 public class AccountVerify {
   @SerializedName("country")

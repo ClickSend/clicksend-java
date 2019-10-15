@@ -1176,6 +1176,129 @@ public class SmsApi {
         return call;
     }
     /**
+     * Build call for smsReceiptReadByMessageIdPut
+     * @param messageId The message ID you want to mark as read (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call smsReceiptReadByMessageIdPutCall(String messageId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/sms/receipts-read/{message_id}"
+            .replaceAll("\\{" + "message_id" + "\\}", apiClient.escapeString(messageId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth" };
+        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call smsReceiptReadByMessageIdPutValidateBeforeCall(String messageId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'messageId' is set
+        if (messageId == null) {
+            throw new ApiException("Missing the required parameter 'messageId' when calling smsReceiptReadByMessageIdPut(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = smsReceiptReadByMessageIdPutCall(messageId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Mark specific delivery receipt as read
+     * Mark specific delivery receipt as read
+     * @param messageId The message ID you want to mark as read (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public String smsReceiptReadByMessageIdPut(String messageId) throws ApiException {
+        ApiResponse<String> resp = smsReceiptReadByMessageIdPutWithHttpInfo(messageId);
+        return resp.getData();
+    }
+
+    /**
+     * Mark specific delivery receipt as read
+     * Mark specific delivery receipt as read
+     * @param messageId The message ID you want to mark as read (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<String> smsReceiptReadByMessageIdPutWithHttpInfo(String messageId) throws ApiException {
+        com.squareup.okhttp.Call call = smsReceiptReadByMessageIdPutValidateBeforeCall(messageId, null, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Mark specific delivery receipt as read (asynchronously)
+     * Mark specific delivery receipt as read
+     * @param messageId The message ID you want to mark as read (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call smsReceiptReadByMessageIdPutAsync(String messageId, final ApiCallback<String> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = smsReceiptReadByMessageIdPutValidateBeforeCall(messageId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for smsReceiptsByMessageIdGet
      * @param messageId Message ID (required)
      * @param progressListener Progress listener
