@@ -28,7 +28,7 @@ import java.io.IOException;
  * Base model for Fax Messages
  */
 @ApiModel(description = "Base model for Fax Messages")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-06T05:13:50.861Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-06T08:25:36.914Z")
 
 public class FaxMessage {
   @SerializedName("source")
