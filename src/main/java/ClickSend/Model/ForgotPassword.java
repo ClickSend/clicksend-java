@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ForgotPassword
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-06T08:25:36.914Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-09T08:23:36.752Z")
 public class ForgotPassword {
   @SerializedName("username")
   private String username = null;

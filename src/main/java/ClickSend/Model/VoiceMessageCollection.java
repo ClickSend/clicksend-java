@@ -31,7 +31,7 @@ import java.util.List;
  * Array of VoiceMessage items
  */
 @ApiModel(description = "Array of VoiceMessage items")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-06T08:25:36.914Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-09T08:23:36.752Z")
 
 public class VoiceMessageCollection {
   @SerializedName("messages")
