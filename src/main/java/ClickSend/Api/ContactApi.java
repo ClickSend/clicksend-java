@@ -730,6 +730,149 @@ public class ContactApi {
         return call;
     }
     /**
+     * Build call for listsCopyContactPut
+     * @param fromListId List ID for list that contains contact. (required)
+     * @param contactId Contact ID (required)
+     * @param toListId List ID for list you want to copy the contact to. (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call listsCopyContactPutCall(Integer fromListId, Integer contactId, Integer toListId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id}"
+            .replaceAll("\\{" + "from_list_id" + "\\}", apiClient.escapeString(fromListId.toString()))
+            .replaceAll("\\{" + "contact_id" + "\\}", apiClient.escapeString(contactId.toString()))
+            .replaceAll("\\{" + "to_list_id" + "\\}", apiClient.escapeString(toListId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth" };
+        return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call listsCopyContactPutValidateBeforeCall(Integer fromListId, Integer contactId, Integer toListId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'fromListId' is set
+        if (fromListId == null) {
+            throw new ApiException("Missing the required parameter 'fromListId' when calling listsCopyContactPut(Async)");
+        }
+        
+        // verify the required parameter 'contactId' is set
+        if (contactId == null) {
+            throw new ApiException("Missing the required parameter 'contactId' when calling listsCopyContactPut(Async)");
+        }
+        
+        // verify the required parameter 'toListId' is set
+        if (toListId == null) {
+            throw new ApiException("Missing the required parameter 'toListId' when calling listsCopyContactPut(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = listsCopyContactPutCall(fromListId, contactId, toListId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Copy contact to another list
+     * Copy contact to another list
+     * @param fromListId List ID for list that contains contact. (required)
+     * @param contactId Contact ID (required)
+     * @param toListId List ID for list you want to copy the contact to. (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public String listsCopyContactPut(Integer fromListId, Integer contactId, Integer toListId) throws ApiException {
+        ApiResponse<String> resp = listsCopyContactPutWithHttpInfo(fromListId, contactId, toListId);
+        return resp.getData();
+    }
+
+    /**
+     * Copy contact to another list
+     * Copy contact to another list
+     * @param fromListId List ID for list that contains contact. (required)
+     * @param contactId Contact ID (required)
+     * @param toListId List ID for list you want to copy the contact to. (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<String> listsCopyContactPutWithHttpInfo(Integer fromListId, Integer contactId, Integer toListId) throws ApiException {
+        com.squareup.okhttp.Call call = listsCopyContactPutValidateBeforeCall(fromListId, contactId, toListId, null, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Copy contact to another list (asynchronously)
+     * Copy contact to another list
+     * @param fromListId List ID for list that contains contact. (required)
+     * @param contactId Contact ID (required)
+     * @param toListId List ID for list you want to copy the contact to. (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call listsCopyContactPutAsync(Integer fromListId, Integer contactId, Integer toListId, final ApiCallback<String> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = listsCopyContactPutValidateBeforeCall(fromListId, contactId, toListId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for listsRemoveOptedOutContactsByListIdAndOptOutListIdPut
      * @param listId Your list id (required)
      * @param optOutListId Your opt out list id (required)

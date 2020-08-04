@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**listsContactsByListIdAndContactIdPut**](ContactApi.md#listsContactsByListIdAndContactIdPut) | **PUT** /lists/{list_id}/contacts/{contact_id} | Update specific contact
 [**listsContactsByListIdGet**](ContactApi.md#listsContactsByListIdGet) | **GET** /lists/{list_id}/contacts | Get all contacts in a list
 [**listsContactsByListIdPost**](ContactApi.md#listsContactsByListIdPost) | **POST** /lists/{list_id}/contacts | Create new contact
+[**listsCopyContactPut**](ContactApi.md#listsCopyContactPut) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/copy/{to_list_id} | Copy contact to another list
 [**listsRemoveOptedOutContactsByListIdAndOptOutListIdPut**](ContactApi.md#listsRemoveOptedOutContactsByListIdAndOptOutListIdPut) | **PUT** /lists/{list_id}/remove-opted-out-contacts/{opt_out_list_id} | Remove all opted out contacts
 [**listsTransferContactPut**](ContactApi.md#listsTransferContactPut) | **PUT** /lists/{from_list_id}/contacts/{contact_id}/transfer/{to_list_id} | Transfer contact to another list
 
@@ -283,6 +284,64 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contact** | [**Contact**](Contact.md)| Contact model |
  **listId** | **Integer**| List id |
+
+### Return type
+
+**String**
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="listsCopyContactPut"></a>
+# **listsCopyContactPut**
+> String listsCopyContactPut(fromListId, contactId, toListId)
+
+Copy contact to another list
+
+Copy contact to another list
+
+### Example
+```java
+// Import classes:
+//import ClickSend.ApiClient;
+//import ClickSend.ApiException;
+//import ClickSend.Configuration;
+//import ClickSend.auth.*;
+//import ClickSend.Api.ContactApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure HTTP basic authorization: BasicAuth
+HttpBasicAuth BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication("BasicAuth");
+BasicAuth.setUsername("YOUR USERNAME");
+BasicAuth.setPassword("YOUR PASSWORD");
+
+ContactApi apiInstance = new ContactApi();
+Integer fromListId = 56; // Integer | List ID for list that contains contact.
+Integer contactId = 56; // Integer | Contact ID
+Integer toListId = 56; // Integer | List ID for list you want to copy the contact to.
+try {
+    String result = apiInstance.listsCopyContactPut(fromListId, contactId, toListId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContactApi#listsCopyContactPut");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fromListId** | **Integer**| List ID for list that contains contact. |
+ **contactId** | **Integer**| Contact ID |
+ **toListId** | **Integer**| List ID for list you want to copy the contact to. |
 
 ### Return type
 

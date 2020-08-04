@@ -120,6 +120,24 @@ public class ContactApiTest {
     }
     
     /**
+     * Copy contact to another list
+     *
+     * Copy contact to another list
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void listsCopyContactPutTest() throws ApiException {
+        Integer fromListId = null;
+        Integer contactId = null;
+        Integer toListId = null;
+        String response = api.listsCopyContactPut(fromListId, contactId, toListId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Remove all opted out contacts
      *
      * Remove all opted out contacts
