@@ -26,10 +26,10 @@ import java.io.IOException;
 import java.math.BigDecimal;
 
 /**
- * All dates before specified timestam.
+ * All dates before specified timestamp.
  */
-@ApiModel(description = "All dates before specified timestam.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-04T01:04:52.522Z")
+@ApiModel(description = "All dates before specified timestamp.")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-31T05:43:27.414Z")
 
 
 

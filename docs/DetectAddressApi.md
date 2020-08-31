@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="detectAddressPost"></a>
 # **detectAddressPost**
-> String detectAddressPost(uploadFile)
+> String detectAddressPost(content)
 
 Detects address in uploaded file.
 
@@ -32,9 +32,9 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 DetectAddressApi apiInstance = new DetectAddressApi();
-UploadFile uploadFile = new UploadFile(); // UploadFile | Your file to be uploaded
+Content content = new Content(); // Content | Your file to be uploaded
 try {
-    String result = apiInstance.detectAddressPost(uploadFile);
+    String result = apiInstance.detectAddressPost(content);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DetectAddressApi#detectAddressPost");
@@ -46,7 +46,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uploadFile** | [**UploadFile**](UploadFile.md)| Your file to be uploaded |
+ **content** | [**Content**](Content.md)| Your file to be uploaded |
 
 ### Return type
 

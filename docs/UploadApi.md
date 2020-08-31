@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="uploadsPost"></a>
 # **uploadsPost**
-> String uploadsPost(uploadFile, convert)
+> String uploadsPost(content, convert)
 
 Upload File
 
@@ -32,10 +32,10 @@ BasicAuth.setUsername("YOUR USERNAME");
 BasicAuth.setPassword("YOUR PASSWORD");
 
 UploadApi apiInstance = new UploadApi();
-UploadFile uploadFile = new UploadFile(); // UploadFile | Your file to be uploaded
+Content content = new Content(); // Content | Your file to be uploaded
 String convert = "convert_example"; // String | 
 try {
-    String result = apiInstance.uploadsPost(uploadFile, convert);
+    String result = apiInstance.uploadsPost(content, convert);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UploadApi#uploadsPost");
@@ -47,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uploadFile** | [**UploadFile**](UploadFile.md)| Your file to be uploaded |
+ **content** | [**Content**](Content.md)| Your file to be uploaded |
  **convert** | **String**|  |
 
 ### Return type

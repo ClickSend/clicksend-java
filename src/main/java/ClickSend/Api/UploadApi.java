@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ClickSend.Model.UploadFile;
+import ClickSend.Model.Content;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -56,15 +56,15 @@ public class UploadApi {
 
     /**
      * Build call for uploadsPost
-     * @param uploadFile Your file to be uploaded (required)
+     * @param content Your file to be uploaded (required)
      * @param convert  (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call uploadsPostCall(UploadFile uploadFile, String convert, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = uploadFile;
+    public com.squareup.okhttp.Call uploadsPostCall(Content content, String convert, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = content;
 
         // create path and map variables
         String localVarPath = "/uploads";
@@ -107,11 +107,11 @@ public class UploadApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call uploadsPostValidateBeforeCall(UploadFile uploadFile, String convert, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call uploadsPostValidateBeforeCall(Content content, String convert, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        // verify the required parameter 'uploadFile' is set
-        if (uploadFile == null) {
-            throw new ApiException("Missing the required parameter 'uploadFile' when calling uploadsPost(Async)");
+        // verify the required parameter 'content' is set
+        if (content == null) {
+            throw new ApiException("Missing the required parameter 'content' when calling uploadsPost(Async)");
         }
         
         // verify the required parameter 'convert' is set
@@ -120,7 +120,7 @@ public class UploadApi {
         }
         
 
-        com.squareup.okhttp.Call call = uploadsPostCall(uploadFile, convert, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = uploadsPostCall(content, convert, progressListener, progressRequestListener);
         return call;
 
     }
@@ -128,26 +128,26 @@ public class UploadApi {
     /**
      * Upload File
      * Upload File
-     * @param uploadFile Your file to be uploaded (required)
+     * @param content Your file to be uploaded (required)
      * @param convert  (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String uploadsPost(UploadFile uploadFile, String convert) throws ApiException {
-        ApiResponse<String> resp = uploadsPostWithHttpInfo(uploadFile, convert);
+    public String uploadsPost(Content content, String convert) throws ApiException {
+        ApiResponse<String> resp = uploadsPostWithHttpInfo(content, convert);
         return resp.getData();
     }
 
     /**
      * Upload File
      * Upload File
-     * @param uploadFile Your file to be uploaded (required)
+     * @param content Your file to be uploaded (required)
      * @param convert  (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> uploadsPostWithHttpInfo(UploadFile uploadFile, String convert) throws ApiException {
-        com.squareup.okhttp.Call call = uploadsPostValidateBeforeCall(uploadFile, convert, null, null);
+    public ApiResponse<String> uploadsPostWithHttpInfo(Content content, String convert) throws ApiException {
+        com.squareup.okhttp.Call call = uploadsPostValidateBeforeCall(content, convert, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -155,13 +155,13 @@ public class UploadApi {
     /**
      * Upload File (asynchronously)
      * Upload File
-     * @param uploadFile Your file to be uploaded (required)
+     * @param content Your file to be uploaded (required)
      * @param convert  (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call uploadsPostAsync(UploadFile uploadFile, String convert, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call uploadsPostAsync(Content content, String convert, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -182,7 +182,7 @@ public class UploadApi {
             };
         }
 
-        com.squareup.okhttp.Call call = uploadsPostValidateBeforeCall(uploadFile, convert, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = uploadsPostValidateBeforeCall(content, convert, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

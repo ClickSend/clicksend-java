@@ -14,7 +14,7 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
-import ClickSend.Model.UploadFile;
+import ClickSend.Model.Content;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -42,9 +42,9 @@ public class UploadApiTest {
      */
     @Test
     public void uploadsPostTest() throws ApiException {
-        UploadFile uploadFile = null;
+        Content content = null;
         String convert = null;
-        String response = api.uploadsPost(uploadFile, convert);
+        String response = api.uploadsPost(content, convert);
 
         // TODO: test validations
     }
