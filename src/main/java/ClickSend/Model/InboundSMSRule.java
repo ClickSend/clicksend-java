@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * Model for Inbound SMS Rules
  */
 @ApiModel(description = "Model for Inbound SMS Rules")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-31T06:02:18.873Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-01T01:03:45.107Z")
 
 
 
@@ -55,6 +55,9 @@ public class InboundSMSRule {
 
   @SerializedName("enabled")
   private BigDecimal enabled = null;
+
+  @SerializedName("webhook_type")
+  private String webhookType = null;
 
   public InboundSMSRule() {
     //this.classType = this.getClass().getSimpleName();
@@ -185,6 +188,24 @@ public class InboundSMSRule {
     this.enabled = enabled;
   }
 
+  public InboundSMSRule webhookType(String webhookType) {
+    this.webhookType = webhookType;
+    return this;
+  }
+
+   /**
+   * post, get, or json. post by default
+   * @return webhookType
+  **/
+  @ApiModelProperty(value = "post, get, or json. post by default")
+  public String getWebhookType() {
+    return webhookType;
+  }
+
+  public void setWebhookType(String webhookType) {
+    this.webhookType = webhookType;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -201,12 +222,13 @@ public class InboundSMSRule {
         Objects.equals(this.messageSearchTerm, inboundSMSRule.messageSearchTerm) &&
         Objects.equals(this.action, inboundSMSRule.action) &&
         Objects.equals(this.actionAddress, inboundSMSRule.actionAddress) &&
-        Objects.equals(this.enabled, inboundSMSRule.enabled);
+        Objects.equals(this.enabled, inboundSMSRule.enabled) &&
+        Objects.equals(this.webhookType, inboundSMSRule.webhookType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dedicatedNumber, ruleName, messageSearchType, messageSearchTerm, action, actionAddress, enabled);
+    return Objects.hash(dedicatedNumber, ruleName, messageSearchType, messageSearchTerm, action, actionAddress, enabled, webhookType);
   }
 
 
@@ -222,6 +244,7 @@ public class InboundSMSRule {
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    actionAddress: ").append(toIndentedString(actionAddress)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
+    sb.append("    webhookType: ").append(toIndentedString(webhookType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

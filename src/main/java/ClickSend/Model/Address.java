@@ -28,7 +28,7 @@ import java.io.IOException;
  * Base model for all address-related objects.
  */
 @ApiModel(description = "Base model for all address-related objects.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-31T06:02:18.873Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-01T01:03:45.107Z")
 
 
 

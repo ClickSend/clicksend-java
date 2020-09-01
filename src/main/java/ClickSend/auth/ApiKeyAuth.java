@@ -18,7 +18,7 @@ import ClickSend.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-08-31T06:02:18.873Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-01T01:03:45.107Z")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;
