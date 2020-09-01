@@ -28,19 +28,19 @@ import java.io.IOException;
  * Your file to be uploaded.
  */
 @ApiModel(description = "Your file to be uploaded.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-01T01:03:45.107Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-09-01T07:30:25.037Z")
 
 
 
 
-public class Content {
+public class UploadFile {
   @SerializedName("content")
   private String content = null;
 
-  public Content() {
+  public UploadFile() {
     //this.classType = this.getClass().getSimpleName();
   }
-  public Content content(String content) {
+  public UploadFile content(String content) {
     this.content = content;
     return this;
   }
@@ -67,8 +67,8 @@ public class Content {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Content content = (Content) o;
-    return Objects.equals(this.content, content.content);
+    UploadFile uploadFile = (UploadFile) o;
+    return Objects.equals(this.content, uploadFile.content);
   }
 
   @Override
@@ -80,7 +80,7 @@ public class Content {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Content {\n");
+    sb.append("class UploadFile {\n");
     
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("}");

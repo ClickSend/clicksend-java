@@ -14,7 +14,7 @@
 package ClickSend.Api;
 
 import ClickSend.ApiException;
-import ClickSend.Model.Content;
+import ClickSend.Model.UploadFile;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -42,8 +42,8 @@ public class DetectAddressApiTest {
      */
     @Test
     public void detectAddressPostTest() throws ApiException {
-        Content content = null;
-        String response = api.detectAddressPost(content);
+        UploadFile uploadFile = null;
+        String response = api.detectAddressPost(uploadFile);
 
         // TODO: test validations
     }

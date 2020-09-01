@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import ClickSend.Model.Content;
+import ClickSend.Model.UploadFile;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -56,14 +56,14 @@ public class DetectAddressApi {
 
     /**
      * Build call for detectAddressPost
-     * @param content Your file to be uploaded (required)
+     * @param uploadFile Your file to be uploaded (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call detectAddressPostCall(Content content, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = content;
+    public com.squareup.okhttp.Call detectAddressPostCall(UploadFile uploadFile, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = uploadFile;
 
         // create path and map variables
         String localVarPath = "/post/letters/detect-address";
@@ -104,15 +104,15 @@ public class DetectAddressApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call detectAddressPostValidateBeforeCall(Content content, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call detectAddressPostValidateBeforeCall(UploadFile uploadFile, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        // verify the required parameter 'content' is set
-        if (content == null) {
-            throw new ApiException("Missing the required parameter 'content' when calling detectAddressPost(Async)");
+        // verify the required parameter 'uploadFile' is set
+        if (uploadFile == null) {
+            throw new ApiException("Missing the required parameter 'uploadFile' when calling detectAddressPost(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = detectAddressPostCall(content, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = detectAddressPostCall(uploadFile, progressListener, progressRequestListener);
         return call;
 
     }
@@ -120,24 +120,24 @@ public class DetectAddressApi {
     /**
      * Detects address in uploaded file.
      * Detects address in uploaded file.
-     * @param content Your file to be uploaded (required)
+     * @param uploadFile Your file to be uploaded (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String detectAddressPost(Content content) throws ApiException {
-        ApiResponse<String> resp = detectAddressPostWithHttpInfo(content);
+    public String detectAddressPost(UploadFile uploadFile) throws ApiException {
+        ApiResponse<String> resp = detectAddressPostWithHttpInfo(uploadFile);
         return resp.getData();
     }
 
     /**
      * Detects address in uploaded file.
      * Detects address in uploaded file.
-     * @param content Your file to be uploaded (required)
+     * @param uploadFile Your file to be uploaded (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> detectAddressPostWithHttpInfo(Content content) throws ApiException {
-        com.squareup.okhttp.Call call = detectAddressPostValidateBeforeCall(content, null, null);
+    public ApiResponse<String> detectAddressPostWithHttpInfo(UploadFile uploadFile) throws ApiException {
+        com.squareup.okhttp.Call call = detectAddressPostValidateBeforeCall(uploadFile, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -145,12 +145,12 @@ public class DetectAddressApi {
     /**
      * Detects address in uploaded file. (asynchronously)
      * Detects address in uploaded file.
-     * @param content Your file to be uploaded (required)
+     * @param uploadFile Your file to be uploaded (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call detectAddressPostAsync(Content content, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call detectAddressPostAsync(UploadFile uploadFile, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -171,7 +171,7 @@ public class DetectAddressApi {
             };
         }
 
-        com.squareup.okhttp.Call call = detectAddressPostValidateBeforeCall(content, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = detectAddressPostValidateBeforeCall(uploadFile, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
