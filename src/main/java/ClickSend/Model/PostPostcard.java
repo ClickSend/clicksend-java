@@ -31,7 +31,7 @@ import java.util.List;
  * PostPostcard model
  */
 @ApiModel(description = "PostPostcard model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-02-26T02:31:20.144Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-08T01:29:42.813Z")
 
 public class PostPostcard {
   @SerializedName("file_urls")

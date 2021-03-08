@@ -29,7 +29,7 @@ import java.io.IOException;
  * Contains all details for the main contact.
  */
 @ApiModel(description = "Contains all details for the main contact.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-02-26T02:31:20.144Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-08T01:29:42.813Z")
 
 public class Fields {
   @SerializedName("fields")
