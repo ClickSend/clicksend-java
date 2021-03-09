@@ -28,7 +28,7 @@ import java.io.IOException;
  * Accounts that are maintained under a main account
  */
 @ApiModel(description = "Accounts that are maintained under a main account")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-09T00:01:46.833Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-09T01:11:01.679Z")
 
 public class Subaccount {
   @SerializedName("api_username")

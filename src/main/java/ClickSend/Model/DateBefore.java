@@ -29,7 +29,7 @@ import java.math.BigDecimal;
  * All dates before specified timestamp.
  */
 @ApiModel(description = "All dates before specified timestamp.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-09T00:01:46.833Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-09T01:11:01.679Z")
 
 public class DateBefore {
   @SerializedName("date_before")
