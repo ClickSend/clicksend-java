@@ -28,7 +28,7 @@ import java.io.IOException;
  * Email attachment
  */
 @ApiModel(description = "Email attachment")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-09T01:11:01.679Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-09T01:31:16.694Z")
 
 public class Attachment {
   @SerializedName("content")
