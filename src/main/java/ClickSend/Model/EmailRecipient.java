@@ -28,7 +28,7 @@ import java.io.IOException;
  * Recipient of an email, either To, Cc, or Bcc.
  */
 @ApiModel(description = "Recipient of an email, either To, Cc, or Bcc.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-08T01:29:42.813Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-09T00:01:46.833Z")
 
 public class EmailRecipient {
   @SerializedName("email")
