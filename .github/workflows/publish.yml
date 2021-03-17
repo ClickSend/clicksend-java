@@ -17,4 +17,4 @@ jobs:
       env: 
         GPR_USER: ClickSend
         GPR_API_KEY: ${{ secrets.GPR_TOKEN }}
-      run: ./gradlew publish
+      run: chmod +x gradlew && ./gradlew publish
