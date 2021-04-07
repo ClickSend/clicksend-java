@@ -28,7 +28,7 @@ import java.io.IOException;
  * Email-to-SMS Allowed Address
  */
 @ApiModel(description = "Email-to-SMS Allowed Address")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-03-17T06:14:28.545Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-04-07T02:08:31.953Z")
 
 public class EmailSMSAddress {
   @SerializedName("email_address")
