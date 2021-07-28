@@ -30,7 +30,7 @@ import java.util.List;
  * Contact list import model
  */
 @ApiModel(description = "Contact list import model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-07-27T04:29:09.538Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-07-28T02:25:08.844Z")
 
 public class ContactListImport {
   @SerializedName("file_url")

@@ -28,7 +28,7 @@ import java.io.IOException;
  * Your contact list.
  */
 @ApiModel(description = "Your contact list.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-07-27T04:29:09.538Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-07-28T02:25:08.844Z")
 
 public class ContactList {
   @SerializedName("list_name")
