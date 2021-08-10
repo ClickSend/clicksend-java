@@ -34,6 +34,42 @@ public class MmsApiTest {
 
     
     /**
+     * Export all mms history
+     *
+     * Export all mms history
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void mmsHistoryExportGetTest() throws ApiException {
+        String filename = null;
+        String response = api.mmsHistoryExportGet(filename);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get all mms history
+     *
+     * Get all mms history
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void mmsHistoryGetTest() throws ApiException {
+        String q = null;
+        Integer dateFrom = null;
+        Integer dateTo = null;
+        Integer page = null;
+        Integer limit = null;
+        String response = api.mmsHistoryGet(q, dateFrom, dateTo, page, limit);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get Price for MMS sent
      *
      * Get Price for MMS sent

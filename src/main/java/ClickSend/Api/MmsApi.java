@@ -56,6 +56,273 @@ public class MmsApi {
     }
 
     /**
+     * Build call for mmsHistoryExportGet
+     * @param filename Filename to download history as (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call mmsHistoryExportGetCall(String filename, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/mms/history/export";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (filename != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("filename", filename));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call mmsHistoryExportGetValidateBeforeCall(String filename, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'filename' is set
+        if (filename == null) {
+            throw new ApiException("Missing the required parameter 'filename' when calling mmsHistoryExportGet(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = mmsHistoryExportGetCall(filename, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Export all mms history
+     * Export all mms history
+     * @param filename Filename to download history as (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public String mmsHistoryExportGet(String filename) throws ApiException {
+        ApiResponse<String> resp = mmsHistoryExportGetWithHttpInfo(filename);
+        return resp.getData();
+    }
+
+    /**
+     * Export all mms history
+     * Export all mms history
+     * @param filename Filename to download history as (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<String> mmsHistoryExportGetWithHttpInfo(String filename) throws ApiException {
+        com.squareup.okhttp.Call call = mmsHistoryExportGetValidateBeforeCall(filename, null, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Export all mms history (asynchronously)
+     * Export all mms history
+     * @param filename Filename to download history as (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call mmsHistoryExportGetAsync(String filename, final ApiCallback<String> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = mmsHistoryExportGetValidateBeforeCall(filename, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for mmsHistoryGet
+     * @param q Custom query Example: from:{number},status_code:201. (optional)
+     * @param dateFrom Start date (optional)
+     * @param dateTo End date (optional)
+     * @param page Page number (optional, default to 1)
+     * @param limit Number of records per page (optional, default to 10)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call mmsHistoryGetCall(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/mms/history";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (q != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("q", q));
+        if (dateFrom != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("date_from", dateFrom));
+        if (dateTo != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("date_to", dateTo));
+        if (page != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+        if (limit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "BasicAuth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call mmsHistoryGetValidateBeforeCall(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+
+        com.squareup.okhttp.Call call = mmsHistoryGetCall(q, dateFrom, dateTo, page, limit, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * Get all mms history
+     * Get all mms history
+     * @param q Custom query Example: from:{number},status_code:201. (optional)
+     * @param dateFrom Start date (optional)
+     * @param dateTo End date (optional)
+     * @param page Page number (optional, default to 1)
+     * @param limit Number of records per page (optional, default to 10)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public String mmsHistoryGet(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit) throws ApiException {
+        ApiResponse<String> resp = mmsHistoryGetWithHttpInfo(q, dateFrom, dateTo, page, limit);
+        return resp.getData();
+    }
+
+    /**
+     * Get all mms history
+     * Get all mms history
+     * @param q Custom query Example: from:{number},status_code:201. (optional)
+     * @param dateFrom Start date (optional)
+     * @param dateTo End date (optional)
+     * @param page Page number (optional, default to 1)
+     * @param limit Number of records per page (optional, default to 10)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<String> mmsHistoryGetWithHttpInfo(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = mmsHistoryGetValidateBeforeCall(q, dateFrom, dateTo, page, limit, null, null);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * Get all mms history (asynchronously)
+     * Get all mms history
+     * @param q Custom query Example: from:{number},status_code:201. (optional)
+     * @param dateFrom Start date (optional)
+     * @param dateTo End date (optional)
+     * @param page Page number (optional, default to 1)
+     * @param limit Number of records per page (optional, default to 10)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call mmsHistoryGetAsync(String q, Integer dateFrom, Integer dateTo, Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = mmsHistoryGetValidateBeforeCall(q, dateFrom, dateTo, page, limit, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
      * Build call for mmsPricePost
      * @param mmsMessages MmsMessageCollection model (required)
      * @param progressListener Progress listener
