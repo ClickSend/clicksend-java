@@ -13,12 +13,12 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.DateBefore;
 import ClickSend.Model.FaxMessageCollection;
 import ClickSend.Model.Url;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,11 +39,11 @@ public class FaxApiTest {
      *
      * Get a list of Fax History.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxHistoryGetTest() throws ApiException {
+    public void faxHistoryGetTest() throws Exception {
         Integer dateFrom = null;
         Integer dateTo = null;
         String q = null;
@@ -60,11 +60,11 @@ public class FaxApiTest {
      *
      * Calculate Total Price for Fax Messages sent
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxPricePostTest() throws ApiException {
+    public void faxPricePostTest() throws Exception {
         FaxMessageCollection faxMessage = null;
         String response = api.faxPricePost(faxMessage);
 
@@ -76,11 +76,11 @@ public class FaxApiTest {
      *
      * Get a single fax receipt based on message id.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxReceiptsByMessageIdGetTest() throws ApiException {
+    public void faxReceiptsByMessageIdGetTest() throws Exception {
         String messageId = null;
         String response = api.faxReceiptsByMessageIdGet(messageId);
 
@@ -92,11 +92,11 @@ public class FaxApiTest {
      *
      * Get all delivery receipts
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxReceiptsGetTest() throws ApiException {
+    public void faxReceiptsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.faxReceiptsGet(page, limit);
@@ -109,11 +109,11 @@ public class FaxApiTest {
      *
      * Add a delivery receipt
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxReceiptsPostTest() throws ApiException {
+    public void faxReceiptsPostTest() throws Exception {
         Url url = null;
         String response = api.faxReceiptsPost(url);
 
@@ -125,11 +125,11 @@ public class FaxApiTest {
      *
      * Mark delivery receipts as read
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxReceiptsReadPutTest() throws ApiException {
+    public void faxReceiptsReadPutTest() throws Exception {
         DateBefore dateBefore = null;
         String response = api.faxReceiptsReadPut(dateBefore);
 
@@ -141,11 +141,11 @@ public class FaxApiTest {
      *
      * Send a fax using supplied supported file-types.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxSendPostTest() throws ApiException {
+    public void faxSendPostTest() throws Exception {
         FaxMessageCollection faxMessage = null;
         String response = api.faxSendPost(faxMessage);
 

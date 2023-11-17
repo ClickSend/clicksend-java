@@ -23,53 +23,39 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * From Email object.
+ * CountryListIds
  */
-@ApiModel(description = "From Email object.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-17T03:08:54.691Z")
-public class EmailFrom {
-  @SerializedName("email_address_id")
-  private String emailAddressId = null;
+public class CountryListIds {
+  @SerializedName("country_list_ids")
+  private List<BigDecimal> countryListIds = new ArrayList<BigDecimal>();
 
-  @SerializedName("name")
-  private String name = null;
+  public CountryListIds countryListIds(List<BigDecimal> countryListIds) {
+    this.countryListIds = countryListIds;
+    return this;
+  }
 
-  public EmailFrom emailAddressId(String emailAddressId) {
-    this.emailAddressId = emailAddressId;
+  public CountryListIds addCountryListIdsItem(BigDecimal countryListIdsItem) {
+    this.countryListIds.add(countryListIdsItem);
     return this;
   }
 
    /**
-   * Email address id of the recipient.
-   * @return emailAddressId
+   * Array of country ids
+   * @return countryListIds
   **/
-  @ApiModelProperty(required = true, value = "Email address id of the recipient.")
-  public String getEmailAddressId() {
-    return emailAddressId;
+  @ApiModelProperty(example = "[1]", required = true, value = "Array of country ids")
+  public List<BigDecimal> getCountryListIds() {
+    return countryListIds;
   }
 
-  public void setEmailAddressId(String emailAddressId) {
-    this.emailAddressId = emailAddressId;
-  }
-
-  public EmailFrom name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Name of the recipient.
-   * @return name
-  **/
-  @ApiModelProperty(value = "Name of the recipient.")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
+  public void setCountryListIds(List<BigDecimal> countryListIds) {
+    this.countryListIds = countryListIds;
   }
 
 
@@ -81,24 +67,22 @@ public class EmailFrom {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EmailFrom emailFrom = (EmailFrom) o;
-    return Objects.equals(this.emailAddressId, emailFrom.emailAddressId) &&
-        Objects.equals(this.name, emailFrom.name);
+    CountryListIds countryListIds = (CountryListIds) o;
+    return Objects.equals(this.countryListIds, countryListIds.countryListIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(emailAddressId, name);
+    return Objects.hash(countryListIds);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EmailFrom {\n");
+    sb.append("class CountryListIds {\n");
     
-    sb.append("    emailAddressId: ").append(toIndentedString(emailAddressId)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    countryListIds: ").append(toIndentedString(countryListIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

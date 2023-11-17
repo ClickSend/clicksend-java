@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.DeliveryReceiptRule;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class VoiceDeliveryReceiptRulesApiTest {
      *
      * Delete voice delivery receipt automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceDeliveryReceiptAutomationDeleteTest() throws ApiException {
+    public void voiceDeliveryReceiptAutomationDeleteTest() throws Exception {
         Integer receiptRuleId = null;
         String response = api.voiceDeliveryReceiptAutomationDelete(receiptRuleId);
 
@@ -53,11 +53,11 @@ public class VoiceDeliveryReceiptRulesApiTest {
      *
      * Get specific voice delivery receipt automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceDeliveryReceiptAutomationGetTest() throws ApiException {
+    public void voiceDeliveryReceiptAutomationGetTest() throws Exception {
         Integer receiptRuleId = null;
         String response = api.voiceDeliveryReceiptAutomationGet(receiptRuleId);
 
@@ -69,11 +69,11 @@ public class VoiceDeliveryReceiptRulesApiTest {
      *
      * Create voice delivery receipt automations
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceDeliveryReceiptAutomationPostTest() throws ApiException {
+    public void voiceDeliveryReceiptAutomationPostTest() throws Exception {
         DeliveryReceiptRule deliveryReceiptRule = null;
         String response = api.voiceDeliveryReceiptAutomationPost(deliveryReceiptRule);
 
@@ -85,11 +85,11 @@ public class VoiceDeliveryReceiptRulesApiTest {
      *
      * Update voice delivery receipt automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceDeliveryReceiptAutomationPutTest() throws ApiException {
+    public void voiceDeliveryReceiptAutomationPutTest() throws Exception {
         Integer receiptRuleId = null;
         DeliveryReceiptRule deliveryReceiptRule = null;
         String response = api.voiceDeliveryReceiptAutomationPut(receiptRuleId, deliveryReceiptRule);
@@ -102,11 +102,11 @@ public class VoiceDeliveryReceiptRulesApiTest {
      *
      * Get all voice delivery receipt automations
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceDeliveryReceiptAutomationsGetTest() throws ApiException {
+    public void voiceDeliveryReceiptAutomationsGetTest() throws Exception {
         String q = null;
         Integer page = null;
         Integer limit = null;

@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 <a name="listsContactsByListIdGet"></a>
 # **listsContactsByListIdGet**
-> String listsContactsByListIdGet(listId, page, limit)
+> String listsContactsByListIdGet(listId, page, limit, updatedAfter)
 
 Get all contacts in a list
 
@@ -212,8 +212,9 @@ ContactApi apiInstance = new ContactApi();
 Integer listId = 56; // Integer | Contact list ID
 Integer page = 1; // Integer | Page number
 Integer limit = 10; // Integer | Number of records per page
+Integer updatedAfter = 10; // Integer | Get all contacts updated after a given timestamp.
 try {
-    String result = apiInstance.listsContactsByListIdGet(listId, page, limit);
+    String result = apiInstance.listsContactsByListIdGet(listId, page, limit, updatedAfter);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactApi#listsContactsByListIdGet");
@@ -228,6 +229,7 @@ Name | Type | Description  | Notes
  **listId** | **Integer**| Contact list ID |
  **page** | **Integer**| Page number | [optional] [default to 1]
  **limit** | **Integer**| Number of records per page | [optional] [default to 10]
+ **updatedAfter** | **Integer**| Get all contacts updated after a given timestamp. | [optional] [default to 10]
 
 ### Return type
 
