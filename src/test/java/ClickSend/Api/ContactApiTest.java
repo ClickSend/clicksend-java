@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.Contact;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class ContactApiTest {
      *
      * Delete a contact
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsContactsByListIdAndContactIdDeleteTest() throws ApiException {
+    public void listsContactsByListIdAndContactIdDeleteTest() throws Exception {
         Integer listId = null;
         Integer contactId = null;
         String response = api.listsContactsByListIdAndContactIdDelete(listId, contactId);
@@ -54,11 +54,11 @@ public class ContactApiTest {
      *
      * Get a specific contact
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsContactsByListIdAndContactIdGetTest() throws ApiException {
+    public void listsContactsByListIdAndContactIdGetTest() throws Exception {
         Integer listId = null;
         Integer contactId = null;
         String response = api.listsContactsByListIdAndContactIdGet(listId, contactId);
@@ -71,11 +71,11 @@ public class ContactApiTest {
      *
      * Update specific contact
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsContactsByListIdAndContactIdPutTest() throws ApiException {
+    public void listsContactsByListIdAndContactIdPutTest() throws Exception {
         Integer listId = null;
         Integer contactId = null;
         Contact contact = null;
@@ -89,15 +89,16 @@ public class ContactApiTest {
      *
      * Get all contacts in a list
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsContactsByListIdGetTest() throws ApiException {
+    public void listsContactsByListIdGetTest() throws Exception {
         Integer listId = null;
         Integer page = null;
         Integer limit = null;
-        String response = api.listsContactsByListIdGet(listId, page, limit);
+        Integer updatedAfter = null;
+        String response = api.listsContactsByListIdGet(listId, page, limit, updatedAfter);
 
         // TODO: test validations
     }
@@ -107,11 +108,11 @@ public class ContactApiTest {
      *
      * Create new contact
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsContactsByListIdPostTest() throws ApiException {
+    public void listsContactsByListIdPostTest() throws Exception {
         Contact contact = null;
         Integer listId = null;
         String response = api.listsContactsByListIdPost(contact, listId);
@@ -124,11 +125,11 @@ public class ContactApiTest {
      *
      * Copy contact to another list
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsCopyContactPutTest() throws ApiException {
+    public void listsCopyContactPutTest() throws Exception {
         Integer fromListId = null;
         Integer contactId = null;
         Integer toListId = null;
@@ -142,11 +143,11 @@ public class ContactApiTest {
      *
      * Remove all opted out contacts
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsRemoveOptedOutContactsByListIdAndOptOutListIdPutTest() throws ApiException {
+    public void listsRemoveOptedOutContactsByListIdAndOptOutListIdPutTest() throws Exception {
         Integer listId = null;
         Integer optOutListId = null;
         String response = api.listsRemoveOptedOutContactsByListIdAndOptOutListIdPut(listId, optOutListId);
@@ -159,11 +160,11 @@ public class ContactApiTest {
      *
      * Transfer contact to another list
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsTransferContactPutTest() throws ApiException {
+    public void listsTransferContactPutTest() throws Exception {
         Integer fromListId = null;
         Integer contactId = null;
         Integer toListId = null;

@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.PostPostcard;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class PostPostcardApiTest {
      *
      * Export postcard history to a CSV file
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postPostcardsHistoryExportGetTest() throws ApiException {
+    public void postPostcardsHistoryExportGetTest() throws Exception {
         String filename = null;
         String response = api.postPostcardsHistoryExportGet(filename);
 
@@ -53,11 +53,11 @@ public class PostPostcardApiTest {
      *
      * Retrieve the history of postcards sent or scheduled
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postPostcardsHistoryGetTest() throws ApiException {
+    public void postPostcardsHistoryGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.postPostcardsHistoryGet(page, limit);
@@ -70,11 +70,11 @@ public class PostPostcardApiTest {
      *
      * Calculate price for sending one or more postcards
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postPostcardsPricePostTest() throws ApiException {
+    public void postPostcardsPricePostTest() throws Exception {
         PostPostcard postPostcards = null;
         String response = api.postPostcardsPricePost(postPostcards);
 
@@ -86,11 +86,11 @@ public class PostPostcardApiTest {
      *
      * Send one or more postcards
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postPostcardsSendPostTest() throws ApiException {
+    public void postPostcardsSendPostTest() throws Exception {
         PostPostcard postPostcards = null;
         String response = api.postPostcardsSendPost(postPostcards);
 

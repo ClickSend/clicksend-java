@@ -467,12 +467,13 @@ public class ContactApi {
      * @param listId Contact list ID (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
+     * @param updatedAfter Get all contacts updated after a given timestamp. (optional, default to 10)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call listsContactsByListIdGetCall(Integer listId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call listsContactsByListIdGetCall(Integer listId, Integer page, Integer limit, Integer updatedAfter, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -485,6 +486,8 @@ public class ContactApi {
         localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
         if (limit != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+        if (updatedAfter != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("updated_after", updatedAfter));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -519,7 +522,7 @@ public class ContactApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call listsContactsByListIdGetValidateBeforeCall(Integer listId, Integer page, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call listsContactsByListIdGetValidateBeforeCall(Integer listId, Integer page, Integer limit, Integer updatedAfter, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'listId' is set
         if (listId == null) {
@@ -527,7 +530,7 @@ public class ContactApi {
         }
         
 
-        com.squareup.okhttp.Call call = listsContactsByListIdGetCall(listId, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsContactsByListIdGetCall(listId, page, limit, updatedAfter, progressListener, progressRequestListener);
         return call;
 
     }
@@ -538,11 +541,12 @@ public class ContactApi {
      * @param listId Contact list ID (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
+     * @param updatedAfter Get all contacts updated after a given timestamp. (optional, default to 10)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String listsContactsByListIdGet(Integer listId, Integer page, Integer limit) throws ApiException {
-        ApiResponse<String> resp = listsContactsByListIdGetWithHttpInfo(listId, page, limit);
+    public String listsContactsByListIdGet(Integer listId, Integer page, Integer limit, Integer updatedAfter) throws ApiException {
+        ApiResponse<String> resp = listsContactsByListIdGetWithHttpInfo(listId, page, limit, updatedAfter);
         return resp.getData();
     }
 
@@ -552,11 +556,12 @@ public class ContactApi {
      * @param listId Contact list ID (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
+     * @param updatedAfter Get all contacts updated after a given timestamp. (optional, default to 10)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> listsContactsByListIdGetWithHttpInfo(Integer listId, Integer page, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = listsContactsByListIdGetValidateBeforeCall(listId, page, limit, null, null);
+    public ApiResponse<String> listsContactsByListIdGetWithHttpInfo(Integer listId, Integer page, Integer limit, Integer updatedAfter) throws ApiException {
+        com.squareup.okhttp.Call call = listsContactsByListIdGetValidateBeforeCall(listId, page, limit, updatedAfter, null, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -567,11 +572,12 @@ public class ContactApi {
      * @param listId Contact list ID (required)
      * @param page Page number (optional, default to 1)
      * @param limit Number of records per page (optional, default to 10)
+     * @param updatedAfter Get all contacts updated after a given timestamp. (optional, default to 10)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call listsContactsByListIdGetAsync(Integer listId, Integer page, Integer limit, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call listsContactsByListIdGetAsync(Integer listId, Integer page, Integer limit, Integer updatedAfter, final ApiCallback<String> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -592,7 +598,7 @@ public class ContactApi {
             };
         }
 
-        com.squareup.okhttp.Call call = listsContactsByListIdGetValidateBeforeCall(listId, page, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = listsContactsByListIdGetValidateBeforeCall(listId, page, limit, updatedAfter, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

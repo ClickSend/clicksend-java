@@ -13,12 +13,12 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.ContactList;
 import ClickSend.Model.ContactListImport;
 import ClickSend.Model.Fields;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,11 +39,11 @@ public class ContactListApiTest {
      *
      * Delete a specific contact list
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsByListIdDeleteTest() throws ApiException {
+    public void listsByListIdDeleteTest() throws Exception {
         Integer listId = null;
         String response = api.listsByListIdDelete(listId);
 
@@ -55,11 +55,11 @@ public class ContactListApiTest {
      *
      * Get specific contact list
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsByListIdGetTest() throws ApiException {
+    public void listsByListIdGetTest() throws Exception {
         Integer listId = null;
         String response = api.listsByListIdGet(listId);
 
@@ -71,11 +71,11 @@ public class ContactListApiTest {
      *
      * Update specific contact list
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsByListIdPutTest() throws ApiException {
+    public void listsByListIdPutTest() throws Exception {
         Integer listId = null;
         ContactList contactList = null;
         String response = api.listsByListIdPut(listId, contactList);
@@ -88,11 +88,11 @@ public class ContactListApiTest {
      *
      * Get all contact lists
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsGetTest() throws ApiException {
+    public void listsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.listsGet(page, limit);
@@ -105,11 +105,11 @@ public class ContactListApiTest {
      *
      * Import contacts to list
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsImportByListIdPostTest() throws ApiException {
+    public void listsImportByListIdPostTest() throws Exception {
         Integer listId = null;
         ContactListImport file = null;
         String response = api.listsImportByListIdPost(listId, file);
@@ -122,11 +122,11 @@ public class ContactListApiTest {
      *
      * Create new contact list
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsPostTest() throws ApiException {
+    public void listsPostTest() throws Exception {
         ContactList contactList = null;
         String response = api.listsPost(contactList);
 
@@ -138,11 +138,11 @@ public class ContactListApiTest {
      *
      * Remove duplicate contacts
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void listsRemoveDuplicatesByListIdPutTest() throws ApiException {
+    public void listsRemoveDuplicatesByListIdPutTest() throws Exception {
         Integer listId = null;
         Fields fields = null;
         String response = api.listsRemoveDuplicatesByListIdPut(listId, fields);

@@ -13,9 +13,9 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,11 +36,11 @@ public class SearchApiTest {
      *
      * Get list of searched contact list
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void searchContactsListsGetTest() throws ApiException {
+    public void searchContactsListsGetTest() throws Exception {
         String q = null;
         Integer page = null;
         Integer limit = null;

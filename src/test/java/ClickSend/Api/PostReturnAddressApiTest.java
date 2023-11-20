@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.Address;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class PostReturnAddressApiTest {
      *
      * Delete specific post return address
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postReturnAddressesByReturnAddressIdDeleteTest() throws ApiException {
+    public void postReturnAddressesByReturnAddressIdDeleteTest() throws Exception {
         Integer returnAddressId = null;
         String response = api.postReturnAddressesByReturnAddressIdDelete(returnAddressId);
 
@@ -53,11 +53,11 @@ public class PostReturnAddressApiTest {
      *
      * Get specific post return address
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postReturnAddressesByReturnAddressIdGetTest() throws ApiException {
+    public void postReturnAddressesByReturnAddressIdGetTest() throws Exception {
         Integer returnAddressId = null;
         String response = api.postReturnAddressesByReturnAddressIdGet(returnAddressId);
 
@@ -69,11 +69,11 @@ public class PostReturnAddressApiTest {
      *
      * Update post return address
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postReturnAddressesByReturnAddressIdPutTest() throws ApiException {
+    public void postReturnAddressesByReturnAddressIdPutTest() throws Exception {
         Integer returnAddressId = null;
         Address returnAddress = null;
         String response = api.postReturnAddressesByReturnAddressIdPut(returnAddressId, returnAddress);
@@ -86,11 +86,11 @@ public class PostReturnAddressApiTest {
      *
      * Get list of post return addresses
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postReturnAddressesGetTest() throws ApiException {
+    public void postReturnAddressesGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.postReturnAddressesGet(page, limit);
@@ -103,11 +103,11 @@ public class PostReturnAddressApiTest {
      *
      * Create post return address
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postReturnAddressesPostTest() throws ApiException {
+    public void postReturnAddressesPostTest() throws Exception {
         Address returnAddress = null;
         String response = api.postReturnAddressesPost(returnAddress);
 

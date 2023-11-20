@@ -13,9 +13,9 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,11 +36,11 @@ public class MasterEmailTemplatesApiTest {
      *
      * Get all master email template categories
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void masterEmailTemplateCategoriesGetTest() throws ApiException {
+    public void masterEmailTemplateCategoriesGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.masterEmailTemplateCategoriesGet(page, limit);
@@ -53,11 +53,11 @@ public class MasterEmailTemplatesApiTest {
      *
      * Get specific master email template category
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void masterEmailTemplateCategoryGetTest() throws ApiException {
+    public void masterEmailTemplateCategoryGetTest() throws Exception {
         Integer categoryId = null;
         String response = api.masterEmailTemplateCategoryGet(categoryId);
 
@@ -69,11 +69,11 @@ public class MasterEmailTemplatesApiTest {
      *
      * Get specific master email template
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void masterEmailTemplateGetTest() throws ApiException {
+    public void masterEmailTemplateGetTest() throws Exception {
         Integer templateId = null;
         String response = api.masterEmailTemplateGet(templateId);
 
@@ -85,11 +85,11 @@ public class MasterEmailTemplatesApiTest {
      *
      * Get all master email templates
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void masterEmailTemplatesGetTest() throws ApiException {
+    public void masterEmailTemplatesGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.masterEmailTemplatesGet(page, limit);
@@ -102,11 +102,11 @@ public class MasterEmailTemplatesApiTest {
      *
      * Get all master email templates in a category
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void masterEmailTemplatesInCategoryGetTest() throws ApiException {
+    public void masterEmailTemplatesInCategoryGetTest() throws Exception {
         Integer categoryId = null;
         Integer page = null;
         Integer limit = null;

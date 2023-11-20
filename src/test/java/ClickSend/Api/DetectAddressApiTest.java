@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.UploadFile;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class DetectAddressApiTest {
      *
      * Detects address in uploaded file.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void detectAddressPostTest() throws ApiException {
+    public void detectAddressPostTest() throws Exception {
         UploadFile uploadFile = null;
         String response = api.detectAddressPost(uploadFile);
 

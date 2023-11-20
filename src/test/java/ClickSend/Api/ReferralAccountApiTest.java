@@ -13,9 +13,9 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,11 +36,11 @@ public class ReferralAccountApiTest {
      *
      * Get all referral accounts
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void referralAccountsGetTest() throws ApiException {
+    public void referralAccountsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.referralAccountsGet(page, limit);

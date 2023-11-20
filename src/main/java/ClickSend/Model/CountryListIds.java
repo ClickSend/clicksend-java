@@ -23,36 +23,38 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * String to be stripped.
+ * CountryListIds
  */
-@ApiModel(description = "String to be stripped.")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-20T02:44:59.328Z")
+public class CountryListIds {
+  @SerializedName("country_list_ids")
+  private List<Integer> countryListIds = new ArrayList<Integer>();
 
-public class StrippedString {
-  @SerializedName("strip_string")
-  private String stripString = null;
-
-  public StrippedString() {
-    //this.classType = this.getClass().getSimpleName();
+  public CountryListIds countryListIds(List<Integer> countryListIds) {
+    this.countryListIds = countryListIds;
+    return this;
   }
-  public StrippedString stripString(String stripString) {
-    this.stripString = stripString;
+
+  public CountryListIds addCountryListIdsItem(Integer countryListIdsItem) {
+    this.countryListIds.add(countryListIdsItem);
     return this;
   }
 
    /**
-   * String to be.
-   * @return stripString
+   * Array of country ids
+   * @return countryListIds
   **/
-  @ApiModelProperty(required = true, value = "String to be.")
-  public String getStripString() {
-    return stripString;
+  @ApiModelProperty(example = "[1]", required = true, value = "Array of country ids")
+  public List<Integer> getCountryListIds() {
+    return countryListIds;
   }
 
-  public void setStripString(String stripString) {
-    this.stripString = stripString;
+  public void setCountryListIds(List<Integer> countryListIds) {
+    this.countryListIds = countryListIds;
   }
 
 
@@ -64,22 +66,22 @@ public class StrippedString {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    StrippedString strippedString = (StrippedString) o;
-    return Objects.equals(this.stripString, strippedString.stripString);
+    CountryListIds countryListIds = (CountryListIds) o;
+    return Objects.equals(this.countryListIds, countryListIds.countryListIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(stripString);
+    return Objects.hash(countryListIds);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class StrippedString {\n");
+    sb.append("class CountryListIds {\n");
     
-    sb.append("    stripString: ").append(toIndentedString(stripString)).append("\n");
+    sb.append("    countryListIds: ").append(toIndentedString(countryListIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

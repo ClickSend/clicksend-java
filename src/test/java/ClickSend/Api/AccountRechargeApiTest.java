@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.CreditCard;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class AccountRechargeApiTest {
      *
      * Get Credit Card info
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void rechargeCreditCardGetTest() throws ApiException {
+    public void rechargeCreditCardGetTest() throws Exception {
         String response = api.rechargeCreditCardGet();
 
         // TODO: test validations
@@ -52,11 +52,11 @@ public class AccountRechargeApiTest {
      *
      * Update credit card info
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void rechargeCreditCardPutTest() throws ApiException {
+    public void rechargeCreditCardPutTest() throws Exception {
         CreditCard creditCard = null;
         String response = api.rechargeCreditCardPut(creditCard);
 
@@ -68,11 +68,11 @@ public class AccountRechargeApiTest {
      *
      * Get list of all packages
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void rechargePackagesGetTest() throws ApiException {
+    public void rechargePackagesGetTest() throws Exception {
         String country = null;
         String response = api.rechargePackagesGet(country);
 
@@ -84,11 +84,11 @@ public class AccountRechargeApiTest {
      *
      * Purchase a package
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void rechargePurchaseByPackageIdPutTest() throws ApiException {
+    public void rechargePurchaseByPackageIdPutTest() throws Exception {
         Integer packageId = null;
         String response = api.rechargePurchaseByPackageIdPut(packageId);
 
@@ -100,11 +100,11 @@ public class AccountRechargeApiTest {
      *
      * Get specific Transaction
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void rechargeTransactionsByTransactionIdGetTest() throws ApiException {
+    public void rechargeTransactionsByTransactionIdGetTest() throws Exception {
         String transactionId = null;
         String response = api.rechargeTransactionsByTransactionIdGet(transactionId);
 
@@ -116,11 +116,11 @@ public class AccountRechargeApiTest {
      *
      * Get all transactions
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void rechargeTransactionsGetTest() throws ApiException {
+    public void rechargeTransactionsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.rechargeTransactionsGet(page, limit);

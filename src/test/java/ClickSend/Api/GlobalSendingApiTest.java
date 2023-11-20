@@ -13,7 +13,7 @@
 
 package ClickSend.Api;
 
-import ClickSend.Model.Email;
+import ClickSend.Model.CountryListIds;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -24,79 +24,71 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * API tests for TransactionalEmailApi
+ * API tests for GlobalSendingApi
  */
 @Ignore
-public class TransactionalEmailApiTest {
+public class GlobalSendingApiTest {
 
-    private final TransactionalEmailApi api = new TransactionalEmailApi();
+    private final GlobalSendingApi api = new GlobalSendingApi();
 
     
     /**
-     * Export all Transactional Email history
+     * List of countries
      *
-     * Export all Transactional Email history
+     * List of countries with IDs that can be used in selecting countries for Global sending.
      *
      * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailHistoryExportGetTest() throws Exception {
-        String filename = null;
-        Integer dateFrom = null;
-        Integer dateTo = null;
-        String response = api.emailHistoryExportGet(filename, dateFrom, dateTo);
+    public void listCountriesGetTest() throws Exception {
+        String response = api.listCountriesGet();
 
         // TODO: test validations
     }
     
     /**
-     * Get all transactional email history
+     * Agree to rules and regulation
      *
-     * Get all transactional email history
+     * To agree on rules and regulations of selected countries and confirm selection.
      *
      * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailHistoryGetTest() throws Exception {
-        Integer dateFrom = null;
-        Integer dateTo = null;
-        Integer page = null;
-        Integer limit = null;
-        String response = api.emailHistoryGet(dateFrom, dateTo, page, limit);
+    public void userCountriesAgreePostTest() throws Exception {
+        String response = api.userCountriesAgreePost();
 
         // TODO: test validations
     }
     
     /**
-     * Get transactional email price
+     * Get Countries for Global Sending
      *
-     * Get transactional email price
+     * Get the list of selected countries.
      *
      * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailPricePostTest() throws Exception {
-        Email email = null;
-        String response = api.emailPricePost(email);
+    public void userCountriesGetTest() throws Exception {
+        String response = api.userCountriesGet();
 
         // TODO: test validations
     }
     
     /**
-     * Send transactional email
+     * Select Countries for Global Sending
      *
-     * Send transactional email
+     * Use this endpoint to select countries that you intend to send sms / mms to. To remove / unselect a country, just remove the country id from the array in the payload.
      *
      * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailSendPostTest() throws Exception {
-        Email email = null;
-        String response = api.emailSendPost(email);
+    public void userCountriesPostTest() throws Exception {
+        CountryListIds countryListIds = null;
+        String response = api.userCountriesPost(countryListIds);
 
         // TODO: test validations
     }

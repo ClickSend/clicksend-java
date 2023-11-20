@@ -13,9 +13,9 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,11 +36,11 @@ public class CountriesApiTest {
      *
      * Get all countries
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void countriesGetTest() throws ApiException {
+    public void countriesGetTest() throws Exception {
         String response = api.countriesGet();
 
         // TODO: test validations
