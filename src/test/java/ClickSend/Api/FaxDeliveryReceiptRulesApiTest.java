@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.DeliveryReceiptRule;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class FaxDeliveryReceiptRulesApiTest {
      *
      * Delete fax delivery receipt automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxDeliveryReceiptAutomationDeleteTest() throws ApiException {
+    public void faxDeliveryReceiptAutomationDeleteTest() throws Exception {
         Integer receiptRuleId = null;
         String response = api.faxDeliveryReceiptAutomationDelete(receiptRuleId);
 
@@ -53,11 +53,11 @@ public class FaxDeliveryReceiptRulesApiTest {
      *
      * Get specific fax delivery receipt automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxDeliveryReceiptAutomationGetTest() throws ApiException {
+    public void faxDeliveryReceiptAutomationGetTest() throws Exception {
         Integer receiptRuleId = null;
         String response = api.faxDeliveryReceiptAutomationGet(receiptRuleId);
 
@@ -69,11 +69,11 @@ public class FaxDeliveryReceiptRulesApiTest {
      *
      * Create fax delivery receipt automations
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxDeliveryReceiptAutomationPostTest() throws ApiException {
+    public void faxDeliveryReceiptAutomationPostTest() throws Exception {
         DeliveryReceiptRule deliveryReceiptRule = null;
         String response = api.faxDeliveryReceiptAutomationPost(deliveryReceiptRule);
 
@@ -85,11 +85,11 @@ public class FaxDeliveryReceiptRulesApiTest {
      *
      * Update fax delivery receipt automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxDeliveryReceiptAutomationPutTest() throws ApiException {
+    public void faxDeliveryReceiptAutomationPutTest() throws Exception {
         Integer receiptRuleId = null;
         DeliveryReceiptRule deliveryReceiptRule = null;
         String response = api.faxDeliveryReceiptAutomationPut(receiptRuleId, deliveryReceiptRule);
@@ -102,11 +102,11 @@ public class FaxDeliveryReceiptRulesApiTest {
      *
      * Get all fax delivery receipt automations
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxDeliveryReceiptAutomationsGetTest() throws ApiException {
+    public void faxDeliveryReceiptAutomationsGetTest() throws Exception {
         String q = null;
         Integer page = null;
         Integer limit = null;

@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.PostLetter;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class PostLetterApiTest {
      *
      * export post letter history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postLettersExportGetTest() throws ApiException {
+    public void postLettersExportGetTest() throws Exception {
         String filename = null;
         String response = api.postLettersExportGet(filename);
 
@@ -53,11 +53,11 @@ public class PostLetterApiTest {
      *
      * Get all post letter history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postLettersHistoryGetTest() throws ApiException {
+    public void postLettersHistoryGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.postLettersHistoryGet(page, limit);
@@ -70,11 +70,11 @@ public class PostLetterApiTest {
      *
      * Calculate post letter price
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postLettersPricePostTest() throws ApiException {
+    public void postLettersPricePostTest() throws Exception {
         PostLetter postLetter = null;
         String response = api.postLettersPricePost(postLetter);
 
@@ -86,11 +86,11 @@ public class PostLetterApiTest {
      *
      * Send post letter
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void postLettersSendPostTest() throws ApiException {
+    public void postLettersSendPostTest() throws Exception {
         PostLetter postLetter = null;
         String response = api.postLettersSendPost(postLetter);
 

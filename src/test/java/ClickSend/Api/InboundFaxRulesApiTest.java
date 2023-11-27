@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.InboundFaxRule;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class InboundFaxRulesApiTest {
      *
      * Delete inbound fax automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxInboundAutomationDeleteTest() throws ApiException {
+    public void faxInboundAutomationDeleteTest() throws Exception {
         Integer inboundRuleId = null;
         String response = api.faxInboundAutomationDelete(inboundRuleId);
 
@@ -53,11 +53,11 @@ public class InboundFaxRulesApiTest {
      *
      * Get specific inbound fax automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxInboundAutomationGetTest() throws ApiException {
+    public void faxInboundAutomationGetTest() throws Exception {
         Integer inboundRuleId = null;
         String response = api.faxInboundAutomationGet(inboundRuleId);
 
@@ -69,11 +69,11 @@ public class InboundFaxRulesApiTest {
      *
      * Create new inbound fax automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxInboundAutomationPostTest() throws ApiException {
+    public void faxInboundAutomationPostTest() throws Exception {
         InboundFaxRule inboundFaxRule = null;
         String response = api.faxInboundAutomationPost(inboundFaxRule);
 
@@ -85,11 +85,11 @@ public class InboundFaxRulesApiTest {
      *
      * Update inbound fax automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxInboundAutomationPutTest() throws ApiException {
+    public void faxInboundAutomationPutTest() throws Exception {
         Integer inboundRuleId = null;
         InboundFaxRule inboundFaxRule = null;
         String response = api.faxInboundAutomationPut(inboundRuleId, inboundFaxRule);
@@ -102,11 +102,11 @@ public class InboundFaxRulesApiTest {
      *
      * Get all inbound fax automations
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void faxInboundAutomationsGetTest() throws ApiException {
+    public void faxInboundAutomationsGetTest() throws Exception {
         String q = null;
         Integer page = null;
         Integer limit = null;

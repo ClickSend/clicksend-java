@@ -13,9 +13,9 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,11 +36,11 @@ public class NumberApiTest {
      *
      * Buy dedicated number
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void numbersBuyByDedicatedNumberPostTest() throws ApiException {
+    public void numbersBuyByDedicatedNumberPostTest() throws Exception {
         String dedicatedNumber = null;
         String response = api.numbersBuyByDedicatedNumberPost(dedicatedNumber);
 
@@ -52,11 +52,11 @@ public class NumberApiTest {
      *
      * Get all availible dedicated numbers
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void numbersGetTest() throws ApiException {
+    public void numbersGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.numbersGet(page, limit);
@@ -69,11 +69,11 @@ public class NumberApiTest {
      *
      * Get all dedicated numbers by country
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void numbersSearchByCountryGetTest() throws ApiException {
+    public void numbersSearchByCountryGetTest() throws Exception {
         String country = null;
         String search = null;
         Integer searchType = null;

@@ -13,13 +13,13 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.DateBefore;
 import ClickSend.Model.SmsMessageCollection;
 import ClickSend.Model.SmsTemplate;
 import ClickSend.Model.Url;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,11 +40,11 @@ public class SmsApiTest {
      *
      * Update all scheduled message as cancelled
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsCancelAllPutTest() throws ApiException {
+    public void smsCancelAllPutTest() throws Exception {
         String response = api.smsCancelAllPut();
 
         // TODO: test validations
@@ -55,11 +55,11 @@ public class SmsApiTest {
      *
      * Update scheduled message as cancelled
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsCancelByMessageIdPutTest() throws ApiException {
+    public void smsCancelByMessageIdPutTest() throws Exception {
         String messageId = null;
         String response = api.smsCancelByMessageIdPut(messageId);
 
@@ -71,11 +71,11 @@ public class SmsApiTest {
      *
      * Export all sms history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsHistoryExportGetTest() throws ApiException {
+    public void smsHistoryExportGetTest() throws Exception {
         String filename = null;
         String response = api.smsHistoryExportGet(filename);
 
@@ -87,11 +87,11 @@ public class SmsApiTest {
      *
      * Get all sms history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsHistoryGetTest() throws ApiException {
+    public void smsHistoryGetTest() throws Exception {
         String q = null;
         Integer dateFrom = null;
         Integer dateTo = null;
@@ -107,11 +107,11 @@ public class SmsApiTest {
      *
      * Get all inbound sms
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsInboundGetTest() throws ApiException {
+    public void smsInboundGetTest() throws Exception {
         String q = null;
         Integer page = null;
         Integer limit = null;
@@ -125,11 +125,11 @@ public class SmsApiTest {
      *
      * Create inbound sms
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsInboundPostTest() throws ApiException {
+    public void smsInboundPostTest() throws Exception {
         Url url = null;
         String response = api.smsInboundPost(url);
 
@@ -141,11 +141,11 @@ public class SmsApiTest {
      *
      * Mark specific inbound SMS as read
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsInboundReadByMessageIdPutTest() throws ApiException {
+    public void smsInboundReadByMessageIdPutTest() throws Exception {
         String messageId = null;
         String response = api.smsInboundReadByMessageIdPut(messageId);
 
@@ -157,11 +157,11 @@ public class SmsApiTest {
      *
      * Mark all inbound SMS as read optionally before a certain date
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsInboundReadPutTest() throws ApiException {
+    public void smsInboundReadPutTest() throws Exception {
         DateBefore dateBefore = null;
         String response = api.smsInboundReadPut(dateBefore);
 
@@ -173,11 +173,11 @@ public class SmsApiTest {
      *
      * Calculate sms price
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsPricePostTest() throws ApiException {
+    public void smsPricePostTest() throws Exception {
         SmsMessageCollection smsMessages = null;
         String response = api.smsPricePost(smsMessages);
 
@@ -189,11 +189,11 @@ public class SmsApiTest {
      *
      * Get a Specific Delivery Receipt
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsReceiptsByMessageIdGetTest() throws ApiException {
+    public void smsReceiptsByMessageIdGetTest() throws Exception {
         String messageId = null;
         String response = api.smsReceiptsByMessageIdGet(messageId);
 
@@ -205,11 +205,11 @@ public class SmsApiTest {
      *
      * Get all delivery receipts
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsReceiptsGetTest() throws ApiException {
+    public void smsReceiptsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.smsReceiptsGet(page, limit);
@@ -222,11 +222,11 @@ public class SmsApiTest {
      *
      * Add a delivery receipt
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsReceiptsPostTest() throws ApiException {
+    public void smsReceiptsPostTest() throws Exception {
         Url url = null;
         String response = api.smsReceiptsPost(url);
 
@@ -238,11 +238,11 @@ public class SmsApiTest {
      *
      * Mark delivery receipts as read
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsReceiptsReadPutTest() throws ApiException {
+    public void smsReceiptsReadPutTest() throws Exception {
         DateBefore dateBefore = null;
         String response = api.smsReceiptsReadPut(dateBefore);
 
@@ -254,11 +254,11 @@ public class SmsApiTest {
      *
      *  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsSendPostTest() throws ApiException {
+    public void smsSendPostTest() throws Exception {
         SmsMessageCollection smsMessages = null;
         String response = api.smsSendPost(smsMessages);
 
@@ -270,11 +270,11 @@ public class SmsApiTest {
      *
      * Delete sms template
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsTemplatesByTemplateIdDeleteTest() throws ApiException {
+    public void smsTemplatesByTemplateIdDeleteTest() throws Exception {
         Integer templateId = null;
         String response = api.smsTemplatesByTemplateIdDelete(templateId);
 
@@ -286,11 +286,11 @@ public class SmsApiTest {
      *
      * Update sms template
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsTemplatesByTemplateIdPutTest() throws ApiException {
+    public void smsTemplatesByTemplateIdPutTest() throws Exception {
         Integer templateId = null;
         SmsTemplate smsTemplate = null;
         String response = api.smsTemplatesByTemplateIdPut(templateId, smsTemplate);
@@ -303,11 +303,11 @@ public class SmsApiTest {
      *
      * Get lists of all sms templates
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsTemplatesGetTest() throws ApiException {
+    public void smsTemplatesGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.smsTemplatesGet(page, limit);
@@ -320,11 +320,11 @@ public class SmsApiTest {
      *
      * Create sms template
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsTemplatesPostTest() throws ApiException {
+    public void smsTemplatesPostTest() throws Exception {
         SmsTemplate smsTemplate = null;
         String response = api.smsTemplatesPost(smsTemplate);
 

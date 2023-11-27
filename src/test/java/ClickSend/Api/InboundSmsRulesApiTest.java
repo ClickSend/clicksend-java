@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.InboundSMSRule;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class InboundSmsRulesApiTest {
      *
      * Delete inbound sms automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsInboundAutomationDeleteTest() throws ApiException {
+    public void smsInboundAutomationDeleteTest() throws Exception {
         Integer inboundRuleId = null;
         String response = api.smsInboundAutomationDelete(inboundRuleId);
 
@@ -53,11 +53,11 @@ public class InboundSmsRulesApiTest {
      *
      * Get specific inbound sms automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsInboundAutomationGetTest() throws ApiException {
+    public void smsInboundAutomationGetTest() throws Exception {
         Integer inboundRuleId = null;
         String response = api.smsInboundAutomationGet(inboundRuleId);
 
@@ -69,11 +69,11 @@ public class InboundSmsRulesApiTest {
      *
      * Create new inbound sms automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsInboundAutomationPostTest() throws ApiException {
+    public void smsInboundAutomationPostTest() throws Exception {
         InboundSMSRule inboundSmsRule = null;
         String response = api.smsInboundAutomationPost(inboundSmsRule);
 
@@ -85,11 +85,11 @@ public class InboundSmsRulesApiTest {
      *
      * Update inbound sms automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsInboundAutomationPutTest() throws ApiException {
+    public void smsInboundAutomationPutTest() throws Exception {
         Integer inboundRuleId = null;
         InboundSMSRule inboundSmsRule = null;
         String response = api.smsInboundAutomationPut(inboundRuleId, inboundSmsRule);
@@ -102,11 +102,11 @@ public class InboundSmsRulesApiTest {
      *
      * Get all inbound sms automations
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsInboundAutomationsGetTest() throws ApiException {
+    public void smsInboundAutomationsGetTest() throws Exception {
         String q = null;
         Integer page = null;
         Integer limit = null;

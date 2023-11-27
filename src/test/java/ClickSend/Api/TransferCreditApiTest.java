@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.ResellerAccountTransferCredit;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class TransferCreditApiTest {
      *
      * Transfer Credit
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void resellerTransferCreditPutTest() throws ApiException {
+    public void resellerTransferCreditPutTest() throws Exception {
         ResellerAccountTransferCredit resellerAccountTransferCredit = null;
         String response = api.resellerTransferCreditPut(resellerAccountTransferCredit);
 

@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.SmsCampaign;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class SmsCampaignApiTest {
      *
      * Get specific sms campaign
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsCampaignBySmsCampaignIdGetTest() throws ApiException {
+    public void smsCampaignBySmsCampaignIdGetTest() throws Exception {
         Integer smsCampaignId = null;
         String response = api.smsCampaignBySmsCampaignIdGet(smsCampaignId);
 
@@ -53,11 +53,11 @@ public class SmsCampaignApiTest {
      *
      * Update sms campaign
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsCampaignsBySmsCampaignIdPutTest() throws ApiException {
+    public void smsCampaignsBySmsCampaignIdPutTest() throws Exception {
         Integer smsCampaignId = null;
         SmsCampaign campaign = null;
         String response = api.smsCampaignsBySmsCampaignIdPut(smsCampaignId, campaign);
@@ -70,11 +70,11 @@ public class SmsCampaignApiTest {
      *
      * Cancel sms campaign
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsCampaignsCancelBySmsCampaignIdPutTest() throws ApiException {
+    public void smsCampaignsCancelBySmsCampaignIdPutTest() throws Exception {
         Integer smsCampaignId = null;
         String response = api.smsCampaignsCancelBySmsCampaignIdPut(smsCampaignId);
 
@@ -86,11 +86,11 @@ public class SmsCampaignApiTest {
      *
      * Get list of sms campaigns
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsCampaignsGetTest() throws ApiException {
+    public void smsCampaignsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.smsCampaignsGet(page, limit);
@@ -103,11 +103,11 @@ public class SmsCampaignApiTest {
      *
      * Calculate price for sms campaign
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsCampaignsPricePostTest() throws ApiException {
+    public void smsCampaignsPricePostTest() throws Exception {
         SmsCampaign campaign = null;
         String response = api.smsCampaignsPricePost(campaign);
 
@@ -119,11 +119,11 @@ public class SmsCampaignApiTest {
      *
      * Create sms campaign
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsCampaignsSendPostTest() throws ApiException {
+    public void smsCampaignsSendPostTest() throws Exception {
         SmsCampaign campaign = null;
         String response = api.smsCampaignsSendPost(campaign);
 

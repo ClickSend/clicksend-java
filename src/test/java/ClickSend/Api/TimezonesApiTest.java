@@ -13,9 +13,9 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,11 +36,11 @@ public class TimezonesApiTest {
      *
      * Get supported list of timezones.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void timezonesGetTest() throws ApiException {
+    public void timezonesGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.timezonesGet(page, limit);

@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.ResellerAccount;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class ResellerAccountApiTest {
      *
      * Get Reseller clients Account
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void resellerAccountsByClientUserIdGetTest() throws ApiException {
+    public void resellerAccountsByClientUserIdGetTest() throws Exception {
         Integer clientUserId = null;
         String response = api.resellerAccountsByClientUserIdGet(clientUserId);
 
@@ -53,11 +53,11 @@ public class ResellerAccountApiTest {
      *
      * Update Reseller clients Account
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void resellerAccountsByClientUserIdPutTest() throws ApiException {
+    public void resellerAccountsByClientUserIdPutTest() throws Exception {
         Integer clientUserId = null;
         ResellerAccount resellerAccount = null;
         String response = api.resellerAccountsByClientUserIdPut(clientUserId, resellerAccount);
@@ -70,11 +70,11 @@ public class ResellerAccountApiTest {
      *
      * Get list of reseller accounts
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void resellerAccountsGetTest() throws ApiException {
+    public void resellerAccountsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.resellerAccountsGet(page, limit);
@@ -87,11 +87,11 @@ public class ResellerAccountApiTest {
      *
      * Create reseller account
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void resellerAccountsPostTest() throws ApiException {
+    public void resellerAccountsPostTest() throws Exception {
         ResellerAccount resellerAccount = null;
         String response = api.resellerAccountsPost(resellerAccount);
 

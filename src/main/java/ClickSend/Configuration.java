@@ -13,7 +13,7 @@
 
 package ClickSend;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-08-10T02:36:40.162Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-11-27T06:43:51.303Z")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 

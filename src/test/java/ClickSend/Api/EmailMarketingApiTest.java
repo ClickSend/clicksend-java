@@ -13,11 +13,11 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.EmailAddress;
 import ClickSend.Model.EmailCampaign;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,11 +38,11 @@ public class EmailMarketingApiTest {
      *
      * Get all email addresses
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void allowedEmailAddressGetTest() throws ApiException {
+    public void allowedEmailAddressGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.allowedEmailAddressGet(page, limit);
@@ -55,11 +55,11 @@ public class EmailMarketingApiTest {
      *
      * Create allowed Email Address
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void allowedEmailAddressPostTest() throws ApiException {
+    public void allowedEmailAddressPostTest() throws Exception {
         EmailAddress emailAddress = null;
         String response = api.allowedEmailAddressPost(emailAddress);
 
@@ -71,11 +71,11 @@ public class EmailMarketingApiTest {
      *
      * Cancel email campaign
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void cancelEmailCampaignPutTest() throws ApiException {
+    public void cancelEmailCampaignPutTest() throws Exception {
         Integer emailCampaignId = null;
         String response = api.cancelEmailCampaignPut(emailCampaignId);
 
@@ -87,11 +87,11 @@ public class EmailMarketingApiTest {
      *
      * Get specific email campaign
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailCampaignGetTest() throws ApiException {
+    public void emailCampaignGetTest() throws Exception {
         Integer emailCampaignId = null;
         String response = api.emailCampaignGet(emailCampaignId);
 
@@ -103,11 +103,11 @@ public class EmailMarketingApiTest {
      *
      * Export specific email campaign history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailCampaignHistoryExportGetTest() throws ApiException {
+    public void emailCampaignHistoryExportGetTest() throws Exception {
         Integer emailCampaignId = null;
         Integer dateFrom = null;
         Integer dateTo = null;
@@ -121,11 +121,11 @@ public class EmailMarketingApiTest {
      *
      * Get specific email campaign history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailCampaignHistoryGetTest() throws ApiException {
+    public void emailCampaignHistoryGetTest() throws Exception {
         Integer emailCampaignId = null;
         Integer dateFrom = null;
         Integer dateTo = null;
@@ -141,11 +141,11 @@ public class EmailMarketingApiTest {
      *
      * Send email campaign
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailCampaignPostTest() throws ApiException {
+    public void emailCampaignPostTest() throws Exception {
         EmailCampaign emailCampaign = null;
         String response = api.emailCampaignPost(emailCampaign);
 
@@ -157,11 +157,11 @@ public class EmailMarketingApiTest {
      *
      * Calculate email campaign price
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailCampaignPricePostTest() throws ApiException {
+    public void emailCampaignPricePostTest() throws Exception {
         EmailCampaign emailCampaign = null;
         String response = api.emailCampaignPricePost(emailCampaign);
 
@@ -173,11 +173,11 @@ public class EmailMarketingApiTest {
      *
      * Edit email campaign
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailCampaignPutTest() throws ApiException {
+    public void emailCampaignPutTest() throws Exception {
         Integer emailCampaignId = null;
         EmailCampaign emailCampaign = null;
         String response = api.emailCampaignPut(emailCampaignId, emailCampaign);
@@ -190,11 +190,11 @@ public class EmailMarketingApiTest {
      *
      * Get all email campaigns
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailCampaignsGetTest() throws ApiException {
+    public void emailCampaignsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.emailCampaignsGet(page, limit);
@@ -207,11 +207,11 @@ public class EmailMarketingApiTest {
      *
      * Send verification token
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void sendVerificationTokenGetTest() throws ApiException {
+    public void sendVerificationTokenGetTest() throws Exception {
         Integer emailAddressId = null;
         String response = api.sendVerificationTokenGet(emailAddressId);
 
@@ -223,11 +223,11 @@ public class EmailMarketingApiTest {
      *
      * Delete specific email address
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void specificAllowedEmailAddressDeleteTest() throws ApiException {
+    public void specificAllowedEmailAddressDeleteTest() throws Exception {
         Integer emailAddressId = null;
         String response = api.specificAllowedEmailAddressDelete(emailAddressId);
 
@@ -239,11 +239,11 @@ public class EmailMarketingApiTest {
      *
      * Get specific email address
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void specificAllowedEmailAddressGetTest() throws ApiException {
+    public void specificAllowedEmailAddressGetTest() throws Exception {
         Integer emailAddressId = null;
         String response = api.specificAllowedEmailAddressGet(emailAddressId);
 
@@ -255,11 +255,11 @@ public class EmailMarketingApiTest {
      *
      * Verify email address using verification token
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void verifyAllowedEmailAddressGetTest() throws ApiException {
+    public void verifyAllowedEmailAddressGetTest() throws Exception {
         Integer emailAddressId = null;
         String activationToken = null;
         String response = api.verifyAllowedEmailAddressGet(emailAddressId, activationToken);

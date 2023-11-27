@@ -13,11 +13,11 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.DateBefore;
 import ClickSend.Model.MmsMessageCollection;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,11 +38,11 @@ public class MmsApiTest {
      *
      * Export all mms history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void mmsHistoryExportGetTest() throws ApiException {
+    public void mmsHistoryExportGetTest() throws Exception {
         String filename = null;
         String response = api.mmsHistoryExportGet(filename);
 
@@ -54,11 +54,11 @@ public class MmsApiTest {
      *
      * Get all mms history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void mmsHistoryGetTest() throws ApiException {
+    public void mmsHistoryGetTest() throws Exception {
         String q = null;
         Integer dateFrom = null;
         Integer dateTo = null;
@@ -74,11 +74,11 @@ public class MmsApiTest {
      *
      * Get Price for MMS sent
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void mmsPricePostTest() throws ApiException {
+    public void mmsPricePostTest() throws Exception {
         MmsMessageCollection mmsMessages = null;
         String response = api.mmsPricePost(mmsMessages);
 
@@ -90,11 +90,11 @@ public class MmsApiTest {
      *
      * Get all delivery receipts
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void mmsReceiptsGetTest() throws ApiException {
+    public void mmsReceiptsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.mmsReceiptsGet(page, limit);
@@ -107,11 +107,11 @@ public class MmsApiTest {
      *
      * Mark delivery receipts as read
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void mmsReceiptsReadPutTest() throws ApiException {
+    public void mmsReceiptsReadPutTest() throws Exception {
         DateBefore dateBefore = null;
         String response = api.mmsReceiptsReadPut(dateBefore);
 
@@ -123,11 +123,11 @@ public class MmsApiTest {
      *
      * Send MMS
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void mmsSendPostTest() throws ApiException {
+    public void mmsSendPostTest() throws Exception {
         MmsMessageCollection mmsMessages = null;
         String response = api.mmsSendPost(mmsMessages);
 

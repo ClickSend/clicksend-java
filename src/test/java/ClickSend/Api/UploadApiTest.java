@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.UploadFile;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class UploadApiTest {
      *
      * Upload File
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void uploadsPostTest() throws ApiException {
+    public void uploadsPostTest() throws Exception {
         UploadFile uploadFile = null;
         String convert = null;
         String response = api.uploadsPost(uploadFile, convert);
