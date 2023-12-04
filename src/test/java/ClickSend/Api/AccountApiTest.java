@@ -13,7 +13,6 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.Account;
 import ClickSend.Model.AccountForgotPasswordVerify;
 import ClickSend.Model.AccountVerify;
@@ -21,6 +20,7 @@ import ClickSend.Model.ForgotPassword;
 import ClickSend.Model.ForgotUsername;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,11 +41,11 @@ public class AccountApiTest {
      *
      * Get account details
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void accountGetTest() throws ApiException {
+    public void accountGetTest() throws Exception {
         String response = api.accountGet();
 
         // TODO: test validations
@@ -56,11 +56,11 @@ public class AccountApiTest {
      *
      * Create An Account
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void accountPostTest() throws ApiException {
+    public void accountPostTest() throws Exception {
         Account account = null;
         String response = api.accountPost(account);
 
@@ -72,11 +72,11 @@ public class AccountApiTest {
      *
      * Get account useage by subaccount
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void accountUseageBySubaccountGetTest() throws ApiException {
+    public void accountUseageBySubaccountGetTest() throws Exception {
         Integer year = null;
         Integer month = null;
         String response = api.accountUseageBySubaccountGet(year, month);
@@ -89,11 +89,11 @@ public class AccountApiTest {
      *
      * Send account activation token
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void accountVerifySendPutTest() throws ApiException {
+    public void accountVerifySendPutTest() throws Exception {
         AccountVerify accountVerify = null;
         String response = api.accountVerifySendPut(accountVerify);
 
@@ -105,11 +105,11 @@ public class AccountApiTest {
      *
      * Verify new account
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void accountVerifyVerifyByActivationTokenPutTest() throws ApiException {
+    public void accountVerifyVerifyByActivationTokenPutTest() throws Exception {
         Integer activationToken = null;
         String response = api.accountVerifyVerifyByActivationTokenPut(activationToken);
 
@@ -121,11 +121,11 @@ public class AccountApiTest {
      *
      * Forgot password
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void forgotPasswordPutTest() throws ApiException {
+    public void forgotPasswordPutTest() throws Exception {
         ForgotPassword forgotPassword = null;
         String response = api.forgotPasswordPut(forgotPassword);
 
@@ -137,11 +137,11 @@ public class AccountApiTest {
      *
      * Verify forgot password
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void forgotPasswordVerifyPutTest() throws ApiException {
+    public void forgotPasswordVerifyPutTest() throws Exception {
         AccountForgotPasswordVerify verifyPassword = null;
         String response = api.forgotPasswordVerifyPut(verifyPassword);
 
@@ -153,11 +153,11 @@ public class AccountApiTest {
      *
      * Forgot username
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void forgotUsernamePutTest() throws ApiException {
+    public void forgotUsernamePutTest() throws Exception {
         ForgotUsername forgotUsername = null;
         String response = api.forgotUsernamePut(forgotUsername);
 

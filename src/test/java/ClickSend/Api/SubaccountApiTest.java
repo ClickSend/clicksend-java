@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.Subaccount;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class SubaccountApiTest {
      *
      * Delete a subaccount
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void subaccountsBySubaccountIdDeleteTest() throws ApiException {
+    public void subaccountsBySubaccountIdDeleteTest() throws Exception {
         Integer subaccountId = null;
         String response = api.subaccountsBySubaccountIdDelete(subaccountId);
 
@@ -53,11 +53,11 @@ public class SubaccountApiTest {
      *
      * Get specific subaccount
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void subaccountsBySubaccountIdGetTest() throws ApiException {
+    public void subaccountsBySubaccountIdGetTest() throws Exception {
         Integer subaccountId = null;
         String response = api.subaccountsBySubaccountIdGet(subaccountId);
 
@@ -69,11 +69,11 @@ public class SubaccountApiTest {
      *
      * Update subaccount
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void subaccountsBySubaccountIdPutTest() throws ApiException {
+    public void subaccountsBySubaccountIdPutTest() throws Exception {
         Integer subaccountId = null;
         Subaccount subaccount = null;
         String response = api.subaccountsBySubaccountIdPut(subaccountId, subaccount);
@@ -86,11 +86,11 @@ public class SubaccountApiTest {
      *
      * Get all subaccounts
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void subaccountsGetTest() throws ApiException {
+    public void subaccountsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.subaccountsGet(page, limit);
@@ -103,11 +103,11 @@ public class SubaccountApiTest {
      *
      * Create new subaccount
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void subaccountsPostTest() throws ApiException {
+    public void subaccountsPostTest() throws Exception {
         Subaccount subaccount = null;
         String response = api.subaccountsPost(subaccount);
 
@@ -119,11 +119,11 @@ public class SubaccountApiTest {
      *
      * Regenerate an API Key
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void subaccountsRegenApiKeyBySubaccountIdPutTest() throws ApiException {
+    public void subaccountsRegenApiKeyBySubaccountIdPutTest() throws Exception {
         Integer subaccountId = null;
         String response = api.subaccountsRegenApiKeyBySubaccountIdPut(subaccountId);
 

@@ -15,7 +15,6 @@ package ClickSend.Model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import ClickSend.Model.FaxMessage;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -28,60 +27,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Array of FaxMessage items
+ * CountryListIds
  */
-@ApiModel(description = "Array of FaxMessage items")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-04T23:48:22.151Z")
+public class CountryListIds {
+  @SerializedName("country_list_ids")
+  private List<Integer> countryListIds = new ArrayList<Integer>();
 
-public class FaxMessageCollection {
-  @SerializedName("messages")
-  private List<FaxMessage> messages = new ArrayList<FaxMessage>();
-
-  @SerializedName("file_url")
-  private String fileUrl = null;
-
-  public FaxMessageCollection() {
-    //this.classType = this.getClass().getSimpleName();
-  }
-  public FaxMessageCollection messages(List<FaxMessage> messages) {
-    this.messages = messages;
+  public CountryListIds countryListIds(List<Integer> countryListIds) {
+    this.countryListIds = countryListIds;
     return this;
   }
 
-  public FaxMessageCollection addMessagesItem(FaxMessage messagesItem) {
-    this.messages.add(messagesItem);
+  public CountryListIds addCountryListIdsItem(Integer countryListIdsItem) {
+    this.countryListIds.add(countryListIdsItem);
     return this;
   }
 
    /**
-   * Array of FaxMessage items
-   * @return messages
+   * Array of country ids
+   * @return countryListIds
   **/
-  @ApiModelProperty(required = true, value = "Array of FaxMessage items")
-  public List<FaxMessage> getMessages() {
-    return messages;
+  @ApiModelProperty(example = "[1]", required = true, value = "Array of country ids")
+  public List<Integer> getCountryListIds() {
+    return countryListIds;
   }
 
-  public void setMessages(List<FaxMessage> messages) {
-    this.messages = messages;
-  }
-
-  public FaxMessageCollection fileUrl(String fileUrl) {
-    this.fileUrl = fileUrl;
-    return this;
-  }
-
-   /**
-   * URL of file to send
-   * @return fileUrl
-  **/
-  @ApiModelProperty(required = true, value = "URL of file to send")
-  public String getFileUrl() {
-    return fileUrl;
-  }
-
-  public void setFileUrl(String fileUrl) {
-    this.fileUrl = fileUrl;
+  public void setCountryListIds(List<Integer> countryListIds) {
+    this.countryListIds = countryListIds;
   }
 
 
@@ -93,24 +66,22 @@ public class FaxMessageCollection {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FaxMessageCollection faxMessageCollection = (FaxMessageCollection) o;
-    return Objects.equals(this.messages, faxMessageCollection.messages) &&
-        Objects.equals(this.fileUrl, faxMessageCollection.fileUrl);
+    CountryListIds countryListIds = (CountryListIds) o;
+    return Objects.equals(this.countryListIds, countryListIds.countryListIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(messages, fileUrl);
+    return Objects.hash(countryListIds);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FaxMessageCollection {\n");
+    sb.append("class CountryListIds {\n");
     
-    sb.append("    messages: ").append(toIndentedString(messages)).append("\n");
-    sb.append("    fileUrl: ").append(toIndentedString(fileUrl)).append("\n");
+    sb.append("    countryListIds: ").append(toIndentedString(countryListIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

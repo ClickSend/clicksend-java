@@ -13,11 +13,11 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.EmailTemplateNew;
 import ClickSend.Model.EmailTemplateUpdate;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,11 +38,11 @@ public class UserEmailTemplatesApiTest {
      *
      * Delete user email template
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailTemplateDeleteTest() throws ApiException {
+    public void emailTemplateDeleteTest() throws Exception {
         Integer templateId = null;
         String response = api.emailTemplateDelete(templateId);
 
@@ -54,11 +54,11 @@ public class UserEmailTemplatesApiTest {
      *
      * Get specific user email templates
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailTemplateGetTest() throws ApiException {
+    public void emailTemplateGetTest() throws Exception {
         Integer templateId = null;
         String response = api.emailTemplateGet(templateId);
 
@@ -70,11 +70,11 @@ public class UserEmailTemplatesApiTest {
      *
      * Create email template
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailTemplatePostTest() throws ApiException {
+    public void emailTemplatePostTest() throws Exception {
         EmailTemplateNew emailTemplate = null;
         String response = api.emailTemplatePost(emailTemplate);
 
@@ -86,11 +86,11 @@ public class UserEmailTemplatesApiTest {
      *
      * Update email template
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailTemplatePutTest() throws ApiException {
+    public void emailTemplatePutTest() throws Exception {
         Integer templateId = null;
         EmailTemplateUpdate emailTemplate = null;
         String response = api.emailTemplatePut(templateId, emailTemplate);
@@ -103,11 +103,11 @@ public class UserEmailTemplatesApiTest {
      *
      * Get all user email templates
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailTemplatesGetTest() throws ApiException {
+    public void emailTemplatesGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.emailTemplatesGet(page, limit);

@@ -13,11 +13,11 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.EmailSMSAddress;
 import ClickSend.Model.StrippedString;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,11 +38,11 @@ public class EmailToSmsApiTest {
      *
      * Get list of email to sms allowed addresses
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsEmailSmsGetTest() throws ApiException {
+    public void smsEmailSmsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.smsEmailSmsGet(page, limit);
@@ -55,11 +55,11 @@ public class EmailToSmsApiTest {
      *
      * Create email to sms allowed address
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsEmailSmsPostTest() throws ApiException {
+    public void smsEmailSmsPostTest() throws Exception {
         EmailSMSAddress emailSmsAddress = null;
         String response = api.smsEmailSmsPost(emailSmsAddress);
 
@@ -71,11 +71,11 @@ public class EmailToSmsApiTest {
      *
      * Delete email to sms stripped string rule
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsEmailSmsStrippedStringDeleteTest() throws ApiException {
+    public void smsEmailSmsStrippedStringDeleteTest() throws Exception {
         Integer ruleId = null;
         String response = api.smsEmailSmsStrippedStringDelete(ruleId);
 
@@ -87,11 +87,11 @@ public class EmailToSmsApiTest {
      *
      * Get email to sms stripped string rule
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsEmailSmsStrippedStringGetTest() throws ApiException {
+    public void smsEmailSmsStrippedStringGetTest() throws Exception {
         Integer ruleId = null;
         String response = api.smsEmailSmsStrippedStringGet(ruleId);
 
@@ -103,11 +103,11 @@ public class EmailToSmsApiTest {
      *
      * Create email to sms stripped string rules
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsEmailSmsStrippedStringPostTest() throws ApiException {
+    public void smsEmailSmsStrippedStringPostTest() throws Exception {
         StrippedString strippedString = null;
         String response = api.smsEmailSmsStrippedStringPost(strippedString);
 
@@ -119,11 +119,11 @@ public class EmailToSmsApiTest {
      *
      * Update email to sms stripped string rule
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsEmailSmsStrippedStringPutTest() throws ApiException {
+    public void smsEmailSmsStrippedStringPutTest() throws Exception {
         StrippedString strippedString = null;
         Integer ruleId = null;
         String response = api.smsEmailSmsStrippedStringPut(strippedString, ruleId);
@@ -136,11 +136,11 @@ public class EmailToSmsApiTest {
      *
      * Get list of email to sms stripped string rules
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void smsEmailSmsStrippedStringsGetTest() throws ApiException {
+    public void smsEmailSmsStrippedStringsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.smsEmailSmsStrippedStringsGet(page, limit);

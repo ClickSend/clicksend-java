@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.DeliveryIssue;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class DeliveryIssuesApiTest {
      *
      * Get all delivery issues
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deliveryIssuesGetTest() throws ApiException {
+    public void deliveryIssuesGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.deliveryIssuesGet(page, limit);
@@ -54,11 +54,11 @@ public class DeliveryIssuesApiTest {
      *
      * Create delivery Issue
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void deliveryIssuesPostTest() throws ApiException {
+    public void deliveryIssuesPostTest() throws Exception {
         DeliveryIssue deliveryIssue = null;
         String response = api.deliveryIssuesPost(deliveryIssue);
 

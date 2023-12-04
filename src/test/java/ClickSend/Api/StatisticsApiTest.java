@@ -13,9 +13,9 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,11 +36,11 @@ public class StatisticsApiTest {
      *
      * Get sms statistics
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void statisticsSmsGetTest() throws ApiException {
+    public void statisticsSmsGetTest() throws Exception {
         String response = api.statisticsSmsGet();
 
         // TODO: test validations
@@ -51,11 +51,11 @@ public class StatisticsApiTest {
      *
      * Get voice statistics
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void statisticsVoiceGetTest() throws ApiException {
+    public void statisticsVoiceGetTest() throws Exception {
         String response = api.statisticsVoiceGet();
 
         // TODO: test validations

@@ -13,10 +13,10 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.DeliveryReceiptRule;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,11 +37,11 @@ public class EmailDeliveryReceiptRulesApiTest {
      *
      * Delete email delivery receipt automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailDeliveryReceiptAutomationDeleteTest() throws ApiException {
+    public void emailDeliveryReceiptAutomationDeleteTest() throws Exception {
         Integer receiptRuleId = null;
         String response = api.emailDeliveryReceiptAutomationDelete(receiptRuleId);
 
@@ -53,11 +53,11 @@ public class EmailDeliveryReceiptRulesApiTest {
      *
      * Get specific email delivery receipt automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailDeliveryReceiptAutomationGetTest() throws ApiException {
+    public void emailDeliveryReceiptAutomationGetTest() throws Exception {
         Integer receiptRuleId = null;
         String response = api.emailDeliveryReceiptAutomationGet(receiptRuleId);
 
@@ -69,11 +69,11 @@ public class EmailDeliveryReceiptRulesApiTest {
      *
      * Create email delivery receipt automations
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailDeliveryReceiptAutomationPostTest() throws ApiException {
+    public void emailDeliveryReceiptAutomationPostTest() throws Exception {
         DeliveryReceiptRule deliveryReceiptRule = null;
         String response = api.emailDeliveryReceiptAutomationPost(deliveryReceiptRule);
 
@@ -85,11 +85,11 @@ public class EmailDeliveryReceiptRulesApiTest {
      *
      * Update email delivery receipt automation
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailDeliveryReceiptAutomationPutTest() throws ApiException {
+    public void emailDeliveryReceiptAutomationPutTest() throws Exception {
         Integer receiptRuleId = null;
         DeliveryReceiptRule deliveryReceiptRule = null;
         String response = api.emailDeliveryReceiptAutomationPut(receiptRuleId, deliveryReceiptRule);
@@ -102,11 +102,11 @@ public class EmailDeliveryReceiptRulesApiTest {
      *
      * Get all email delivery receipt automations
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void emailDeliveryReceiptAutomationsGetTest() throws ApiException {
+    public void emailDeliveryReceiptAutomationsGetTest() throws Exception {
         String q = null;
         Integer page = null;
         Integer limit = null;

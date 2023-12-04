@@ -13,12 +13,12 @@
 
 package ClickSend.Api;
 
-import ClickSend.ApiException;
 import ClickSend.Model.DateBefore;
 import ClickSend.Model.Url;
 import ClickSend.Model.VoiceMessageCollection;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,11 +39,11 @@ public class VoiceApiTest {
      *
      * Update all voice messages as cancelled
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceCancelAllPutTest() throws ApiException {
+    public void voiceCancelAllPutTest() throws Exception {
         String response = api.voiceCancelAllPut();
 
         // TODO: test validations
@@ -54,11 +54,11 @@ public class VoiceApiTest {
      *
      * Update voice message status as cancelled
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceCancelByMessageIdPutTest() throws ApiException {
+    public void voiceCancelByMessageIdPutTest() throws Exception {
         String messageId = null;
         String response = api.voiceCancelByMessageIdPut(messageId);
 
@@ -70,11 +70,11 @@ public class VoiceApiTest {
      *
      * Export voice history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceHistoryExportGetTest() throws ApiException {
+    public void voiceHistoryExportGetTest() throws Exception {
         String filename = null;
         String response = api.voiceHistoryExportGet(filename);
 
@@ -86,11 +86,11 @@ public class VoiceApiTest {
      *
      * Get all voice history
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceHistoryGetTest() throws ApiException {
+    public void voiceHistoryGetTest() throws Exception {
         Integer dateFrom = null;
         Integer dateTo = null;
         Integer page = null;
@@ -105,11 +105,11 @@ public class VoiceApiTest {
      *
      * Get all voice languages
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceLangGetTest() throws ApiException {
+    public void voiceLangGetTest() throws Exception {
         String response = api.voiceLangGet();
 
         // TODO: test validations
@@ -120,11 +120,11 @@ public class VoiceApiTest {
      *
      * Calculate voice price
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voicePricePostTest() throws ApiException {
+    public void voicePricePostTest() throws Exception {
         VoiceMessageCollection voiceMessages = null;
         String response = api.voicePricePost(voiceMessages);
 
@@ -136,11 +136,11 @@ public class VoiceApiTest {
      *
      * Get all delivery receipts
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceReceiptsGetTest() throws ApiException {
+    public void voiceReceiptsGetTest() throws Exception {
         Integer page = null;
         Integer limit = null;
         String response = api.voiceReceiptsGet(page, limit);
@@ -153,11 +153,11 @@ public class VoiceApiTest {
      *
      * Add a delivery receipt
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceReceiptsPostTest() throws ApiException {
+    public void voiceReceiptsPostTest() throws Exception {
         Url url = null;
         String response = api.voiceReceiptsPost(url);
 
@@ -169,11 +169,11 @@ public class VoiceApiTest {
      *
      * Mark delivery receipts as read
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceReceiptsReadPutTest() throws ApiException {
+    public void voiceReceiptsReadPutTest() throws Exception {
         DateBefore dateBefore = null;
         String response = api.voiceReceiptsReadPut(dateBefore);
 
@@ -185,11 +185,11 @@ public class VoiceApiTest {
      *
      * Send a voice call
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void voiceSendPostTest() throws ApiException {
+    public void voiceSendPostTest() throws Exception {
         VoiceMessageCollection voiceMessages = null;
         String response = api.voiceSendPost(voiceMessages);
 
