@@ -28,7 +28,7 @@ import java.io.IOException;
  * String to be stripped.
  */
 @ApiModel(description = "String to be stripped.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-04T23:48:22.151Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-06T00:00:20.090Z")
 
 public class StrippedString {
   @SerializedName("strip_string")
