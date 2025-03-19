@@ -1727,7 +1727,7 @@ public class SmsApi {
 
     /**
      * Send sms message(s)
-     *  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
+     *  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://developers.clicksend.com/docs/#application-status-codes) for the possible response message status strings.* 
      * @param smsMessages SmsMessageCollection model (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1739,7 +1739,7 @@ public class SmsApi {
 
     /**
      * Send sms message(s)
-     *  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
+     *  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://developers.clicksend.com/docs/#application-status-codes) for the possible response message status strings.* 
      * @param smsMessages SmsMessageCollection model (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1752,7 +1752,7 @@ public class SmsApi {
 
     /**
      * Send sms message(s) (asynchronously)
-     *  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://dashboard.clicksend.com/#/signup/step1/) for the possible response message status strings.* 
+     *  # Send one or more SMS messages  You can post up to 1000 messages with each API call. You can send to a mix of contacts and contact lists, as long as the total number of recipients is up to 1000.  The response contains status and details for each recipient.  *Refer to [Application Status Codes](https://developers.clicksend.com/docs/#application-status-codes) for the possible response message status strings.* 
      * @param smsMessages SmsMessageCollection model (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
