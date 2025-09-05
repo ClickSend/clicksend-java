@@ -13,7 +13,7 @@
 
 package ClickSend;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T03:45:39.779Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-09-05T04:55:28.100Z")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).
