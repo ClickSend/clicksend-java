@@ -28,7 +28,7 @@ import java.io.IOException;
  * SmsMessage model
  */
 @ApiModel(description = "SmsMessage model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T03:45:39.779Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T07:33:09.564Z")
 
 public class SmsMessage {
   @SerializedName("from")
@@ -67,10 +67,10 @@ public class SmsMessage {
   }
 
    /**
-   * Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.
+   * Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.
    * @return from
   **/
-  @ApiModelProperty(value = "Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.")
+  @ApiModelProperty(value = "Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.")
   public String getFrom() {
     return from;
   }
@@ -139,10 +139,10 @@ public class SmsMessage {
   }
 
    /**
-   * Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+   * Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
    * @return schedule
   **/
-  @ApiModelProperty(example = "0", value = "Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp")
+  @ApiModelProperty(example = "0", value = "Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp")
   public Integer getSchedule() {
     return schedule;
   }

@@ -37,6 +37,7 @@ import java.util.Map;
 
 public class GlobalSendingApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public GlobalSendingApi() {
         this(Configuration.getDefaultApiClient());
@@ -52,6 +53,10 @@ public class GlobalSendingApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -99,6 +104,9 @@ public class GlobalSendingApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -212,6 +220,9 @@ public class GlobalSendingApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -325,6 +336,9 @@ public class GlobalSendingApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -439,6 +453,9 @@ public class GlobalSendingApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
