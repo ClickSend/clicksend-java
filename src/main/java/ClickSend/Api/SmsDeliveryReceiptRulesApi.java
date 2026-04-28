@@ -37,6 +37,7 @@ import java.util.Map;
 
 public class SmsDeliveryReceiptRulesApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public SmsDeliveryReceiptRulesApi() {
         this(Configuration.getDefaultApiClient());
@@ -52,6 +53,10 @@ public class SmsDeliveryReceiptRulesApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -101,6 +106,9 @@ public class SmsDeliveryReceiptRulesApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -224,6 +232,9 @@ public class SmsDeliveryReceiptRulesApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -346,6 +357,9 @@ public class SmsDeliveryReceiptRulesApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -470,6 +484,9 @@ public class SmsDeliveryReceiptRulesApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -608,6 +625,9 @@ public class SmsDeliveryReceiptRulesApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

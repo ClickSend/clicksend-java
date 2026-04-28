@@ -28,7 +28,7 @@ import java.io.IOException;
  * Base model for Fax Messages
  */
 @ApiModel(description = "Base model for Fax Messages")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T03:45:39.779Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T09:11:56.143Z")
 
 public class FaxMessage {
   @SerializedName("source")
@@ -136,10 +136,10 @@ public class FaxMessage {
   }
 
    /**
-   * Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+   * Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
    * @return schedule
   **/
-  @ApiModelProperty(value = "Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp")
+  @ApiModelProperty(value = "Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp")
   public Integer getSchedule() {
     return schedule;
   }

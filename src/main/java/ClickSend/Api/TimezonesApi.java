@@ -36,6 +36,7 @@ import java.util.Map;
 
 public class TimezonesApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public TimezonesApi() {
         this(Configuration.getDefaultApiClient());
@@ -51,6 +52,10 @@ public class TimezonesApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -104,6 +109,9 @@ public class TimezonesApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 

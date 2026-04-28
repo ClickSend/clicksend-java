@@ -28,7 +28,7 @@ import java.io.IOException;
  * Campaign Model for MMS
  */
 @ApiModel(description = "Campaign Model for MMS")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T03:45:39.779Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-28T09:11:56.143Z")
 
 public class MmsCampaign {
   @SerializedName("list_id")
@@ -115,10 +115,10 @@ public class MmsCampaign {
   }
 
    /**
-   * Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.
+   * Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.
    * @return from
   **/
-  @ApiModelProperty(value = "Your sender id - more info: http://help.clicksend.com/SMS/what-is-a-sender-id-or-sender-number.")
+  @ApiModelProperty(value = "Your sender id - more info: https://help.clicksend.com/en/collections/57584-numbers-sender-ids.")
   public String getFrom() {
     return from;
   }
