@@ -28,7 +28,7 @@ import java.io.IOException;
  * VoiceMessage fields: source, to, list_id, body, lang, voice, schedule, custom_string, country
  */
 @ApiModel(description = "VoiceMessage fields: source, to, list_id, body, lang, voice, schedule, custom_string, country")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2025-03-19T03:45:39.779Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-04-30T03:36:08.873Z")
 
 public class VoiceMessage {
   @SerializedName("to")
@@ -217,10 +217,10 @@ public class VoiceMessage {
   }
 
    /**
-   * Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp
+   * Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp
    * @return schedule
   **/
-  @ApiModelProperty(value = "Leave blank for immediate delivery. Your schedule time in unix format http://help.clicksend.com/what-is-a-unix-timestamp")
+  @ApiModelProperty(value = "Leave blank for immediate delivery. Your schedule time in unix format https://help.clicksend.com/en/articles/44235-what-is-a-unix-timestamp")
   public Integer getSchedule() {
     return schedule;
   }

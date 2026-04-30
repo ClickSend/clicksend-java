@@ -39,6 +39,7 @@ import java.util.Map;
 
 public class FaxApi {
     private ApiClient apiClient;
+    private Map<String, String> headers;
 
     public FaxApi() {
         this(Configuration.getDefaultApiClient());
@@ -54,6 +55,10 @@ public class FaxApi {
 
     public void setApiClient(ApiClient apiClient) {
         this.apiClient = apiClient;
+    }
+
+    public void setHeadersOverrides(Map<String, String> headers) {
+        this.headers = headers;
     }
 
     /**
@@ -119,6 +124,9 @@ public class FaxApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -251,6 +259,9 @@ public class FaxApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -374,6 +385,9 @@ public class FaxApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -501,6 +515,9 @@ public class FaxApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -621,6 +638,9 @@ public class FaxApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -743,6 +763,9 @@ public class FaxApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
@@ -860,6 +883,9 @@ public class FaxApi {
         }
 
         String[] localVarAuthNames = new String[] { "BasicAuth" };
+        if (headers != null) {
+            localVarHeaderParams.putAll(headers);
+        }
         return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
     }
 
