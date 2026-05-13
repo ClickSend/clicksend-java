@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * CountryListIds
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T04:40:53.000Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T05:45:00.915Z")
 public class CountryListIds {
   @SerializedName("country_list_ids")
   private List<Integer> countryListIds = new ArrayList<Integer>();

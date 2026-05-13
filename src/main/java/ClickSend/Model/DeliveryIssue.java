@@ -28,7 +28,7 @@ import java.io.IOException;
  * Issues with message delivery
  */
 @ApiModel(description = "Issues with message delivery")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T04:40:53.000Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T05:45:00.915Z")
 
 public class DeliveryIssue {
   @SerializedName("message_id")

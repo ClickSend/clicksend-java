@@ -28,7 +28,7 @@ import java.io.IOException;
  * VoiceMessage fields: source, to, list_id, body, lang, voice, schedule, custom_string, country
  */
 @ApiModel(description = "VoiceMessage fields: source, to, list_id, body, lang, voice, schedule, custom_string, country")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T04:40:53.000Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T05:45:00.915Z")
 
 public class VoiceMessage {
   @SerializedName("to")

@@ -28,7 +28,7 @@ import java.io.IOException;
  * From Email object.
  */
 @ApiModel(description = "From Email object.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T04:40:53.000Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T05:45:00.915Z")
 public class FieldsFields {
   @SerializedName("phone_number")
   private String phoneNumber = null;
