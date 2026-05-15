@@ -14,6 +14,10 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Update Gradle wrapper and repositories
+      run: |
+        sed -i 's|gradle-2.6-bin.zip|gradle-8.6-bin.zip|g' gradle/wrapper/gradle-wrapper.properties
+        sed -i 's|jcenter()|mavenCentral()|g' build.gradle
     - name: Publish to Github registry
       env: 
         GPR_USER: ClickSend
