@@ -28,7 +28,7 @@ import java.io.IOException;
  * ResellerAccountTransferCredit model
  */
 @ApiModel(description = "ResellerAccountTransferCredit model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-13T05:45:00.915Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2026-05-15T04:46:57.565Z")
 
 public class ResellerAccountTransferCredit {
   @SerializedName("client_user_id")
