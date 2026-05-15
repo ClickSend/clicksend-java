@@ -20,6 +20,8 @@ jobs:
         sed -i 's|^ *main = |       mainClass = |' build.gradle
         sed -i "s|compile '|implementation '|g" build.gradle
         sed -i "s|testCompile '|testImplementation '|g" build.gradle
+        sed -i "s|apply plugin: 'maven'|apply plugin: 'maven-publish'|" build.gradle
+        sed -i '/install {/,/}/c\    publishing {\n        repositories {\n            maven {\n                url = "https://maven.pkg.github.com/clicksend/clicksend-java"\n                credentials {\n                    username = System.getenv("GPR_USER")\n                    password = System.getenv("GPR_API_KEY")\n                }\n            }\n        }\n        publications {\n            maven(MavenPublication) {\n                from components.java\n                artifactId = "clicksend-java-client"\n            }\n        }\n    }' build.gradle
     - name: Publish to Github registry
       env: 
         GPR_USER: ClickSend
