@@ -14,10 +14,10 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Upgrade Gradle wrapper
-      run: chmod +x gradlew && ./gradlew wrapper --gradle-version=8.6
+    - name: Update Gradle wrapper
+      run: sed -i 's|gradle-2.6-bin.zip|gradle-8.6-bin.zip|g' gradle/wrapper/gradle-wrapper.properties
     - name: Publish to Github registry
       env: 
         GPR_USER: ClickSend
         GPR_API_KEY: ${{ secrets.GPR_TOKEN }}
-      run: ./gradlew publish
+      run: chmod +x gradlew && ./gradlew publish
