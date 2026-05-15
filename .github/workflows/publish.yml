@@ -17,9 +17,9 @@ jobs:
     - name: Update Gradle wrapper and build config
       run: |
         sed -i 's|gradle-2.6-bin.zip|gradle-8.6-bin.zip|g' gradle/wrapper/gradle-wrapper.properties
-        sed -i 's|jcenter()|mavenCentral()|g' build.gradle
-        sed -i "s|apply plugin: 'maven'|apply plugin: 'maven-publish'|" build.gradle
-        sed -i '/install {/,/}/c\    publishing {\n        publications {\n            maven(MavenPublication) {\n                from components.java\n                artifactId = \"clicksend-java-client\"\n            }\n        }\n    }' build.gradle
+        sed -i 's|^ *main = |       mainClass = |' build.gradle
+        sed -i "s|compile '|implementation '|g" build.gradle
+        sed -i "s|testCompile '|testImplementation '|g" build.gradle
     - name: Publish to Github registry
       env: 
         GPR_USER: ClickSend
